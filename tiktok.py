@@ -6,7 +6,7 @@
 
 from TikTokApi import TikTokApi
 import pandas as pd
-import prettify
+#import prettify
 
  
 api = TikTokApi()
