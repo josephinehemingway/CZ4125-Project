@@ -20,8 +20,8 @@ for trending_video in vids:
     print("----------")
     # COMMENTS
     # print(trending_video.comments())
-    # for comment in trending_video.comments():
-    #     print(comment)
+    for comment in trending_video.comments():
+         print(comment)
 
     # DOWNLOAD ADDRESS
     info = trending_video.info()
