@@ -1,0 +1,53 @@
+.head-text {
+  position: relative;
+  color: white;
+}
+
+.head-image {
+  object-fit: cover;
+  object-position: center;
+}
+
+.title {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-family: Poppins-SemiBold, sans-serif;
+  color: white;
+  font-weight: 600;
+  font-size: calc(60px + .7vw);
+  line-height: calc(70px + .7vw);
+}
+
+.subtitle {
+  font-family: Poppins-Light, sans-serif;
+  color: white;
+  font-size: calc(12px + .7vw);
+  margin-bottom: 0;
+  line-height: 2vw;
+}
+
+.text-on-image {
+  position: absolute;
+  left: 10%;
+  top: 30%;
+  width: 35%;
+  font-weight: 300;
+  font-family: Poppins, sans-serif;
+  color: white;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.center-title-on-image {
+  position: absolute;
+  width: 100%;
+  top: 30%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+body.home {
+  background-color: white;
+}
