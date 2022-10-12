@@ -13,7 +13,7 @@ const Footer = () => {
       width: '100%',
     }}
     >
-      Ⓒ CZ4025 Developing Data Products Group 7
+      Ⓒ 2022 CZ4025 Developing Data Products Group 7
     </div>
   );
 };
