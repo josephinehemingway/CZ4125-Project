@@ -30,6 +30,29 @@ header {
   line-height: 2vw;
 }
 
+.seemore {
+  font-family: Poppins, sans-serif;
+  color: #232323;
+  font-size: calc(12px + .3vw);
+  margin-bottom: 0;
+  line-height: 2vw;
+}
+
+.seemore:hover {
+  color: #46c7c7;
+  transition: all 0.2s ease-in-out;
+}
+
+.sectionheading {
+  color: #232323;
+  font-weight: 600;
+  font-size: 30px;
+  font-family: Poppins, sans-serif ;
+  text-align: center;
+  margin-bottom: 0;
+  margin-top: 1rem;
+}
+
 .text-on-image-left {
   position: absolute;
   left: 10%;

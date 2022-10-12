@@ -18,8 +18,9 @@ export const StyledHeading = styled.h2`
 
 export const Container = styled.div`
   width: ${(props: { width: string }) => (props.width ? props.width : '100%')};
-  height: 100%;
+  height: ${(props: { height: string }) => (props.height ? props.height : '100%')};
   margin-top: ${(props: { margintop: string }) => (props.margintop ? props.margintop : '0px')};
+  padding-top: ${(props: { paddingtop: string }) => (props.paddingtop ? props.paddingtop : '0px')};
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -41,7 +42,7 @@ export const RowContainer = styled.div`
 }
 `
 
-export const StyledSearch = styled(Input)`
+export const StyledSearchWhite = styled(Input)`
   && {
     color: #fff;
     background: none;
@@ -65,10 +66,40 @@ export const StyledSearch = styled(Input)`
     .ant-input {
       background: none;
       color: #fff;
+      margin-left: 0.5rem;
     }
 
     .anticon {
       color: white;
+    }
+  }
+`
+
+export const StyledSearch = styled(Input)`
+  && {
+    color: #000;
+    background: none;
+    border: 1.2px solid #000;
+    border-radius: 60px;
+    width: ${(props: { width: string }) => (props.width ? props.width : '70%')};
+    height: calc(20px + 2vw);
+    display: flex;
+    flex-direction: row;
+    padding: 1vw;
+
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-family: Poppins-Medium, sans-serif;
+    font-size: calc(10px + .4vw);
+    
+    &:hover {
+      border: 2px solid #46c7c7;
+    }
+    
+    .ant-input {
+      background: none;
+      color: #000;
+      margin-left: 0.5rem;
     }
   }
 `

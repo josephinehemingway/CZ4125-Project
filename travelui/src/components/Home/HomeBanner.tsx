@@ -2,11 +2,15 @@ import React, { useState } from "react";
 import "../styles.css";
 import Cover from "../../assets/images/kayak.png";
 import Logo from "../../assets/images/Logo.png";
-import {Container, StyledSearch, RowContainer} from "../reusable/Styles";
+import {Container, StyledSearchWhite, RowContainer} from "../reusable/Styles";
 import { BorderedButton } from "../reusable/Button";
 import { SearchOutlined } from "@ant-design/icons";
 
-const HomeBanner = () => {
+type Props = {
+    onClick?: React.MouseEventHandler
+}
+
+const HomeBanner: React.FC<Props> = ({ onClick }) => {
     const [destination, setDestination] = useState<string>("");
     const onSearch = (destination: string) => setDestination(destination);
 
@@ -22,11 +26,11 @@ const HomeBanner = () => {
                   <h3 className="subtitle">
                       Grab ‘n’ go an itinerary for your next destination with us!
                   </h3>
-                  <BorderedButton>Explore</BorderedButton>
+                  <BorderedButton onClick={onClick}>Explore</BorderedButton>
               </div>
               <div className="text-on-image-right">
                   <Container align={"flex-end"}>
-                      <StyledSearch
+                      <StyledSearchWhite
                         width={'90%'}
                         prefix={<SearchOutlined />}
                         placeholder="Search Destinations"
