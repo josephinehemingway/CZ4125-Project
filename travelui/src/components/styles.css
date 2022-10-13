@@ -134,10 +134,10 @@ textarea:focus, input:focus, select:focus{
   box-shadow: 0 2px 20px #e1e5ee;
   cursor: pointer;
   transition: transform 200ms ease-in;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   margin-right: 2rem;
-  margin-bottom: 0.5rem;
-  width: 20em;
+  margin-bottom: 1rem;
+  min-width: 20em;
   height: 30em;
 }
 

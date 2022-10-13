@@ -99,8 +99,8 @@ export const StyledSearch = styled(Input)`
 `
 
 export const HorizontalScroll = styled.div`
-  //width: 100%;
-  height: 100%;
+  width: 100%;
+  height: 35em;
   display: flex;
   justify-content: flex-start;
   overflow-x: scroll;
