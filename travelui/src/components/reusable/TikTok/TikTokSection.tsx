@@ -1,10 +1,13 @@
 import React from "react";
 import { RowContainer, HorizontalScroll } from "../Styles";
-import {TIKTOK_LIST} from "../../../utils/const";
+import {TIKTOK_INTERFACE} from "../../../utils/const";
 
-const TikTokSection = () => {
+type Props = {
+  TikTokList: TIKTOK_INTERFACE[];
+};
 
-  const tiktokArray = TIKTOK_LIST.map((t) => (
+const TikTokSection: React.FC<Props> = ({TikTokList}) => {
+  const tiktokArray = TikTokList.map((t) => (
     <div className={"tiktok"}>
       <iframe
         key={t.id}

@@ -18,7 +18,7 @@ const ExploreBanner: React.FC<Props> = ({ coverUrl, destinationName }) => {
   };
 
   return (
-    <div>
+    <>
       <div className="head-image">
         {/*<img className="head-image" src={coverUrl} height={"100%"} width={"100%"} alt="" />*/}
       </div>
@@ -41,7 +41,7 @@ const ExploreBanner: React.FC<Props> = ({ coverUrl, destinationName }) => {
           />
         </Container>
       </div>
-    </div>
+    </>
   );
 };
 

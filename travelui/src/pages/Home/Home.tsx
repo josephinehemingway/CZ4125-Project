@@ -6,8 +6,9 @@ import ExploreSection from "../../components/Home/ExploreSection";
 import TikTokSection from "../../components/reusable/TikTok/TikTokSection";
 import Logo from "../../assets/images/Logo.png";
 import Plane from "../../assets/images/Plane-black.png";
+import { TIKTOK_LIST } from "../../utils/const";
 
-const Home = () => {
+const Home: React.FC = () => {
   const [destination, setDestination] = useState<string>("");
   const onSearch = (destination: string) => {
     setDestination(destination);
@@ -51,7 +52,7 @@ const Home = () => {
           allowClear
         />
         <ExploreSection />
-        <TikTokSection />
+        <TikTokSection TikTokList={TIKTOK_LIST}/>
       </Container>
     </body>
   );

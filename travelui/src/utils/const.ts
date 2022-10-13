@@ -4,7 +4,7 @@ import Rome from '../assets/images/Rome.jpeg';
 import Zurich from '../assets/images/Zurich.jpeg';
 import Madrid from '../assets/images/Madrid.jpeg';
 
-interface DESTINATIONS_INTERFACE {
+export interface DESTINATIONS_INTERFACE {
     id: number;
     cityName: string;
     imgUrl: string;
@@ -44,7 +44,7 @@ export const DESTINATIONS_LIST: DESTINATIONS_INTERFACE[] = [
     },
 ]
 
-interface TIKTOK_INTERFACE {
+export interface TIKTOK_INTERFACE {
     id: number;
     embedUrl: string;
 }

@@ -1,9 +1,10 @@
 import React from "react";
 import "../Pages.css";
 import { Container } from "../../components/reusable/Styles";
-import { useLocation } from "react-router-dom";
+import {Link, useLocation} from "react-router-dom";
 import ExploreBanner from "../../components/Explore/ExploreBanner";
 import London from "../../assets/images/London.jpeg";
+import {Breadcrumb} from "antd";
 // import TikTokSection from "../../components/reusable/TikTok/TikTokSection";
 
 const Explore: React.FC = ({}) => {
@@ -13,12 +14,20 @@ const Explore: React.FC = ({}) => {
     <body className="home">
       <ExploreBanner coverUrl={London} destinationName={destinationName} />
       <Container
-        align="center"
         width="70%"
         height={"155vh"}
-        paddingtop={"4rem"}
+        paddingtop={"2rem"}
+        align='flex-start'
       >
-        hello
+        <Breadcrumb style={{fontSize: '20px'}}>
+          <Breadcrumb.Item>
+            <Link to="/">Home</Link>
+          </Breadcrumb.Item>
+          <Breadcrumb.Item>
+            <Link to="/">Explore</Link>
+          </Breadcrumb.Item>
+          <Breadcrumb.Item>{destinationName}</Breadcrumb.Item>
+        </Breadcrumb>
       </Container>
     </body>
   );
