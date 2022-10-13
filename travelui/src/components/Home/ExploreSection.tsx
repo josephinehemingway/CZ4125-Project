@@ -1,8 +1,21 @@
 import React from 'react';
 import {RowContainer, HorizontalScroll} from "../reusable/Styles";
 import CityCard from "../reusable/Cards/Cities";
+import {DESTINATIONS_LIST} from "../../utils/const";
+import { Link } from 'react-router-dom';
 
 const ExploreSection = () => {
+
+    const cityCardsArray = DESTINATIONS_LIST.map(d => (
+      <Link to={d.link}>
+          <CityCard
+            key={d.id}
+            url={d.imgUrl}
+            cityName={d.cityName}
+          />
+      </Link>
+    ));
+
     return (
       <div style={{width: '100%'}}>
           <RowContainer height={'3rem'} align='center' justify={'space-between'} margintop={'1rem'} >
@@ -10,16 +23,8 @@ const ExploreSection = () => {
               <p className='seemore'> See More {'>'}  </p>
           </RowContainer>
           <HorizontalScroll>
-              <CityCard url={require('../../assets/images/London.jpeg')} cityName={'London, UK'}/>
-              <CityCard url={require('../../assets/images/Paris.jpeg')} cityName={'Paris, France'}/>
-              <CityCard url={require('../../assets/images/Rome.jpeg')} cityName={'Rome, Italy'}/>
-              <CityCard url={require('../../assets/images/London.jpeg')} cityName={'London, UK'}/>
-              <CityCard url={require('../../assets/images/London.jpeg')} cityName={'London, UK'}/>
-
+              {cityCardsArray}
           </HorizontalScroll>
-
-
-
       </div>
     );
 };

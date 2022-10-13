@@ -138,6 +138,7 @@ textarea:focus, input:focus, select:focus{
   margin-right: 2rem;
   margin-bottom: 1rem;
   min-width: 20em;
+  max-width: 20em;
   height: 30em;
 }
 
