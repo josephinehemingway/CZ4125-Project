@@ -22,7 +22,6 @@ const TikTokSection = () => {
         align="center"
         justify={"space-between"}
         margintop={"1rem"}
-        marginbottom={"1rem"}
       >
         <h3 className="sectiontitle">Explore Popular TikToks</h3>
         <a href="https://www.tiktok.com/search?q=travel"
@@ -33,7 +32,10 @@ const TikTokSection = () => {
           See More {'>'}
         </a>
       </RowContainer>
-      <HorizontalScroll height={'38rem'}>
+      <h3 className="dark-subtitle">
+        Need some inspiration for your next destination? Check out these trending TikToks!
+      </h3>
+      <HorizontalScroll height={'37rem'}>
         { tiktokArray }
       </HorizontalScroll>
     </div>
