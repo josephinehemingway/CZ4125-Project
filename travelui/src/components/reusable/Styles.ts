@@ -17,7 +17,7 @@ export const Container = styled.div`
   padding-top: ${(props: { paddingtop: string }) => (props.paddingtop ? props.paddingtop : '0px')};
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: ${(props: { justify: string }) => (props.justify ? props.justify : 'flex-start')};
   align-items: ${(props: { align: string }) => (props.align ? props.align : 'center')};
 `
 
@@ -113,9 +113,6 @@ export const HorizontalScroll = styled.div`
 //     margin-right: ${(props: { margin: string }) => (props.margin ? props.margin : '20px')};
 //   }
 // `
-
-
-
 
 //
 // export const StyledInputNumber = styled(InputNumber)`

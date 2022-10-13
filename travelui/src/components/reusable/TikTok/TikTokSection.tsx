@@ -35,7 +35,7 @@ const TikTokSection = () => {
       <h3 className="dark-subtitle">
         Need some inspiration for your next destination? Check out these trending TikToks!
       </h3>
-      <HorizontalScroll height={'37rem'}>
+      <HorizontalScroll height={'38rem'}>
         { tiktokArray }
       </HorizontalScroll>
     </div>
