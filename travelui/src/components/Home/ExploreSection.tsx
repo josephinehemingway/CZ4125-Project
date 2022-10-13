@@ -14,8 +14,6 @@ const ExploreSection = () => {
               <CityCard url={require('../../assets/images/Paris.jpeg')} cityName={'Paris, France'}/>
               <CityCard url={require('../../assets/images/Rome.jpeg')} cityName={'Rome, Italy'}/>
               <CityCard url={require('../../assets/images/London.jpeg')} cityName={'London, UK'}/>
-              <CityCard url={require('../../assets/images/Paris.jpeg')} cityName={'Paris, France'}/>
-              <CityCard url={require('../../assets/images/Rome.jpeg')} cityName={'Rome, Italy'}/>
           </HorizontalScroll>
 
 
