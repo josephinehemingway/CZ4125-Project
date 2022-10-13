@@ -10,12 +10,6 @@ import {
   // Tabs,
 } from 'antd'
 
-export const StyledHeading = styled.h2`
-  margin-bottom: 0;
-  font-family: Poppins, sans-serif;
-  font-size: 20px;
-`
-
 export const Container = styled.div`
   width: ${(props: { width: string }) => (props.width ? props.width : '100%')};
   height: ${(props: { height: string }) => (props.height ? props.height : '100%')};
@@ -104,14 +98,13 @@ export const StyledSearch = styled(Input)`
   }
 `
 
-
-// export const HorizontalScroll = styled.div`
-//   width: 100%;
-//   height: 100%;
-//   display: flex;
-//   justify-content: flex-start;
-//   overflow-x: scroll;
-// `
+export const HorizontalScroll = styled.div`
+  //width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  overflow-x: scroll;
+`
 
 // export const StyledRow = styled(Row)`
 //   && {

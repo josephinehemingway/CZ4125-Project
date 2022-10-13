@@ -6,11 +6,14 @@ import Footer from "../../components/reusable/Footer";
 import Logo from "../../assets/images/Logo.png";
 import {SearchOutlined} from "@ant-design/icons";
 import ExploreSection from "../../components/Home/ExploreSection";
-import TikTokSection from "../../components/reusable/TikTokSection";
+import TikTokSection from "../../components/reusable/TikTok/TikTokSection";
 
 const Home = () => {
   const [destination, setDestination] = useState<string>("");
-  const onSearch = (destination: string) => setDestination(destination);
+  const onSearch = (destination: string) => {
+    setDestination(destination);
+    console.log(destination);
+  }
 
   const exploreRef = useRef<HTMLDivElement>(null)
 
@@ -28,7 +31,7 @@ const Home = () => {
     <HomeBanner onClick={onClick}/>
     <Container>
       <Container  ref={exploreRef}  align='center' width='70%' height={'100vh'} paddingtop={'4rem'} >
-        <img src={Logo} width={"60vw"} alt="" />
+        <img src={Logo} width={"60vw"} alt="" style={{marginBottom: '1rem'}} />
         <h3 className="sectiontitle">Where shall we explore today?</h3>
         <StyledSearch
           width={'75%'}

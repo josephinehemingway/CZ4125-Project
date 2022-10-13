@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "../styles.css";
-import Cover from "../../assets/images/kayak.png";
 import Logo from "../../assets/images/Logo.png";
 import {Container, StyledSearchWhite, RowContainer} from "../reusable/Styles";
 import { BorderedButton } from "../reusable/Button";
@@ -12,7 +11,10 @@ type Props = {
 
 const HomeBanner: React.FC<Props> = ({ onClick }) => {
     const [destination, setDestination] = useState<string>("");
-    const onSearch = (destination: string) => setDestination(destination);
+    const onSearch = (destination: string) => {
+        setDestination(destination);
+        console.log(destination);
+    }
 
     return (
           <header >

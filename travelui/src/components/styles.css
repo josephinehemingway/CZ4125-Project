@@ -128,3 +128,44 @@ select {
 textarea:focus, input:focus, select:focus{
   outline: none;
 }
+
+.city-card {
+  overflow: hidden;
+  box-shadow: 0 2px 20px #e1e5ee;
+  cursor: pointer;
+  transition: transform 200ms ease-in;
+  margin-top: 1rem;
+  margin-right: 2rem;
+  margin-bottom: 0.5rem;
+  width: 20em;
+  height: 30em;
+}
+
+.city-card:hover {
+  transform: scale(1.01);
+  box-shadow: 0 2px 25px #a8adb7;
+}
+
+
+.city-img {
+  -webkit-filter: brightness(80%);
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.city-img:hover {
+  -webkit-filter: brightness(60%);
+}
+
+.city-name {
+  position: relative;
+  width: 80%;
+  bottom: 15%;
+  left: 10%;
+  font-family: Poppins-SemiBold, sans-serif;
+  color: #fff;
+  font-size: calc(15px + .3vw);
+}
+

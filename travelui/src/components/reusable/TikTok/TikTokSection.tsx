@@ -1,5 +1,5 @@
 import React from 'react';
-import {RowContainer} from "./Styles";
+import {RowContainer} from "../Styles";
 
 const TikTokSection = () => {
     return (
