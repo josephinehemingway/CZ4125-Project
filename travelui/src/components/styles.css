@@ -1,0 +1,233 @@
+header {
+  background-image: url('../assets/images/kayak.png');
+  height: 100vh;
+  width: 100vw;
+  background-size: 100%;
+  box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2);
+}
+
+.head-image {
+  object-fit: contain;
+  object-position: center;
+  background-size: contain; /* 100% */
+  background-color: #232323;
+  /*background-image: url('../assets/images/London.jpeg');*/
+  height: 40vh;
+  width: 100vw;
+  box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2);
+}
+
+.title {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-family: Poppins-SemiBold, sans-serif;
+  color: white;
+  font-weight: 600;
+  font-size: calc(60px + .7vw);
+  line-height: calc(70px + .7vw);
+}
+
+.title2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-family: Poppins-SemiBold, sans-serif;
+  color: white;
+  font-weight: 600;
+  font-size: calc(45px + .7vw);
+  line-height: calc(50px + .7vw);
+}
+
+.subtitle {
+  font-family: Poppins-Light, sans-serif;
+  color: white;
+  font-size: calc(12px + .7vw);
+  margin-bottom: 0;
+  line-height: 2vw;
+}
+
+.seemore {
+  font-family: Poppins, sans-serif;
+  color: #232323;
+  font-size: calc(12px + .3vw);
+  margin-bottom: 0;
+  line-height: 2vw;
+}
+
+.seemore:hover {
+  color: #46c7c7;
+  transition: all 0.2s ease-in-out;
+}
+
+.sectionheading {
+  color: #232323;
+  font-weight: 600;
+  font-size: 30px;
+  font-family: Poppins, sans-serif ;
+  text-align: center;
+  margin-bottom: 0;
+  margin-top: 1rem;
+}
+
+.text-on-image-center {
+  position: absolute;
+  top: 10%;
+  width: 100%;
+  font-weight: 300;
+  font-family: Poppins, sans-serif;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.text-on-image-left {
+  position: absolute;
+  left: 10%;
+  top: 30%;
+  width: 35%;
+  font-weight: 300;
+  font-family: Poppins, sans-serif;
+  color: white;
+  background: none;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.text-on-image-right {
+  position: absolute;
+  right: 10%;
+  top: 40%;
+  width: 35%;
+  font-weight: 300;
+  font-family: Poppins, sans-serif;
+  color: white;
+  background: none;
+  align-items: flex-end;
+  text-align: left;
+}
+
+.center-title-on-image {
+  position: absolute;
+  width: 100%;
+  top: 30%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+body.home {
+  background-color: white;
+}
+
+.double-input {
+  color: #fff;
+  background: none;
+  border: 1.2px solid #fff;
+  border-radius: 60px;
+  width: 40%;
+  height: calc(20px + 2vw);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 1.5rem;
+  padding-right: 1rem;
+  font-size: calc(10px + .4vw);
+  margin-right: 1rem;
+  overflow-x: hidden;
+}
+
+.double-input:hover {
+   border: 2px solid #46c7c7;
+}
+
+input {
+  background: none;
+  border: none;
+}
+
+select {
+  background: none;
+  border: none;
+}
+
+textarea:focus, input:focus, select:focus{
+  outline: none;
+}
+
+.city-card {
+  overflow: hidden;
+  box-shadow: 0 2px 20px #e1e5ee;
+  cursor: pointer;
+  transition: transform 200ms ease-in;
+  margin-top: 1.5rem;
+  margin-right: 2rem;
+  margin-bottom: 1rem;
+  min-width: 20em;
+  max-width: 20em;
+  height: 30em;
+}
+
+.city-card:hover {
+  transform: scale(1.01);
+  box-shadow: 0 2px 25px #a8adb7;
+}
+
+.city-img {
+  -webkit-filter: brightness(80%);
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.city-img:hover {
+  -webkit-filter: brightness(60%);
+}
+
+.city-name {
+  position: relative;
+  width: 80%;
+  bottom: 15%;
+  left: 10%;
+  font-family: Poppins-SemiBold, sans-serif;
+  color: #fff;
+  font-size: calc(15px + .3vw);
+}
+
+.tiktok {
+  min-width: 20rem;
+  border-radius: 20rem;
+  left: 0;
+  position: relative;
+  margin-right: 2rem;
+}
+
+.tiktok-iframe {
+  width: 100%;
+  height: 36rem;
+  border: none;
+  border-radius: 10px;
+  margin-top: 1rem;
+  position: relative;
+  top: 0;
+  transition: transform 200ms ease-in;
+}
+
+.tiktok-iframe:hover {
+  transform: scale(1.005);
+  box-shadow: 0 2px 25px #a8adb7;
+  transition: transform 200ms ease-in;
+}
+
+.dark-subtitle {
+  font-family: Poppins, sans-serif;
+  color: #000;
+  font-size: calc(12px + .3vw);
+  margin-bottom: 0;
+  margin-top: 0;
+  line-height: 2vw;
+}
