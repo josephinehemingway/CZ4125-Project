@@ -1,18 +1,14 @@
-# Getting Started with Create React App
+# Travel App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) TS template.
+CZ4025 Developing Data Products Group 7 2022
 
-## Available Scripts
-
-In the project directory, you can run:
+## Commands
+### `npm i`
+- Run this before starting to install all dependencies after pulling from git
 
 ### `npm start`
-
-Runs the app in the development mode.\
+- to start the application in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
 ### `npm test`
 
