@@ -100,7 +100,7 @@ export const StyledSearch = styled(Input)`
 
 export const HorizontalScroll = styled.div`
   width: 100%;
-  height: 35em;
+  height: ${(props: { height: string }) => (props.height ? props.height : '35em')};;
   display: flex;
   justify-content: flex-start;
   overflow-x: scroll;

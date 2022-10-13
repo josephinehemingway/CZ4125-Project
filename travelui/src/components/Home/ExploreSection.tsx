@@ -5,7 +5,6 @@ import {DESTINATIONS_LIST} from "../../utils/const";
 import { Link } from 'react-router-dom';
 
 const ExploreSection = () => {
-
     const cityCardsArray = DESTINATIONS_LIST.map(d => (
       <Link to={d.link}>
           <CityCard
@@ -20,7 +19,13 @@ const ExploreSection = () => {
       <div style={{width: '100%'}}>
           <RowContainer height={'3rem'} align='center' justify={'space-between'} margintop={'1rem'} >
               <h3 className='sectiontitle'>Explore Popular Destinations</h3>
-              <p className='seemore'> See More {'>'}  </p>
+              <a href="https://www.tiktok.com/search?q=travel"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 className='seemore'
+              >
+                See More {'>'}
+              </a>
           </RowContainer>
           <HorizontalScroll>
               {cityCardsArray}

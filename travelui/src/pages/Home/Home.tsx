@@ -30,7 +30,7 @@ const Home = () => {
     <body className="home">
     <HomeBanner onClick={onClick}/>
     <Container>
-      <Container  ref={exploreRef}  align='center' width='70%' height={'100vh'} paddingtop={'4rem'} >
+      <Container  ref={exploreRef}  align='center' width='70%' height={'150vh'} paddingtop={'4rem'} >
         <img src={Logo} width={"60vw"} alt="" style={{marginBottom: '1rem'}} />
         <h3 className="sectiontitle">Where shall we explore today?</h3>
         <StyledSearch
