@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 import "../Pages.css";
-import { Container, StyledSearch } from "../../components/reusable/Styles";
+import { Container, StyledSearch, StyledSectionTitle } from "../../components/reusable/Styles";
 import HomeBanner from "../../components/Home/HomeBanner";
 import ExploreSection from "../../components/Home/ExploreSection";
 import TikTokSection from "../../components/reusable/TikTok/TikTokSection";
@@ -42,7 +42,7 @@ const Home: React.FC = () => {
           alt=""
           style={{ marginBottom: "1rem" }}
         />
-        <h3 className="sectiontitle">Where shall we explore today?</h3>
+        <StyledSectionTitle>Where shall we explore today?</StyledSectionTitle>
         <StyledSearch
           width={"75%"}
           suffix={<img src={Plane} height={"20rem"} alt="" />}
