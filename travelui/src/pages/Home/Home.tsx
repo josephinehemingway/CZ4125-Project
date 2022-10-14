@@ -33,7 +33,7 @@ const Home: React.FC = () => {
         ref={exploreRef}
         align="center"
         width="70%"
-        height={"155vh"}
+        paddingbottom={'1.5rem'}
         paddingtop={"4rem"}
       >
         <img

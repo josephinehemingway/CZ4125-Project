@@ -7,8 +7,9 @@ import {
 export const Container = styled.div`
   width: ${(props: { width: string }) => (props.width ? props.width : '100%')};
   height: ${(props: { height: string }) => (props.height ? props.height : '100%')};
-  margin-top: ${(props: { margintop: string }) => (props.margintop ? props.margintop : '0px')};
-  padding-top: ${(props: { paddingtop: string }) => (props.paddingtop ? props.paddingtop : '0px')};
+  margin-top: ${(props: { margintop: string }) => (props.margintop ? props.margintop : '0')};
+  padding-top: ${(props: { paddingtop: string }) => (props.paddingtop ? props.paddingtop : '0')};
+  padding-bottom: ${(props: { paddingbottom: string }) => (props.paddingbottom ? props.paddingbottom : '0')};
   display: flex;
   flex-direction: column;
   justify-content: ${(props: { justify: string }) => (props.justify ? props.justify : 'flex-start')};
@@ -23,10 +24,10 @@ export const RowContainer = styled.div`
   justify-content:  ${(props: { justify: string }) => (props.justify ? props.justify : 'center')};;
   width: ${(props: { width: string }) => (props.width ? props.width : "100%")};
   height: ${(props: { height: string }) => (props.height ? props.height : "100%")};
-  margin-top: ${(props: { margintop: string }) => props.margintop ? props.margintop : "0px"};
-  margin-bottom:  ${(props: { marginbottom: string }) => props.marginbottom ? props.marginbottom : "0px"};
-  margin-right: ${(props: { marginright: string }) => props.marginright ? props.marginright : "0px"};
-  margin-left: ${(props: { marginleft: string }) => props.marginleft ? props.marginleft : "0px"};
+  margin-top: ${(props: { margintop: string }) => props.margintop ? props.margintop : "0"};
+  margin-bottom:  ${(props: { marginbottom: string }) => props.marginbottom ? props.marginbottom : "0"};
+  margin-right: ${(props: { marginright: string }) => props.marginright ? props.marginright : "0"};
+  margin-left: ${(props: { marginleft: string }) => props.marginleft ? props.marginleft : "0"};
 }
 `
 
@@ -146,7 +147,7 @@ export const StyledTitle = styled.h3`
     color: ${(props: { color: string }) => (props.color ? props.color : '#fff')};
     font-weight: 600;
     font-size: calc(60px + .7vw);
-    line-height: calc(70px + .7vw);
+    line-height: calc(80px + .2vw);
   }
 `
 
@@ -158,7 +159,7 @@ export const StyledHeading = styled.h3`
     color: ${(props: { color: string }) => (props.color ? props.color : '#fff')};
     font-weight: 600;
     font-size: calc(45px + .7vw);
-    line-height: calc(50px + .7vw);
+    line-height: calc(60px + .5vw);
   }
 `
 
@@ -174,6 +175,18 @@ export const StyledSectionTitle = styled.h3`
   }
 `
 
+export const StyledPageTitle = styled.h3`
+  && {
+    margin-top: ${(props: { margintop: string }) => (props.margintop ? props.margintop : '0')};
+    margin-bottom: ${(props: { marginbottom: string }) => (props.marginbottom ? props.marginbottom : '0')};
+    font-family: Poppins-SemiBold, sans-serif;
+    color: ${(props: { color: string }) => (props.color ? props.color : '#2d2d2d')};
+    font-weight: 600;
+    font-size: calc(35px + .7vw);
+    text-align: center;
+  }
+`
+
 export const StyledSubtitle = styled.h3`
   && {
     margin-top: ${(props: { margintop: string }) => (props.margintop ? props.margintop : '0')};
@@ -181,7 +194,7 @@ export const StyledSubtitle = styled.h3`
     font-family: Poppins-Light, sans-serif;
     color: ${(props: { color: string }) => (props.color ? props.color : '#fff')};
     font-size: calc(12px + .7vw);
-    line-height: 2vw;
+    line-height: calc(20px + .5vw);
   }
 `
 
@@ -192,7 +205,7 @@ export const StyledLink = styled.a`
     font-family: Poppins, sans-serif;
     color: ${(props: { color: string }) => (props.color ? props.color : '#232323')};
     font-size: calc(12px + .3vw);
-    line-height: 2vw;
+    line-height: calc(20px + .5vw);
     
     &:hover {
       color: #46c7c7;
@@ -208,7 +221,7 @@ export const StyledText = styled.p`
     font-family: Poppins, sans-serif;
     color: ${(props: { color: string }) => (props.color ? props.color : '#000')};
     font-size: calc(12px + .3vw);
-    line-height: 2vw;
+    line-height: calc(20px + .5vw);
   }
 `
 //

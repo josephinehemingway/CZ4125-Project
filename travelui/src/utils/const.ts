@@ -16,31 +16,31 @@ export const DESTINATIONS_LIST: DESTINATIONS_INTERFACE[] = [
         id: 1,
         cityName: "London, UK",
         imgUrl: London,
-        link: "/explore/London"
+        link: "/explore/UK/London"
     },
     {
         id: 2,
         cityName: "Paris, France",
         imgUrl: Paris,
-        link: "/explore/Paris"
+        link: "/explore/France/Paris"
     },
     {
         id: 3,
         cityName: "Rome, Italy",
         imgUrl: Rome,
-        link: "/explore/Rome"
+        link: "/explore/Italy/Rome"
     },
     {
         id: 4,
         cityName: "Zurich, Switzerland",
         imgUrl: Zurich,
-        link: "/explore/Zurich"
+        link: "/explore/Switzerland/Zurich"
     },
     {
         id: 5,
         cityName: "Madrid, Spain",
         imgUrl: Madrid,
-        link: "/explore/Madrid"
+        link: "/explore/Spain/Madrid"
     },
 ]
 
