@@ -1,6 +1,13 @@
 import React, { useState } from "react";
 import "../styles.css";
-import { Container, StyledSearchWhite, RowContainer } from "../reusable/Styles";
+import {
+  Container,
+  StyledSearchWhite,
+  RowContainer,
+  StyledDoubleInput,
+  StyledTitle,
+  StyledSubtitle,
+} from "../reusable/Styles";
 import { BorderedButton } from "../reusable/Button";
 import { Link } from "react-router-dom";
 import Logo from "../../assets/images/Logo.png";
@@ -23,10 +30,10 @@ const HomeBanner: React.FC<Props> = ({ onClick }) => {
         <Link to="/">
           <img src={Logo} width={"60vw"} alt="" />
         </Link>
-        <h3 className="title">Too busy to plan your trips?</h3>
-        <h3 className="subtitle">
+        <StyledTitle>Too busy to plan your trips?</StyledTitle>
+        <StyledSubtitle>
           Grab ‘n’ go an itinerary for your next destination with us!
-        </h3>
+        </StyledSubtitle>
         <BorderedButton onClick={onClick}>Explore</BorderedButton>
       </div>
       <div className="text-on-image-right">
@@ -42,7 +49,7 @@ const HomeBanner: React.FC<Props> = ({ onClick }) => {
             allowClear
           />
           <RowContainer justify={"flex-end"}>
-            <div className="double-input">
+            <StyledDoubleInput>
               <div
                 style={{
                   display: "flex",
@@ -75,7 +82,7 @@ const HomeBanner: React.FC<Props> = ({ onClick }) => {
                 <option value="autumn">Autumn</option>
                 <option value="winter">Winter</option>
               </select>
-            </div>
+            </StyledDoubleInput>
             <BorderedButton margintop={"0rem"}>Let's Go</BorderedButton>
           </RowContainer>
         </Container>

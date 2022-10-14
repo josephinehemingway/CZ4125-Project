@@ -2,7 +2,11 @@ import React, { useState } from "react";
 import "../styles.css";
 import Logo from "../../assets/images/Logo.png";
 import Plane from "../../assets/images/Plane.png";
-import { StyledSearchWhite, Container } from "../reusable/Styles";
+import {
+  StyledSearchWhite,
+  Container,
+  StyledHeading,
+} from "../reusable/Styles";
 import { Link } from "react-router-dom";
 
 type Props = {
@@ -27,7 +31,7 @@ const ExploreBanner: React.FC<Props> = ({ coverUrl, destinationName }) => {
         <Link to="/">
           <img src={Logo} width={"60vw"} alt="" />
         </Link>
-        <h3 className="title2">Explore {destinationName}</h3>
+        <StyledHeading>Explore {destinationName}</StyledHeading>
         <Container width={"50%"}>
           <StyledSearchWhite
             width={"90%"}

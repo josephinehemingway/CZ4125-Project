@@ -1,13 +1,7 @@
 // @ts-ignore
 import styled from 'styled-components'
 import {
-  Input,
-//   InputNumber,
-  // Card,
-  // Select,
-  // Table,
-  // Col,
-  // Tabs,
+  Input
 } from 'antd'
 
 export const Container = styled.div`
@@ -106,14 +100,117 @@ export const HorizontalScroll = styled.div`
   overflow-x: scroll;
 `
 
-// export const StyledRow = styled(Row)`
-//   && {
-//     width: ${(props: { margin: string }) => (props.margin ? props.margin : '100%')};
-//     margin-bottom:  ${(props: { margin: string }) => (props.margin ? props.margin : '20px')};
-//     margin-right: ${(props: { margin: string }) => (props.margin ? props.margin : '20px')};
-//   }
-// `
+export const StyledDoubleInput = styled.div`
+  && {
+    color: #fff;
+    background: none;
+    border: 1.2px solid #fff;
+    border-radius: 60px;
+    width: 40%;
+    height: calc(20px + 2vw);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 1.5rem;
+    padding-right: 1rem;
+    font-size: calc(10px + .4vw);
+    margin-right: 1rem;
+    overflow-x: hidden;
+    
+    &:hover {
+      border: 2px solid #46c7c7;
+    }
 
+    input {
+      background: none;
+      border: none;
+    }
+
+    select {
+      background: none;
+      border: none;
+    }
+
+    textarea:focus, input:focus, select:focus{
+      outline: none;
+    }
+  }
+`
+
+export const StyledTitle = styled.h3`
+  && {
+    margin-top: ${(props: { margintop: string }) => (props.margintop ? props.margintop : '1rem')};
+    margin-bottom: ${(props: { marginbottom: string }) => (props.marginbottom ? props.marginbottom : '1rem')};
+    font-family: Poppins-SemiBold, sans-serif;
+    color: ${(props: { color: string }) => (props.color ? props.color : '#fff')};
+    font-weight: 600;
+    font-size: calc(60px + .7vw);
+    line-height: calc(70px + .7vw);
+  }
+`
+
+export const StyledHeading = styled.h3`
+  && {
+    margin-top: ${(props: { margintop: string }) => (props.margintop ? props.margintop : '0.5rem')};
+    margin-bottom: ${(props: { marginbottom: string }) => (props.marginbottom ? props.marginbottom : '0.5rem')};
+    font-family: Poppins-SemiBold, sans-serif;
+    color: ${(props: { color: string }) => (props.color ? props.color : '#fff')};
+    font-weight: 600;
+    font-size: calc(45px + .7vw);
+    line-height: calc(50px + .7vw);
+  }
+`
+
+export const StyledSectionTitle = styled.h3`
+  && {
+    margin-top: ${(props: { margintop: string }) => (props.margintop ? props.margintop : '0')};
+    margin-bottom: ${(props: { marginbottom: string }) => (props.marginbottom ? props.marginbottom : '0')};
+    font-family: Poppins, sans-serif;
+    color: ${(props: { color: string }) => (props.color ? props.color : '#232323')};
+    font-weight: 600;
+    font-size: calc(20px + .5vw);
+    text-align: center;
+  }
+`
+
+export const StyledSubtitle = styled.h3`
+  && {
+    margin-top: ${(props: { margintop: string }) => (props.margintop ? props.margintop : '0')};
+    margin-bottom: ${(props: { marginbottom: string }) => (props.marginbottom ? props.marginbottom : '0')};
+    font-family: Poppins-Light, sans-serif;
+    color: ${(props: { color: string }) => (props.color ? props.color : '#fff')};
+    font-size: calc(12px + .7vw);
+    line-height: 2vw;
+  }
+`
+
+export const StyledLink = styled.a`
+  && {
+    margin-top: ${(props: { margintop: string }) => (props.margintop ? props.margintop : '0')};
+    margin-bottom: ${(props: { marginbottom: string }) => (props.marginbottom ? props.marginbottom : '0')};
+    font-family: Poppins, sans-serif;
+    color: ${(props: { color: string }) => (props.color ? props.color : '#232323')};
+    font-size: calc(12px + .3vw);
+    line-height: 2vw;
+    
+    &:hover {
+      color: #46c7c7;
+      transition: all 0.2s ease-in-out;
+    }
+  }
+`
+
+export const StyledText = styled.p`
+  && {
+    margin-top: ${(props: { margintop: string }) => (props.margintop ? props.margintop : '0')};
+    margin-bottom: ${(props: { marginbottom: string }) => (props.marginbottom ? props.marginbottom : '0')};
+    font-family: Poppins, sans-serif;
+    color: ${(props: { color: string }) => (props.color ? props.color : '#000')};
+    font-size: calc(12px + .3vw);
+    line-height: 2vw;
+  }
+`
 //
 // export const StyledInputNumber = styled(InputNumber)`
 //   && {
@@ -141,19 +238,6 @@ export const HorizontalScroll = styled.div`
 //   }
 // `
 //
-// export const StyledCard = styled(Card)`
-//   && {
-//     width: 100%;
-//     background-color: #F2F6FE;
-//   }
-// `
-//
-// export const StyledTable = styled(Table)`
-//   && {
-//     width: 100%;
-//     margin-bottom: 20px;
-//   }
-// `
 // export const ContentContainer = styled(Col)`
 //   && {
 //     padding: ${(props) => (props.padding ? props.padding : '10px')};
@@ -163,20 +247,6 @@ export const HorizontalScroll = styled.div`
 //     justify-content: flex-start;
 //     align-items: ${(props) => (props.alignitems ? props.alignitems : 'flex-start')};
 //   }
-// `
-//
-// export const LeftColumn = styled.div`
-//   width: 72%;
-//   height: 100%;
-//   display: flex;
-//   flex-direction: column;
-//   height: 100%;
-// `
-//
-// export const RightColumn = styled(LeftColumn)`
-//   width: 28%;
-//   padding-left: 30px;
-//   margin-top: 55px;
 // `
 //
 // export const StyledTabs = styled(Tabs)`

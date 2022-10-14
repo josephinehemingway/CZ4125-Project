@@ -1,4 +1,5 @@
 import React from 'react';
+import './Cards.css';
 
 type Props = {
     url: string;

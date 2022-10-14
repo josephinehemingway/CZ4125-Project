@@ -1,5 +1,5 @@
 import React from "react";
-import { RowContainer, HorizontalScroll } from "../reusable/Styles";
+import {RowContainer, HorizontalScroll, StyledLink, StyledSectionTitle} from "../reusable/Styles";
 import CityCard from "../reusable/Cards/Cities";
 import { DESTINATIONS_LIST } from "../../utils/const";
 import { Link } from "react-router-dom";
@@ -28,15 +28,14 @@ const ExploreSection = () => {
         justify={"space-between"}
         margintop={"1rem"}
       >
-        <h3 className="sectiontitle">Explore Popular Destinations</h3>
-        <a
+        <StyledSectionTitle>Explore Popular Destinations</StyledSectionTitle>
+        <StyledLink
           href="https://www.tiktok.com/search?q=travel"
           target="_blank"
           rel="noopener noreferrer"
-          className="seemore"
         >
           See More {">"}
-        </a>
+        </StyledLink>
       </RowContainer>
       <HorizontalScroll>{cityCardsArray}</HorizontalScroll>
     </div>
