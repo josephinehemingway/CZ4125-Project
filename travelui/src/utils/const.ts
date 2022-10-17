@@ -16,66 +16,66 @@ export const DESTINATIONS_LIST: DESTINATIONS_INTERFACE[] = [
         id: 1,
         cityName: "London, UK",
         imgUrl: London,
-        link: "/explore/London"
+        link: "/explore/UK/London"
     },
     {
         id: 2,
         cityName: "Paris, France",
         imgUrl: Paris,
-        link: "/explore/Paris"
+        link: "/explore/France/Paris"
     },
     {
         id: 3,
         cityName: "Rome, Italy",
         imgUrl: Rome,
-        link: "/explore/Rome"
+        link: "/explore/Italy/Rome"
     },
     {
         id: 4,
         cityName: "Zurich, Switzerland",
         imgUrl: Zurich,
-        link: "/explore/Zurich"
+        link: "/explore/Switzerland/Zurich"
     },
     {
         id: 5,
         cityName: "Madrid, Spain",
         imgUrl: Madrid,
-        link: "/explore/Madrid"
+        link: "/explore/Spain/Madrid"
     },
 ]
 
 export interface TIKTOK_INTERFACE {
-    id: number;
+    id: string;
     embedUrl: string;
 }
 
 export const TIKTOK_LIST: TIKTOK_INTERFACE[] = [
     {
-        id: 7153200517185801474,
+        id: '7153200517185801474',
         embedUrl: '7153200517185801474'
     },
     {
-        id: 7017992166064590085,
+        id: '7017992166064590085',
         embedUrl: '7017992166064590085'
     },
     {
-        id: 7148877963805658373,
+        id: '7148877963805658373',
         embedUrl: '7148877963805658373'
     },
     {
-        id: 7133282938900319493,
+        id: '7133282938900319493',
         embedUrl: '7133282938900319493'
     },
     {
-        id: 7049207025682697477,
+        id: '7049207025682697477',
         embedUrl: '7049207025682697477'
     },
     {
-        id: 7122010129549118747,
+        id: '7122010129549118747',
         embedUrl: '7122010129549118747'
     },
     {
-        id: 7140994174752410885,
+        id: '7140994174752410885',
         embedUrl: '7140994174752410885'
     },
 
