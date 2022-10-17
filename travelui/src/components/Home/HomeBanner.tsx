@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import "../styles.css";
 import {
     Container,
-    StyledSearchWhite,
+    StyledInputSearch,
     RowContainer,
     StyledDoubleInput,
     StyledTitle,
-    StyledSubtitle,
+    StyledSubtitle
 } from "../reusable/Styles";
 import { BorderedButton } from "../reusable/Button";
 import { Link } from "react-router-dom";
@@ -38,10 +38,10 @@ const HomeBanner: React.FC<Props> = ({ onClick }) => {
             </div>
             <div className="text-on-image-right">
                 <Container align={"flex-end"}>
-                    <StyledSearchWhite
-                        enterButton={
-                            <img src={Plane} height={"20rem"} alt="" />
-                        }
+                    <StyledInputSearch
+                        col={'white'}
+                        nohover
+                        suffix={<img src={Plane} height={"20rem"} alt="" />}
                         width={"90%"}
                         placeholder="Search Destinations"
                         value={destination === "" ? undefined : destination}

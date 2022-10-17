@@ -15,10 +15,9 @@ type Props = {
 
 const TikTokSection: React.FC<Props> = ({ TikTokList }) => {
     const tiktokArray = TikTokList.map((t) => (
-        <div className={"tiktok"}>
+        <div key={t.id} className={"tiktok"}>
             <iframe
                 title={t.id}
-                key={t.id}
                 src={`https://www.tiktok.com/embed/${t.embedUrl}`}
                 className="tiktok-iframe"
                 allow="encrypted-media;"

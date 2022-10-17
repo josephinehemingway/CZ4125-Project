@@ -41,20 +41,29 @@ const Explore: React.FC = () => {
                     size="large"
                     tabBarGutter={50}
                     tabBarStyle={{ fontFamily: "Poppins-Medium" }}
-                >
-                    <Tabs.TabPane tab="Attractions" key="1">
-                        Attractions Tab
-                    </Tabs.TabPane>
-                    <Tabs.TabPane tab="Food" key="2">
-                        Food Tab
-                    </Tabs.TabPane>
-                    <Tabs.TabPane tab="Accommodations" key="3">
-                        Accommodations Tab
-                    </Tabs.TabPane>
-                    <Tabs.TabPane tab="Guides" key="4">
-                        Guides Tab
-                    </Tabs.TabPane>
-                </Tabs>
+                    items={[
+                        {
+                            label: `Attractions`,
+                            key: '1',
+                            children: ` Attractions Tab`,
+                        },
+                        {
+                            label: `Food`,
+                            key: '2',
+                            children: `Food Tab`,
+                        },
+                        {
+                            label: `Accommodations`,
+                            key: '3',
+                            children: `Accommodations Tab`,
+                        },
+                        {
+                            label: `Guides`,
+                            key: '4',
+                            children: `Guides Tab`,
+                        },
+                    ]}
+                />
             </Container>
         </body>
     );

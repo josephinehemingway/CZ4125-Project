@@ -15,9 +15,8 @@ const ExploreSection = () => {
     };
 
     const cityCardsArray = DESTINATIONS_LIST.map((d) => (
-        <Link to={d.link}>
+        <Link key={d.id} to={d.link}>
             <CityCard
-                key={d.id}
                 onClick={scrollToTop}
                 url={d.imgUrl}
                 cityName={d.cityName}

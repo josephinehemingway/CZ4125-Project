@@ -44,84 +44,58 @@ export const RowContainer = styled.div`
     }
 `;
 
-export const StyledSearchWhite = styled(Input.Search)`
+interface StyledInputSearchProps {
+    col: string | undefined;
+    nohover: boolean | undefined;
+}
+
+export const StyledInputSearch = styled(Input)<
+    Partial<StyledInputSearchProps>
+>`
     && {
+        ${({ col }: any) =>
+            col === "white" &&
+            `
+        color: #fff;
+        border: 1.2px solid #fff;
         .ant-input {
             background: none;
             color: #fff;
-            margin-left: 1rem;
+            margin-left: 0.5rem;
         }
-
-        .ant-input-group {
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            border: 1.2px solid #fff;
-            margin-top: 1rem;
-            margin-bottom: 1rem;
-            border-radius: 60px !important;
-
-            &:hover {
-                border: 1.2px solid #46c7c7;
-            }
-        }
-
-        .ant-input-affix-wrapper {
-            border-bottom-left-radius: 60px !important;
-            border-top-left-radius: 60px !important;
-
-            background: none;
-            border: none;
-            height: calc(20px + 2vw);
-            width: ${(props: { width: string }) =>
-                props.width ? props.width : "70%"};
-            font-size: calc(10px + 0.4vw);
-            font-family: Poppins-Medium, sans-serif;
-          
-          &:active {
-            outline: none !important;
-          }
-
-          .input {
-            background: none;
-            border: none;
-          }
-
-          .select {
-            background: none;
-            border: none;
-          !important
-          }
-
-          .textarea:focus,
-          .input:focus,
-          .select:focus {
-            outline: none !important;
-          }
-        }
-
-        .ant-input-group-addon {
-            background: none;
-        }
-
-        .ant-input-search-button {
-            background-color: var(--color-primary);
-            border: none;
-            border-radius: 60px !important;
-            height: calc(20px + 2vw);
-        }
-      
         .anticon {
             color: #fff;
         }
-    }
-`;
-
-export const StyledSearch = styled(Input)`
-    && {
+        `}
+        ${({ col }: any) =>
+            col === "black" &&
+            `
         color: #000;
-        background: none;
         border: 1.2px solid #000;
+        .ant-input {
+            background: none;
+            color: #000;
+            margin-left: 0.5rem;
+        }
+        .anticon {
+            color: #000;
+        }
+        `}
+
+        ${({ nohover }: any) =>
+            !nohover &&
+            `
+            img {
+            -webkit-filter: opacity(60%);
+        }
+
+          img:hover {
+            transform: scale(1.01);
+            -webkit-filter: opacity(100%);
+          }
+        
+        `}
+        background: none;
         border-radius: 60px;
         width: ${(props: { width: string }) =>
             props.width ? props.width : "70%"};
@@ -129,7 +103,6 @@ export const StyledSearch = styled(Input)`
         display: flex;
         flex-direction: row;
         padding: 1vw;
-
         margin-top: 1rem;
         margin-bottom: 1rem;
         font-family: Poppins-Medium, sans-serif;
@@ -137,12 +110,6 @@ export const StyledSearch = styled(Input)`
 
         &:hover {
             border: 2px solid #46c7c7;
-        }
-
-        .ant-input {
-            background: none;
-            color: #000;
-            margin-left: 0.5rem;
         }
     }
 `;
@@ -302,6 +269,79 @@ export const StyledText = styled.p`
         line-height: calc(20px + 0.5vw);
     }
 `;
+
+// export const StyledSearchWhite = styled(Input.Search)`
+//     && {
+//         .ant-input {
+//             background: none;
+//             color: #fff;
+//             margin-left: 1rem;
+//         }
+//
+//         .ant-input-group {
+//             display: flex;
+//             justify-content: flex-start;
+//             align-items: center;
+//             border: 1.2px solid #fff;
+//             margin-top: 1rem;
+//             margin-bottom: 1rem;
+//             border-radius: 60px !important;
+//
+//             &:hover {
+//                 border: 1.2px solid #46c7c7;
+//             }
+//         }
+//
+//         .ant-input-affix-wrapper {
+//             border-bottom-left-radius: 60px !important;
+//             border-top-left-radius: 60px !important;
+//
+//             background: none;
+//             border: none;
+//             height: calc(20px + 2vw);
+//             width: ${(props: { width: string }) =>
+//                 props.width ? props.width : "70%"};
+//             font-size: calc(10px + 0.4vw);
+//             font-family: Poppins-Medium, sans-serif;
+//
+//           &:active {
+//             outline: none !important;
+//           }
+//
+//           .input {
+//             background: none;
+//             border: none;
+//           }
+//
+//           .select {
+//             background: none;
+//             border: none;
+//           !important
+//           }
+//
+//           .textarea:focus,
+//           .input:focus,
+//           .select:focus {
+//             outline: none !important;
+//           }
+//         }
+//
+//         .ant-input-group-addon {
+//             background: none;
+//         }
+//
+//         .ant-input-search-button {
+//             background-color: var(--color-primary);
+//             border: none;
+//             border-radius: 60px !important;
+//             height: calc(20px + 2vw);
+//         }
+//
+//         .anticon {
+//             color: #fff;
+//         }
+//     }
+// `;
 
 // export const StyledInputNumber = styled(InputNumber)`
 //   && {
