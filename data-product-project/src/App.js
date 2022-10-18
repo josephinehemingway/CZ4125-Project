@@ -26,11 +26,12 @@ const App = () => {
           </Grid> */}
           <Grid item xs={12} md={8} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
             <Map
+              //defaultCenter={{ lat:-1.2884, lng:36.8233 }}
               //setChildClicked={setChildClicked}
               // setBounds={setBounds}
               // setCoords={setCoords}
               // coords={coords}
-              //places={places}
+              // places={places}
               // weatherData={weatherData}
             />
           </Grid>
