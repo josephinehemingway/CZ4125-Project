@@ -24,7 +24,7 @@ const Explore: React.FC = () => {
             />
             <Container
                 width="70%"
-                height={"155vh"}
+                height={"195vh"}
                 paddingtop={"2rem"}
                 align="flex-start"
             >

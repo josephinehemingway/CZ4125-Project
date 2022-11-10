@@ -9,7 +9,6 @@ import Footer from "./components/reusable/Footer";
 function App() {
     return (
         <Router>
-            {/*<Navbar/>*/}
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route
