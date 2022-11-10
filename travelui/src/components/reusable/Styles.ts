@@ -276,6 +276,20 @@ export const StyledText = styled.p`
     }
 `;
 
+export const StyledSubSubheading = styled.p`
+    && {
+        margin-top: ${(props: { margintop: string }) =>
+    props.margintop ? props.margintop : "0"};
+        margin-bottom: ${(props: { marginbottom: string }) =>
+    props.marginbottom ? props.marginbottom : "0"};
+        font-family: Poppins-SemiBold, sans-serif;
+        color: ${(props: { color: string }) =>
+    props.color ? props.color : "#000"};
+        font-size: calc(18px + 0.3vw);
+        line-height: calc(20px + 0.5vw);
+    }
+`;
+
 // export const StyledSearchWhite = styled(Input.Search)`
 //     && {
 //         .ant-input {

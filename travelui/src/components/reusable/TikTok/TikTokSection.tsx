@@ -11,9 +11,10 @@ import "./TikTok.css";
 
 type Props = {
     TikTokList: TIKTOK_INTERFACE[];
+    title?: string;
 };
 
-const TikTokSection: React.FC<Props> = ({ TikTokList }) => {
+const TikTokSection: React.FC<Props> = ({ TikTokList, title}) => {
     const tiktokArray = TikTokList.map((t) => (
         <div key={t.id} className={"tiktok"}>
             <iframe
@@ -33,7 +34,10 @@ const TikTokSection: React.FC<Props> = ({ TikTokList }) => {
                 justify={"space-between"}
                 margintop={"1rem"}
             >
-                <StyledSectionTitle>Explore Popular TikToks</StyledSectionTitle>
+                {title ?
+                    <StyledSectionTitle>{title}</StyledSectionTitle>
+                    : <StyledSectionTitle>Explore Popular TikToks</StyledSectionTitle>
+                }
                 <StyledLink
                     href="https://www.tiktok.com/search?q=travel"
                     target="_blank"
