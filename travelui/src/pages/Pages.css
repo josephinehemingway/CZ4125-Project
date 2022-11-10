@@ -1,0 +1,18 @@
+ body.home {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+ }
+
+ .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+     color: #46c7c7 !important;
+     font-weight: 500;
+ }
+
+ .ant-tabs-ink-bar {
+     position: absolute;
+     background: #46c7c7 !important;
+     pointer-events: none;
+ }

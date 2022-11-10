@@ -10,8 +10,7 @@ import pandas as pd
 
  
 api = TikTokApi()
-vids = api.hashtag(name="Switzerland").videos(count=100)
-count=0
+vids = api.hashtag(name="Switzerland").videos()
 
 #vids is an iterator
 # print(type(vids))
@@ -19,34 +18,16 @@ count=0
 # iterate through iterator
 for trending_video in vids:
     print("----------")
-<<<<<<< HEAD
     # COMMENTS
     # print(trending_video.comments())
     for comment in trending_video.comments():
          print(comment)
 
-=======
-    
->>>>>>> a8cae99 (Google itinerary function, still in progress)
     # DOWNLOAD ADDRESS
-    #info = trending_video.info()
-    #print(info['video']['downloadAddr'])
+    info = trending_video.info()
+    print(info['video']['downloadAddr'])
 
-<<<<<<< HEAD
-=======
-    # COMMENTS
-    #print(trending_video.comments())
-    #for comment in trending_video.comments():
-        #print(comment)
-    
->>>>>>> a8cae99 (Google itinerary function, still in progress)
     # stats = trending_video.stats
-    author = trending_video.author.username
-    print(author)
-    count = count +1
-
-
-print(count)
-
+    # author = trending_video.author.username
 
 
