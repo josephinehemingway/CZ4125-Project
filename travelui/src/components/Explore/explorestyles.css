@@ -1,0 +1,17 @@
+.explore-gallery {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.explore-subgallery {
+    width: 70%;
+    display: flex;
+    align-content: space-between;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    height: 100%;
+}
+

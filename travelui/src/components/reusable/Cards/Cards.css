@@ -37,3 +37,47 @@
   color: #fff;
   font-size: calc(15px + .3vw);
 }
+
+.attr-card {
+  overflow: hidden;
+  box-shadow: 0 2px 20px #e1e5ee;
+  cursor: pointer;
+  transition: transform 200ms ease-in;
+  margin-top: 0.5rem;
+  margin-right: 1rem;
+  margin-bottom: 0.5rem;
+  min-width: 14em;
+  max-width: 14em;
+  height: 16em;
+  border-radius: 1rem;
+}
+
+.attr-card:hover {
+  transform: scale(1.01);
+  box-shadow: 0 2px 25px #a8adb7;
+}
+
+.attr-img {
+  -webkit-filter: brightness(80%);
+  min-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.attr-img:hover {
+  -webkit-filter: brightness(60%);
+}
+
+.attr-name {
+  position: relative;
+  text-overflow: ellipsis;
+  overflow-x: hidden;
+  width: 80%;
+  height: 2rem;
+  bottom: 17.5%;
+  left: 7.5%;
+  font-family: Poppins-SemiBold, sans-serif;
+  color: #fff;
+  font-size: calc(12px + .3vw);
+}

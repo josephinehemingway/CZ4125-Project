@@ -5,6 +5,7 @@ import { Link, useLocation } from "react-router-dom";
 import ExploreBanner from "../../components/Explore/ExploreBanner";
 import London from "../../assets/images/London.jpeg";
 import { Breadcrumb } from "antd";
+import Attractions from "../../components/Explore/AttractionsFood/Attractions";
 // import TikTokSection from "../../components/reusable/TikTok/TikTokSection";
 
 const {TabPane} = StyledTabs
@@ -46,10 +47,10 @@ const Explore: React.FC = () => {
                     tabBarStyle={{fontFamily: 'Poppins-Medium'}}
                 >
                     <TabPane tab="Attractions" key="1">
-                         dump attractions here
+                        <Attractions tabName={'Attractions'} destinationName={destinationName}/>
                     </TabPane>
                     <TabPane tab="Food" key="2">
-                        dump food here
+                        <Attractions tabName={'Restaurants'} destinationName={destinationName}/>
                     </TabPane>
                     <TabPane tab="Accommodations" key="3">
                         dump accoms here
