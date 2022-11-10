@@ -1,0 +1,182 @@
+[
+    {
+        "id": 1,
+        "name": "Hotel Moresco",
+        "url": "https://www.tripadvisor.com/Hotel_Review-g187870-d3348175-Reviews-Hotel_Moresco-Venice_Veneto.html",
+        "rating": 5.0
+    },
+    {
+        "id": 2,
+        "name": "Hotel Artemide",
+        "url": "https://www.tripadvisor.com/Hotel_Review-g187791-d205044-Reviews-Hotel_Artemide-Rome_Lazio.html",
+        "rating": 5.0
+    },
+    {
+        "id": 3,
+        "name": "Turin Palace Hotel",
+        "url": "https://www.tripadvisor.com/Hotel_Review-g187855-d8333271-Reviews-Turin_Palace_Hotel-Turin_Province_of_Turin_Piedmont.html",
+        "rating": 5.0
+    },
+    {
+        "id": 4,
+        "name": "Hotel Spadai",
+        "url": "https://www.tripadvisor.com/Hotel_Review-g187895-d230717-Reviews-Hotel_Spadai-Florence_Tuscany.html",
+        "rating": 5.0
+    },
+    {
+        "id": 5,
+        "name": "Hotel Antiche Figure",
+        "url": "https://www.tripadvisor.com/Hotel_Review-g187870-d289202-Reviews-Hotel_Antiche_Figure-Venice_Veneto.html",
+        "rating": 5.0
+    },
+    {
+        "id": 6,
+        "name": "Hotel Milu",
+        "url": "https://www.tripadvisor.com/Hotel_Review-g187895-d10462189-Reviews-Hotel_Milu-Florence_Tuscany.html",
+        "rating": 5.0
+    },
+    {
+        "id": 7,
+        "name": "Rosa Salva Hotel",
+        "url": "https://www.tripadvisor.com/Hotel_Review-g187870-d12579192-Reviews-Rosa_Salva_Hotel-Venice_Veneto.html",
+        "rating": 5.0
+    },
+    {
+        "id": 8,
+        "name": "Hotel David",
+        "url": "https://www.tripadvisor.com/Hotel_Review-g187895-d203921-Reviews-Hotel_David-Florence_Tuscany.html",
+        "rating": 5.0
+    },
+    {
+        "id": 9,
+        "name": "Dharma Boutique Hotel & Spa",
+        "url": "https://www.tripadvisor.com/Hotel_Review-g187791-d19907141-Reviews-Dharma_Boutique_Hotel_Spa-Rome_Lazio.html",
+        "rating": 5.0
+    },
+    {
+        "id": 10,
+        "name": "Hotel Saturnia & International Venezia",
+        "url": "https://www.tripadvisor.com/Hotel_Review-g187870-d233931-Reviews-Hotel_Saturnia_International_Venezia-Venice_Veneto.html",
+        "rating": 4.5
+    },
+    {
+        "id": 11,
+        "name": "Hotel Barocco",
+        "url": "https://www.tripadvisor.com/Hotel_Review-g187791-d203175-Reviews-Hotel_Barocco-Rome_Lazio.html",
+        "rating": 5.0
+    },
+    {
+        "id": 12,
+        "name": "Hotel Du Lac",
+        "url": "https://www.tripadvisor.com/Hotel_Review-g187834-d197760-Reviews-Hotel_Du_Lac-Bellagio_Lake_Como_Lombardy.html",
+        "rating": 4.5
+    },
+    {
+        "id": 13,
+        "name": "Hotel Villa Belvedere",
+        "url": "https://www.tripadvisor.com/Hotel_Review-g187892-d239205-Reviews-Hotel_Villa_Belvedere-Taormina_Province_of_Messina_Sicily.html",
+        "rating": 5.0
+    },
+    {
+        "id": 14,
+        "name": "San Firenze Suites & Spa",
+        "url": "https://www.tripadvisor.com/Hotel_Review-g187895-d2257439-Reviews-San_Firenze_Suites_Spa-Florence_Tuscany.html",
+        "rating": 5.0
+    },
+    {
+        "id": 15,
+        "name": "Hotel Calimala",
+        "url": "https://www.tripadvisor.com/Hotel_Review-g187895-d17703706-Reviews-Hotel_Calimala-Florence_Tuscany.html",
+        "rating": 5.0
+    },
+    {
+        "id": 16,
+        "name": "Singer Palace Hotel",
+        "url": "https://www.tripadvisor.com/Hotel_Review-g187791-d13393444-Reviews-Singer_Palace_Hotel-Rome_Lazio.html",
+        "rating": 5.0
+    },
+    {
+        "id": 17,
+        "name": "iQ Hotel Roma",
+        "url": "https://www.tripadvisor.com/Hotel_Review-g187791-d1729030-Reviews-IQ_Hotel_Roma-Rome_Lazio.html",
+        "rating": 4.5
+    },
+    {
+        "id": 18,
+        "name": "Grand Hotel La Favorita",
+        "url": "https://www.tripadvisor.com/Hotel_Review-g187782-d1656729-Reviews-Grand_Hotel_La_Favorita-Sorrento_Province_of_Naples_Campania.html",
+        "rating": 5.0
+    },
+    {
+        "id": 19,
+        "name": "Gran Duca di York",
+        "url": "https://www.tripadvisor.com/Hotel_Review-g187849-d237312-Reviews-Gran_Duca_di_York-Milan_Lombardy.html",
+        "rating": 4.5
+    },
+    {
+        "id": 20,
+        "name": "Hotel Margherita",
+        "url": "https://www.tripadvisor.com/Hotel_Review-g194867-d276584-Reviews-Hotel_Margherita-Praiano_Amalfi_Coast_Province_of_Salerno_Campania.html",
+        "rating": 5.0
+    },
+    {
+        "id": 21,
+        "name": "Hotel Canal Grande",
+        "url": "https://www.tripadvisor.com/Hotel_Review-g187870-d1547281-Reviews-Hotel_Canal_Grande-Venice_Veneto.html",
+        "rating": 5.0
+    },
+    {
+        "id": 22,
+        "name": "Hotel Orto De Medici",
+        "url": "https://www.tripadvisor.com/Hotel_Review-g187895-d233491-Reviews-Hotel_Orto_De_Medici-Florence_Tuscany.html",
+        "rating": 4.5
+    },
+    {
+        "id": 23,
+        "name": "Hotel Santa Maria",
+        "url": "https://www.tripadvisor.com/Hotel_Review-g187791-d239263-Reviews-Hotel_Santa_Maria-Rome_Lazio.html",
+        "rating": 5.0
+    },
+    {
+        "id": 24,
+        "name": "Hotel Davanzati",
+        "url": "https://www.tripadvisor.com/Hotel_Review-g187895-d296175-Reviews-Hotel_Davanzati-Florence_Tuscany.html",
+        "rating": 5.0
+    },
+    {
+        "id": 25,
+        "name": "Boutique Hotel Campo de Fiori",
+        "url": "https://www.tripadvisor.com/Hotel_Review-g187791-d208552-Reviews-Boutique_Hotel_Campo_de_Fiori-Rome_Lazio.html",
+        "rating": 4.5
+    },
+    {
+        "id": 26,
+        "name": "Palazzo Natoli Boutique Hotel",
+        "url": "https://www.tripadvisor.com/Hotel_Review-g187890-d14896015-Reviews-Palazzo_Natoli_Boutique_Hotel-Palermo_Province_of_Palermo_Sicily.html",
+        "rating": 5.0
+    },
+    {
+        "id": 27,
+        "name": "Albergo del Senato",
+        "url": "https://www.tripadvisor.com/Hotel_Review-g187791-d191099-Reviews-Albergo_del_Senato-Rome_Lazio.html",
+        "rating": 5.0
+    },
+    {
+        "id": 28,
+        "name": "Room Mate Giulia",
+        "url": "https://www.tripadvisor.com/Hotel_Review-g187849-d9762116-Reviews-Room_Mate_Giulia-Milan_Lombardy.html",
+        "rating": 5.0
+    },
+    {
+        "id": 29,
+        "name": "Hotel Casa Verardo - Residenza D'Epoca",
+        "url": "https://www.tripadvisor.com/Hotel_Review-g187870-d235855-Reviews-Hotel_Casa_Verardo_Residenza_D_Epoca-Venice_Veneto.html",
+        "rating": 4.5
+    },
+    {
+        "id": 30,
+        "name": "Hotel Damaso",
+        "url": "https://www.tripadvisor.com/Hotel_Review-g187791-d12497396-Reviews-Hotel_Damaso-Rome_Lazio.html",
+        "rating": 5.0
+    }
+]
