@@ -4,6 +4,7 @@ import './explorestyles.css';
 import {ATTRACTION_LIST} from "../../utils/const";
 import {Link} from "react-router-dom";
 import AccomsCard from "../reusable/Cards/AccomsCard";
+import Map from "./Map";
 
 type Props = {
     tabName: string;
@@ -11,7 +12,6 @@ type Props = {
 };
 
 //this component will be used for attractions and food section
-
 const Accommodations: React.FC<Props>= ({ destinationName }) => {
     // here we will pass in the destination, tiktoks, list of attractions
     const attrCardsArray = ATTRACTION_LIST.map((d) => (
@@ -39,7 +39,6 @@ const Accommodations: React.FC<Props>= ({ destinationName }) => {
                 height={"3rem"}
                 align="center"
                 justify={"space-between"}
-                margintop={"1rem"}
             >
                 <StyledSubSubheading>
                     Hotels
@@ -81,13 +80,15 @@ const Accommodations: React.FC<Props>= ({ destinationName }) => {
                 height={"3rem"}
                 align="center"
                 justify={"space-between"}
-                margintop={"3rem"}
+                margintop={"2rem"}
             >
-                <StyledSectionTitle>
+                <StyledSectionTitle marginbottom={'1rem'}>
                     Map
                 </StyledSectionTitle>
             </RowContainer>
-
+            <div style={{height:'200px'}} >
+                <Map />
+            </div>
         </div>
     );
 };

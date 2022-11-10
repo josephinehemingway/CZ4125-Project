@@ -4,13 +4,12 @@ import './explorestyles.css';
 import {ATTRACTION_LIST} from "../../utils/const";
 import {Link} from "react-router-dom";
 import AttractionsCard from "../reusable/Cards/AttractionsCard";
+import Map from "./Map";
 
 type Props = {
     tabName: string;
     destinationName: string;
 };
-
-//this component will be used for attractions and food section
 
 const Attractions: React.FC<Props>= ({ tabName, destinationName }) => {
     // here we will pass in the destination, tiktoks, list of attractions
@@ -48,8 +47,8 @@ const Attractions: React.FC<Props>= ({ tabName, destinationName }) => {
                 <div className='explore-subgallery'>
                     {attrCardsArray}
                 </div>
-                <div style={{width: '30%', background: 'black', color: 'white'}}>
-                    map
+                <div style={{width: '30%'}}>
+                    <Map />
                 </div>
             </div>
         </div>

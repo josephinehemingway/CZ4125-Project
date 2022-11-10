@@ -4,6 +4,7 @@ import './explorestyles.css';
 import {ATTRACTION_LIST} from "../../utils/const";
 import {Link} from "react-router-dom";
 import AttractionsCard from "../reusable/Cards/AttractionsCard";
+import Map from "./Map";
 
 type Props = {
     tabName: string;
@@ -50,6 +51,7 @@ const Attractions: React.FC<Props>= ({ tabName, destinationName }) => {
                 </div>
                 <div style={{width: '30%', background: 'black', color: 'white'}}>
                     map
+                    <Map/>
                 </div>
             </div>
         </div>
