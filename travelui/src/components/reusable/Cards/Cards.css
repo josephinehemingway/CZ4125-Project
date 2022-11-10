@@ -81,3 +81,22 @@
   color: #fff;
   font-size: calc(12px + .3vw);
 }
+
+.acc-card {
+  overflow: hidden;
+  box-shadow: 0 2px 20px #e1e5ee;
+  cursor: pointer;
+  transition: transform 200ms ease-in;
+  margin-top: 0.5rem;
+  margin-right: 1rem;
+  margin-bottom: 0.5rem;
+  min-width: 20em;
+  max-width: 20em;
+  height: 18em;
+  border-radius: 10px;
+}
+
+.acc-card:hover {
+  transform: scale(1.01);
+  box-shadow: 0 2px 25px #a8adb7;
+}

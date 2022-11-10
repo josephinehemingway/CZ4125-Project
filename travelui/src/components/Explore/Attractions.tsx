@@ -1,9 +1,9 @@
 import React from 'react';
-import {RowContainer, StyledLink, StyledSectionTitle} from '../../reusable/Styles';
-import '../explorestyles.css';
-import {ATTRACTION_LIST} from "../../../utils/const";
+import {RowContainer, StyledLink, StyledSectionTitle} from '../reusable/Styles';
+import './explorestyles.css';
+import {ATTRACTION_LIST} from "../../utils/const";
 import {Link} from "react-router-dom";
-import AttractionsCard from "../../reusable/Cards/AttractionsCard";
+import AttractionsCard from "../reusable/Cards/AttractionsCard";
 
 type Props = {
     tabName: string;
@@ -26,7 +26,7 @@ const Attractions: React.FC<Props>= ({ tabName, destinationName }) => {
     ));
 
     return (
-        <div>
+        <div style={{marginBottom: '3rem'}}>
             <RowContainer
                 height={"3rem"}
                 align="center"
@@ -45,7 +45,6 @@ const Attractions: React.FC<Props>= ({ tabName, destinationName }) => {
                 </StyledLink>
             </RowContainer>
             <div className={'explore-gallery'}>
-
                 <div className='explore-subgallery'>
                     {attrCardsArray}
                 </div>
@@ -53,7 +52,6 @@ const Attractions: React.FC<Props>= ({ tabName, destinationName }) => {
                     map
                 </div>
             </div>
-
         </div>
     );
 };
