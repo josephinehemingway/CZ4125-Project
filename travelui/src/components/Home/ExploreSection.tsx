@@ -9,7 +9,7 @@ import CityCard from "../reusable/Cards/Cities";
 import { DESTINATIONS_LIST } from "../../utils/const";
 import { Link } from "react-router-dom";
 
-const ExploreSection = () => {
+const ExploreSection: React.FC = () => {
     const scrollToTop = () => {
         window.scrollTo(0, 0);
     };
@@ -19,7 +19,7 @@ const ExploreSection = () => {
             <CityCard
                 onClick={scrollToTop}
                 url={d.imgUrl}
-                cityName={d.cityName}
+                cityName={d.name}
             />
         </Link>
     ));

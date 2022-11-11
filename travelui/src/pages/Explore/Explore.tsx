@@ -5,7 +5,10 @@ import { Link, useLocation } from "react-router-dom";
 import ExploreBanner from "../../components/Explore/ExploreBanner";
 import London from "../../assets/images/London.jpeg";
 import { Breadcrumb } from "antd";
-// import TikTokSection from "../../components/reusable/TikTok/TikTokSection";
+import Attractions from "../../components/Explore/Attractions";
+import TikTokSection from "../../components/reusable/TikTok/TikTokSection";
+import {TIKTOK_LIST} from "../../utils/const";
+import Accommodations from "../../components/Explore/Accommodations";
 
 const {TabPane} = StyledTabs
 
@@ -21,7 +24,7 @@ const Explore: React.FC = () => {
             />
             <Container
                 width="70%"
-                height={"155vh"}
+                height={"195vh"}
                 paddingtop={"2rem"}
                 align="flex-start"
             >
@@ -46,13 +49,15 @@ const Explore: React.FC = () => {
                     tabBarStyle={{fontFamily: 'Poppins-Medium'}}
                 >
                     <TabPane tab="Attractions" key="1">
-                         dump attractions here
+                        <Attractions tabName={'Attractions'} destinationName={destinationName}/>
+                        <TikTokSection title={'Trending Places on TikTok'} TikTokList={TIKTOK_LIST}/>
                     </TabPane>
                     <TabPane tab="Food" key="2">
-                        dump food here
+                        <Attractions tabName={'Restaurants'} destinationName={destinationName}/>
+                        <TikTokSection title={'Food Recommendations from TikTok'} TikTokList={TIKTOK_LIST}/>
                     </TabPane>
                     <TabPane tab="Accommodations" key="3">
-                        dump accoms here
+                        <Accommodations tabName={'Restaurants'} destinationName={destinationName}/>
                     </TabPane>
                     <TabPane tab="Guides" key="4">
                         dump guides here

@@ -4,43 +4,127 @@ import Rome from '../assets/images/Rome.jpeg';
 import Zurich from '../assets/images/Zurich.jpeg';
 import Madrid from '../assets/images/Madrid.jpeg';
 
-export interface DESTINATIONS_INTERFACE {
+export interface CARD_INTERFACE {
     id: number;
-    cityName: string;
+    name: string;
     imgUrl: string;
     link: string;
 }
 
-export const DESTINATIONS_LIST: DESTINATIONS_INTERFACE[] = [
+export const DESTINATIONS_LIST: CARD_INTERFACE[] = [
     {
         id: 1,
-        cityName: "London, UK",
+        name: "London, UK",
         imgUrl: London,
         link: "/explore/UK/London"
     },
     {
         id: 2,
-        cityName: "Paris, France",
+        name: "Paris, France",
         imgUrl: Paris,
         link: "/explore/France/Paris"
     },
     {
         id: 3,
-        cityName: "Rome, Italy",
+        name: "Rome, Italy",
         imgUrl: Rome,
         link: "/explore/Italy/Rome"
     },
     {
         id: 4,
-        cityName: "Zurich, Switzerland",
+        name: "Zurich, Switzerland",
         imgUrl: Zurich,
         link: "/explore/Switzerland/Zurich"
     },
     {
         id: 5,
-        cityName: "Madrid, Spain",
+        name: "Madrid, Spain",
         imgUrl: Madrid,
         link: "/explore/Spain/Madrid"
+    },
+]
+
+export const RESTAURANT_LIST: CARD_INTERFACE[] = [
+    {
+        id: 1,
+        name: "Pizza Hut",
+        imgUrl: London,
+        link: "/explore/UK/London"
+    },
+    {
+        id: 2,
+        name: "KFC",
+        imgUrl: Paris,
+        link: "/explore/France/Paris"
+    },
+    {
+        id: 3,
+        name: "McDonald's",
+        imgUrl: Rome,
+        link: "/explore/Italy/Rome"
+    },
+    {
+        id: 4,
+        name: "Pasta Express",
+        imgUrl: Zurich,
+        link: "/explore/Switzerland/Zurich"
+    },
+    {
+        id: 5,
+        name: "Le Petite",
+        imgUrl: Madrid,
+        link: "/explore/Spain/Madrid"
+    },
+]
+
+export const ATTRACTION_LIST: CARD_INTERFACE[] = [
+    {
+        id: 1,
+        name: "Bahnhofstrasse",
+        imgUrl: Zurich,
+        link: "/explore/UK/Zurich"
+    },
+    {
+        id: 2,
+        name: "Bahnhofstrasdfsdfkjsdf",
+        imgUrl: Zurich,
+        link: "/explore/UK/Zurich"
+    },
+    {
+        id: 3,
+        name: "Bahnhofstrasse",
+        imgUrl: Zurich,
+        link: "/explore/UK/Zurich"
+    },
+    {
+        id: 4,
+        name: "Bahnhofstrasse",
+        imgUrl: Zurich,
+        link: "/explore/UK/Zurich"
+    },
+    {
+        id: 5,
+        name: "Bahnhofstrasse",
+        imgUrl: Zurich,
+        link: "/explore/UK/Zurich"
+    },
+    {
+        id: 6,
+        name: "Bahnhofstrasse",
+        imgUrl: Zurich,
+        link: "/explore/UK/Zurich"
+    },
+    {
+        id: 7,
+        name: "Bahnhofstrasse",
+        imgUrl: Zurich,
+        link: "/explore/UK/Zurich"
+    },
+    {
+        id: 8,
+        name: "Bahnhofstrasse",
+        imgUrl: Zurich,
+        link: "/explore/UK/Zurich"
     },
 ]
 
