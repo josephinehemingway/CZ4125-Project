@@ -33,6 +33,60 @@ def attractions():
             "photo": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/93/4f/fd/uffizi-gallery.jpg?w=500&h=400&s=1",
             "review_url": "https://www.tripadvisor.com/Attraction_Review-g187895-d191153-Reviews-Gallerie_Degli_Uffizi-Florence_Tuscany.html#REVIEWS"
         },
+        {
+            "name": "Doge's Palace",
+            "activity": "Speciality Museums • Historic Sites",
+            "location": "San Marco",
+            "ratings": "4.5 of 5",
+            "photo": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0b/62/d4/a6/20160525-134703-largejpg.jpg?w=500&h=-1&s=1",
+            "review_url": "https://www.tripadvisor.com/Attraction_Review-g187870-d194251-Reviews-Doge_s_Palace-Venice_Veneto.html#REVIEWS"
+        },
+        {
+            "name": "Underground Naples",
+            "activity": "Historic Walking Areas",
+            "location": "Pendino",
+            "ratings": "4.5 of 5",
+            "photo": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/14/ed/76/20190113-115853-largejpg.jpg?w=500&h=400&s=1",
+            "review_url": "https://www.tripadvisor.com/Attraction_Review-g187785-d2466778-Reviews-Underground_Naples-Naples_Province_of_Naples_Campania.html#REVIEWS"
+        },
+
+
+    ]
+
+
+@app.route('/accommodations')
+def hotels():
+    return [
+        {
+            "id": 1,
+            "name": "Hotel Moresco",
+            "url": "https://www.tripadvisor.com/Hotel_Review-g187870-d3348175-Reviews-Hotel_Moresco-Venice_Veneto.html",
+            "rating": 5.0
+        },
+        {
+            "id": 2,
+            "name": "Hotel Artemide",
+            "url": "https://www.tripadvisor.com/Hotel_Review-g187791-d205044-Reviews-Hotel_Artemide-Rome_Lazio.html",
+            "rating": 5.0
+        },
+        {
+            "id": 3,
+            "name": "Turin Palace Hotel",
+            "url": "https://www.tripadvisor.com/Hotel_Review-g187855-d8333271-Reviews-Turin_Palace_Hotel-Turin_Province_of_Turin_Piedmont.html",
+            "rating": 5.0
+        },
+        {
+            "id": 4,
+            "name": "Hotel Spadai",
+            "url": "https://www.tripadvisor.com/Hotel_Review-g187895-d230717-Reviews-Hotel_Spadai-Florence_Tuscany.html",
+            "rating": 5.0
+        },
+        {
+            "id": 5,
+            "name": "Hotel Antiche Figure",
+            "url": "https://www.tripadvisor.com/Hotel_Review-g187870-d289202-Reviews-Hotel_Antiche_Figure-Venice_Veneto.html",
+            "rating": 5.0
+        },
     ]
 
 

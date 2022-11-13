@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import {HorizontalScroll, RowContainer, StyledLink, StyledSectionTitle, StyledSubSubheading} from '../reusable/Styles';
 import './explorestyles.css';
-import {ATTRACTION_LIST} from "../../utils/const";
+import Rome from '../../assets/images/Rome.jpeg';
 import {Link} from "react-router-dom";
 import AccomsCard from "../reusable/Cards/AccomsCard";
 import Map from "./Map";
@@ -14,12 +14,35 @@ type Props = {
 //this component will be used for attractions and food section
 const Accommodations: React.FC<Props>= ({ destinationName }) => {
     // here we will pass in the destination, tiktoks, list of attractions
-    const attrCardsArray = ATTRACTION_LIST.map((d) => (
-        <Link key={d.id} to={d.link}>
+
+    // get data
+    interface AccommodationsApi{
+        id: string,
+        name: string,
+        url: string,
+        rating: number
+    }
+    
+    const [data, setdata] = useState<AccommodationsApi[]>([])
+    useEffect(() => {
+        // Using fetch to fetch the api from 
+        // flask server it will be redirected to proxy
+        fetch("/accommodations").then((res) =>
+            res.json().then((data) => {
+                // Setting a data from api
+                setdata(data);
+                console.log(data)
+            })
+        );
+    }, []);
+
+    const attrCardsArray = data.map((d) => (
+        <Link key={d.id} to={d.url}>
             <AccomsCard
                 // onClick={scrollToTop}
-                url={d.imgUrl}
+                url={Rome}
                 name={d.name}
+                rating={d.rating}
             />
         </Link>
     ));

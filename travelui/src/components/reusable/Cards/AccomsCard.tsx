@@ -4,14 +4,16 @@ import './Cards.css';
 type Props = {
     url: string;
     name: string;
+    rating: number;
     onClick?: React.MouseEventHandler
 }
 
-const AccomsCard: React.FC<Props> = ({url, name, onClick}) => {
+const AccomsCard: React.FC<Props> = ({url, name, rating, onClick}) => {
     return (
         <div className='acc-card' onClick={onClick}>
             <img className='attr-img' src={url} height="100%"  alt=''/>
             <h2 className="attr-name"> {name} </h2>
+            <h2 className="attr-rating"> {rating} </h2>
         </div>
     );
 };
