@@ -15,10 +15,11 @@ const Attractions: React.FC<Props>= ({ tabName, destinationName }) => {
 
     // get data
     interface AttractionsApi{
-        id: string,
-        url: string,
-        title: string,
-        cities: string[]
+        name: string,
+        activity: string,
+        location: string,
+        photo: string,
+        review_url: string
     }
     
     const [data, setdata] = useState<AttractionsApi[]>([])
@@ -34,15 +35,19 @@ const Attractions: React.FC<Props>= ({ tabName, destinationName }) => {
         );
     }, []);
     
-    // const attrCardsArray = data.map((d) => (
-    //     <Link key={d.id} to={d.url}>
-    //         <AttractionsCard
-    //             // onClick={scrollToTop}
-    //             url={d.url}
-    //             attrName={d.title}
-    //         />
-    //     </Link>
-    // ));
+    const attrCardsArray = data.map((d, index) =>{
+        console.log(d.name)
+        return(
+        <Link key={index} to={"/explore/UK/Zurich"}>
+            <AttractionsCard
+                //onClick={scrollToTop}
+                url={d.photo}
+                attrName={d.name}
+                attrActivity={d.activity}
+                attrLocation={d.location}
+                
+            />
+        </Link>)});
 
     return (
         <div style={{marginBottom: '3rem'}}>
@@ -65,19 +70,7 @@ const Attractions: React.FC<Props>= ({ tabName, destinationName }) => {
             </RowContainer>
             <div className={'explore-gallery'}>
                 <div className='explore-subgallery'>
-                    {
-                        data.map(d =>{
-                            console.log(d.title)
-                            return(
-                            <Link key={d.id} to={"/explore/UK/Zurich"}>
-                                <AttractionsCard
-                                    //onClick={scrollToTop}
-                                    url={'../assets/images/Zurich.jpeg'}
-                                    attrName={d.title}
-                                    
-                                />
-                            </Link>)})
-                    }
+                    {attrCardsArray}
                 </div>
                 <div style={{width: '30%'}}>
                     <Map />
