@@ -6,6 +6,9 @@ CZ4025 Developing Data Products Group 7 2022
 ### `npm i`
 - Run this before starting to install all dependencies after pulling from git
 
+### `npm run start-flask-api`
+- Run this to activate virtual environment for backend
+
 ### `npm start`
 - to start the application in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
