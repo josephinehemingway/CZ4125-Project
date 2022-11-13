@@ -1,7 +1,6 @@
 import React, {useState, useEffect } from 'react';
 import {RowContainer, StyledLink, StyledSectionTitle} from '../reusable/Styles';
 import './explorestyles.css';
-import {ATTRACTION_LIST} from "../../utils/const";
 import {Link} from "react-router-dom";
 import AttractionsCard from "../reusable/Cards/AttractionsCard";
 import Map from "./Map";
@@ -15,38 +14,35 @@ const Attractions: React.FC<Props>= ({ tabName, destinationName }) => {
     // here we will pass in the destination, tiktoks, list of attractions
 
     // get data
-    const [data, setdata] = useState({
-        url: "",
-        title: "",
-
-    });
+    interface AttractionsApi{
+        id: string,
+        url: string,
+        title: string,
+        cities: string[]
+    }
     
-    // Using useEffect for single rendering
+    const [data, setdata] = useState<AttractionsApi[]>([])
     useEffect(() => {
         // Using fetch to fetch the api from 
         // flask server it will be redirected to proxy
         fetch("/attractions").then((res) =>
             res.json().then((data) => {
                 // Setting a data from api
-                setdata({
-                    url: data.url,
-                    title: data.title,
-                });
+                setdata(data);
                 console.log(data)
             })
         );
     }, []);
     
-
-    const attrCardsArray = ATTRACTION_LIST.map((d) => (
-        <Link key={d.id} to={d.link}>
-            <AttractionsCard
-                // onClick={scrollToTop}
-                url={d.imgUrl}
-                attrName={d.name}
-            />
-        </Link>
-    ));
+    // const attrCardsArray = data.map((d) => (
+    //     <Link key={d.id} to={d.url}>
+    //         <AttractionsCard
+    //             // onClick={scrollToTop}
+    //             url={d.url}
+    //             attrName={d.title}
+    //         />
+    //     </Link>
+    // ));
 
     return (
         <div style={{marginBottom: '3rem'}}>
@@ -67,12 +63,21 @@ const Attractions: React.FC<Props>= ({ tabName, destinationName }) => {
                     See More {">"}
                 </StyledLink>
             </RowContainer>
-            <div>
-                {data.title}
-            </div>
             <div className={'explore-gallery'}>
                 <div className='explore-subgallery'>
-                    {attrCardsArray}
+                    {
+                        data.map(d =>{
+                            console.log(d.title)
+                            return(
+                            <Link key={d.id} to={"/explore/UK/Zurich"}>
+                                <AttractionsCard
+                                    //onClick={scrollToTop}
+                                    url={'../assets/images/Zurich.jpeg'}
+                                    attrName={d.title}
+                                    
+                                />
+                            </Link>)})
+                    }
                 </div>
                 <div style={{width: '30%'}}>
                     <Map />

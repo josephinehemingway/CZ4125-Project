@@ -2,7 +2,7 @@ from flask import Flask
 from flask_cors import CORS, cross_origin
 app = Flask(__name__)
 cors = CORS(app)
-app.config['CORS_HEADERS'] = 'Content-Type'
+app.config['CORS_HEADERS'] = 'application/json'
 
 
 @app.route('/attractions')
@@ -10,6 +10,7 @@ app.config['CORS_HEADERS'] = 'Content-Type'
 def attractions():
     return [
         {
+            "id": 1,
             "url": "https://www.ricksteves.com/europe/italy/itinerary",
             "title": "Italy Itinerary: Where to Go in Italy by Rick Steves",
             "cities": [
@@ -37,6 +38,7 @@ def attractions():
             ]
         },
         {
+            "id": 2,
             "url": "https://wanderlustcrew.com/10-days-in-italy/",
             "title": "How to Spend 10 Days in Italy: 5 Amazing Itinerary Ideas for your Trip to Italy | Wanderlust Crew",
             "cities": [
