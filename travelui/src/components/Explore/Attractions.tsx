@@ -14,28 +14,28 @@ type Props = {
 const Attractions: React.FC<Props>= ({ tabName, destinationName }) => {
     // here we will pass in the destination, tiktoks, list of attractions
 
-        // get data
-        const [data, setdata] = useState({
-            url: "",
-            title: "",
+    // get data
+    const [data, setdata] = useState({
+        url: "",
+        title: "",
+
+    });
     
-        });
-      
-        // Using useEffect for single rendering
-        useEffect(() => {
-            // Using fetch to fetch the api from 
-            // flask server it will be redirected to proxy
-            fetch("/attractions").then((res) =>
-                res.json().then((data) => {
-                    // Setting a data from api
-                    setdata({
-                        url: data.url,
-                        title: data.title,
-                    });
-                    console.log(data)
-                })
-            );
-        }, []);
+    // Using useEffect for single rendering
+    useEffect(() => {
+        // Using fetch to fetch the api from 
+        // flask server it will be redirected to proxy
+        fetch("/attractions").then((res) =>
+            res.json().then((data) => {
+                // Setting a data from api
+                setdata({
+                    url: data.url,
+                    title: data.title,
+                });
+                console.log(data)
+            })
+        );
+    }, []);
     
 
     const attrCardsArray = ATTRACTION_LIST.map((d) => (
