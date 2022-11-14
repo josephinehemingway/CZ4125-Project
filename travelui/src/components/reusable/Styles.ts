@@ -1,6 +1,6 @@
 // @ts-ignore
 import styled from "styled-components";
-import { Input, Tabs } from "antd";
+import { Input } from "antd";
 
 export const Container = styled.div`
     width: ${(props: { width: string }) =>
@@ -162,12 +162,6 @@ export const StyledDoubleInput = styled.div`
         }
     }
 `;
-
-export const StyledTabs = styled(Tabs)`
-  && {
-    width: 100%;
-  }
-`
 
 export const StyledTitle = styled.h3`
     && {
