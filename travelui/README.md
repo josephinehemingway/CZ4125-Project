@@ -6,7 +6,11 @@ CZ4025 Developing Data Products Group 7 2022
 
 ### `npm i`
 
--   Run this before starting to install all dependencies after pulling from git
+-   Run this before starting to install all dependencies for frontend after pulling from git
+
+### `pip install -r requirements.txt`
+
+-   Run this before starting to install all dependencies for backend after pulling from git
 
 ### `npm run start-flask-api`
 
