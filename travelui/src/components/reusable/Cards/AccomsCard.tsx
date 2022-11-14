@@ -12,8 +12,10 @@ const AccomsCard: React.FC<Props> = ({url, name, rating, onClick}) => {
     return (
         <div className='acc-card' onClick={onClick}>
             <img className='attr-img' src={url} height="100%"  alt=''/>
-            <h2 className="attr-name"> {name} </h2>
-            <h2 className="attr-rating"> {rating} </h2>
+            <div className='attr-desc'>
+                <h2 className="attr-name"> {name} </h2>
+                <h2 className="attr-rating"> {rating}.0 </h2>
+            </div>
         </div>
     );
 };
