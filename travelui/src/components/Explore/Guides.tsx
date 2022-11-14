@@ -20,7 +20,7 @@ const Attractions: React.FC<Props>= ({ tabName, destinationName }) => {
         <Link key={d.id} to={d.link}>
             <AttractionsCard
                 // onClick={scrollToTop}
-                url={d.imgUrl}
+                imgurl={d.imgUrl}
                 attrName={d.name}
             />
         </Link>

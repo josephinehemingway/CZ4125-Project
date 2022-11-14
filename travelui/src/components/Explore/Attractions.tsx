@@ -41,7 +41,7 @@ const Attractions: React.FC<Props>= ({ tabName, destinationName }) => {
         <Link key={index} to={"/explore/UK/Zurich"}>
             <AttractionsCard
                 //onClick={scrollToTop}
-                url={d.photo}
+                imgurl={d.photo}
                 attrName={d.name}
                 attrActivity={d.activity}
                 attrLocation={d.location}
