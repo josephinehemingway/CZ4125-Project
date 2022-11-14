@@ -8,10 +8,6 @@ CZ4025 Developing Data Products Group 7 2022
 
 -   Run this before starting to install all dependencies after pulling from git
 
-### `python3 -m venv env`(macOS) or `py -m venv env`(Windows)
-
--   Create virtual
-
 ### `npm run start-flask-api`
 
 -   Run this to activate virtual environment for backend
