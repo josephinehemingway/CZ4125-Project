@@ -31,7 +31,7 @@ const ExploreBanner: React.FC<Props> = ({ coverUrl, destinationName }) => {
                 <Link to="/">
                     <img src={Logo} width={"60vw"} alt="" />
                 </Link>
-                <StyledHeading>Explore {destinationName}</StyledHeading>
+                <StyledHeading marginbottom={'1rem'}>Explore {destinationName}</StyledHeading>
                 <Container width={"50%"}>
                     <StyledInputSearch
                         col={"white"}

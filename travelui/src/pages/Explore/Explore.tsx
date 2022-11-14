@@ -2,13 +2,14 @@ import React from "react";
 import "../Pages.css";
 import { Container, StyledPageTitle } from "../../components/reusable/Styles";
 import { Link, useLocation } from "react-router-dom";
-import ExploreBanner from "../../components/Explore/ExploreBanner";
-import London from "../../assets/images/London.jpeg";
 import { Breadcrumb, Tabs } from "antd";
-import Attractions from "../../components/Explore/Attractions";
-import TikTokSection from "../../components/reusable/TikTok/TikTokSection";
 import {TIKTOK_LIST} from "../../utils/const";
+import London from "../../assets/images/London.jpeg";
+import ExploreBanner from "../../components/Explore/ExploreBanner";
+import TikTokSection from "../../components/reusable/TikTok/TikTokSection";
+import Attractions from "../../components/Explore/Attractions";
 import Accommodations from "../../components/Explore/Accommodations";
+import Guides from "../../components/Explore/Guides";
 
 const Explore: React.FC = () => {
     const countryName = useLocation().pathname.split("/")[2];
@@ -28,7 +29,9 @@ const Explore: React.FC = () => {
         <Accommodations tabName={'Accommodations'} destinationName={destinationName}/>
     </>
 
-
+    const guidesTab = <>
+        <Guides tabName={'Guides'} destinationName={destinationName}/>
+    </>
 
     return (
         <body className="home">
@@ -42,7 +45,7 @@ const Explore: React.FC = () => {
                 paddingtop={"2rem"}
                 align="flex-start"
             >
-                <Breadcrumb style={{ fontSize: "20px" }}>
+                <Breadcrumb style={{ fontSize: "20px", marginBottom: '0.5rem' }}>
                     <Breadcrumb.Item>
                         <Link to="/">Home</Link>
                     </Breadcrumb.Item>
@@ -81,7 +84,7 @@ const Explore: React.FC = () => {
                         {
                             label: `Guides`,
                             key: '4',
-                            children: `Dump guides here`,
+                            children: guidesTab,
                         },
                     ]}
                 />

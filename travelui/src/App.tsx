@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import Explore from "./pages/Explore/Explore";
 import Footer from "./components/reusable/Footer";
+import Itinerary from "./pages/Itinerary/Itinerary";
 
 function App() {
     return (
@@ -15,7 +16,7 @@ function App() {
                     path="/explore/:country/:destination"
                     element={<Explore />}
                 />
-                {/*<Route path='/itinerary/:destination' element={<Itinerary/>} />*/}
+                <Route path='/itinerary/:destination' element={<Itinerary/>} />
             </Routes>
             <Footer />
         </Router>
