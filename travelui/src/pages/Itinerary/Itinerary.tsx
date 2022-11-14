@@ -20,7 +20,7 @@ function capitalise(destinationName: string) {
 
 const Itinerary: React.FC = () => {
     const destinationDetails = useLocation().pathname.split("/")[2];
-    const destinationName = destinationDetails.split("-")[0];
+    const destinationName = destinationDetails.split("-")[0].replace("%20", " ");
     const seasonSelected = destinationDetails.split("-")[1];
     const durationSelected = parseInt(destinationDetails.split("-")[2]);
 

@@ -4,7 +4,7 @@ import Logo from "../../assets/images/Logo.png";
 import {
     Container,
     StyledHeading,
-    StyledSubtitle, StyledDoubleInput
+    StyledSubtitle, StyledDoubleInput, StyledInput
 } from "../reusable/Styles";
 import {Link} from "react-router-dom";
 import Plane from "../../assets/images/Plane.png";
@@ -34,11 +34,12 @@ const ItineraryBanner: React.FC<Props> = ({ coverUrl, destinationName, durationS
                 <StyledHeading>Grab 'n' Go</StyledHeading>
                 <StyledSubtitle marginbottom={'2rem'}>an itinerary for your next destination</StyledSubtitle>
                 <Container width={"50%"}>
-                    <StyledDoubleInput width={'100%'}>
-                        <input
+                    <StyledDoubleInput paddingleft={'0'} width={'100%'}>
+                        <StyledInput
+                            allowClear
                             defaultValue={destination}
                             style={{ width: "75%" }}
-                            onChange={(e) => {setDestination(e.target.value)}}
+                            onChange={(e: any) => {setDestination(e.target.value)}}
                         />
                         <div
                             style={{
