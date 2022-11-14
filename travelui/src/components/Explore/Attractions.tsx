@@ -11,9 +11,6 @@ type Props = {
 };
 
 const Attractions: React.FC<Props>= ({ tabName, destinationName }) => {
-    // here we will pass in the destination, tiktoks, list of attractions
-
-    // get data
     interface AttractionsApi{
         name: string,
         activity: string,

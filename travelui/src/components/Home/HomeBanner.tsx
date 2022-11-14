@@ -9,19 +9,31 @@ import {
     StyledSubtitle
 } from "../reusable/Styles";
 import { BorderedButton } from "../reusable/Button";
-import { Link } from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import Logo from "../../assets/images/Logo.png";
 import Plane from "../../assets/images/Plane.png";
 
 type Props = {
-    onClick?: React.MouseEventHandler;
+    onClickExplore?: React.MouseEventHandler;
 };
 
-const HomeBanner: React.FC<Props> = ({ onClick }) => {
+const HomeBanner: React.FC<Props> = ({ onClickExplore}) => {
     const [destination, setDestination] = useState<string>("");
-    const onSearch = (destination: string) => {
-        setDestination(destination);
+    const [duration, setDuration] = useState<number>(1);
+    const [season, setSeason] = useState<string>("Summer");
+
+    let navigate = useNavigate();
+
+    const onClickItinerary = () =>{
+        let path = `itinerary/${destination}-${season}-${duration}`;
+        navigate(path);
+    }
+
+    const onSearch = () => {
         console.log(destination);
+        console.log(season)
+        console.log(duration)
+        onClickItinerary()
     };
 
     return (
@@ -34,7 +46,7 @@ const HomeBanner: React.FC<Props> = ({ onClick }) => {
                 <StyledSubtitle>
                     Grab ‘n’ go an itinerary for your next destination with us!
                 </StyledSubtitle>
-                <BorderedButton onClick={onClick}>Explore</BorderedButton>
+                <BorderedButton onClick={onClickExplore}>Explore</BorderedButton>
             </div>
             <div className="text-on-image-right">
                 <Container align={"flex-end"}>
@@ -46,7 +58,7 @@ const HomeBanner: React.FC<Props> = ({ onClick }) => {
                         placeholder="Search Destinations"
                         value={destination === "" ? undefined : destination}
                         onChange={(e: { target: { value: any } }) =>
-                            onSearch(e.target.value)
+                            setDestination(e.target.value)
                         }
                         allowClear
                     />
@@ -61,13 +73,13 @@ const HomeBanner: React.FC<Props> = ({ onClick }) => {
                             >
                                 <input
                                     type="number"
-                                    defaultValue={0}
+                                    defaultValue={duration}
                                     min={0}
                                     max={14}
-                                    // placeholder='Number of days'
                                     style={{ width: "2.5rem" }}
+                                    onChange={(e) => {setDuration(parseInt(e.target.value))}}
                                 />
-                                <div>days</div>
+                                { duration === 1 ? <div>day</div> : <div>days</div>}
                                 <div
                                     style={{
                                         fontSize: "calc(14px + .4vw)",
@@ -78,14 +90,19 @@ const HomeBanner: React.FC<Props> = ({ onClick }) => {
                                     |
                                 </div>
                             </div>
-                            <select style={{ width: "8.5rem" }}>
-                                <option value="spring">Spring</option>
-                                <option value="summer">Summer</option>
-                                <option value="autumn">Autumn</option>
-                                <option value="winter">Winter</option>
+                            <select
+                                defaultValue={season}
+                                onChange= {(e) => {setSeason(e.target.value)}}
+                                style={{ width: "8.5rem" }}>
+                                <option value="Spring">Spring</option>
+                                <option value="Summer">Summer</option>
+                                <option value="Autumn">Autumn</option>
+                                <option value="Winter">Winter</option>
                             </select>
                         </StyledDoubleInput>
-                        <BorderedButton margintop={"0rem"}>
+                        <BorderedButton
+                            onClick={onSearch}
+                            margintop={"0rem"}>
                             Let's Go
                         </BorderedButton>
                     </RowContainer>
