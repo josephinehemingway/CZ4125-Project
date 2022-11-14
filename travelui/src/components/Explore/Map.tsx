@@ -8,6 +8,17 @@ const Map = () => {
     const coords = { lat: 34.665394, lng: 135.432526}
     // const matches = useMediaQuery('(min-width:600px)');
     const classes = useStyles();
+    const address = "Universal Studios Singapore";
+
+    fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=${address}&key=AIzaSyB1rc1kUjUCkOXTzjodOzvIy81dQXL044s`)
+    .then((response) => {
+        return response.json();
+    }).then(jsonData => {
+        console.log(jsonData.results[0].geometry.location);
+    })
+    .catch(error => {
+        console.log(error);
+    })
 
     return (
         <div className={classes.mapContainer}>
