@@ -10,7 +10,7 @@ CZ4025 Developing Data Products Group 7 2022
 
 ### `npm run start-flask-api`
 
--   Run this to activate virtual environment for backend
+-   Run this to activate virtual environment for backend.\
     Open [http://localhost:5000](http://localhost:5000) to view it in the browser.
 
 ### `npm start`
