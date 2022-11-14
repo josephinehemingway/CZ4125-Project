@@ -99,10 +99,10 @@ export const StyledInputSearch = styled(Input)<
         border-radius: 60px;
         width: ${(props: { width: string }) =>
             props.width ? props.width : "70%"};
-        height: calc(20px + 2vw);
+        height: calc(22px + 2vw);
         display: flex;
         flex-direction: row;
-        padding: 1vw;
+        padding: 0.9vw;
         margin-top: 1rem;
         margin-bottom: 1rem;
         font-family: Poppins-Medium, sans-serif;
