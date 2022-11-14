@@ -36,7 +36,7 @@ const Accommodations: React.FC<Props>= ({ destinationName }) => {
         );
     }, []);
 
-    const attrCardsArray = data.map((d) => (
+    const accomCardsArray = data.map((d) => (
         <Link key={d.id} to={d.url}>
             <AccomsCard
                 // onClick={scrollToTop}
@@ -75,7 +75,7 @@ const Accommodations: React.FC<Props>= ({ destinationName }) => {
                 </StyledLink>
             </RowContainer>
             <HorizontalScroll height={'100%'}>
-                {attrCardsArray}
+                {accomCardsArray}
             </HorizontalScroll>
 
             <RowContainer
@@ -96,7 +96,7 @@ const Accommodations: React.FC<Props>= ({ destinationName }) => {
                 </StyledLink>
             </RowContainer>
             <HorizontalScroll height={'100%'}>
-                {attrCardsArray}
+                {accomCardsArray}
             </HorizontalScroll>
 
             <RowContainer
@@ -106,7 +106,7 @@ const Accommodations: React.FC<Props>= ({ destinationName }) => {
                 margintop={"2rem"}
             >
                 <StyledSectionTitle marginbottom={'1rem'}>
-                    Map
+                    Map View
                 </StyledSectionTitle>
             </RowContainer>
             <div style={{height:'200px'}} >

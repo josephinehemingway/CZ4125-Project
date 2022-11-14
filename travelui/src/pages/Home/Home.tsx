@@ -17,14 +17,14 @@ const Home: React.FC = () => {
 
     const exploreRef = useRef<HTMLDivElement>(null);
 
-    const onClick = () => {
+    const onClickExplore = () => {
         const node: any = exploreRef.current;
         window.scrollTo({top: node.offsetTop, left: 0, behavior: "smooth"});
     };
 
     return (
         <body className="home">
-        <HomeBanner onClick={onClick}/>
+        <HomeBanner onClickExplore={onClickExplore} />
         <Container
             ref={exploreRef}
             align="center"
@@ -39,6 +39,7 @@ const Home: React.FC = () => {
                 style={{marginBottom: "1rem"}}
             />
             <StyledSectionTitle>Where shall we explore today?</StyledSectionTitle>
+
             <StyledInputSearch
                 col={'black'}
                 width={"75%"}

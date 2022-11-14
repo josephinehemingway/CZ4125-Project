@@ -1,25 +1,19 @@
 import React from 'react';
-import {RowContainer, StyledLink, StyledSectionTitle} from '../reusable/Styles';
+import {HorizontalScroll, RowContainer, StyledLink, StyledSectionTitle} from '../reusable/Styles';
 import './explorestyles.css';
 import {ATTRACTION_LIST} from "../../utils/const";
 import {Link} from "react-router-dom";
-import AttractionsCard from "../reusable/Cards/AttractionsCard";
-import Map from "./Map";
+import GuidesCard from "../reusable/Cards/GuidesCard";
 
 type Props = {
     tabName: string;
     destinationName: string;
 };
 
-//this component will be used for attractions and food section
-
-const Attractions: React.FC<Props>= ({ tabName, destinationName }) => {
-    // here we will pass in the destination, tiktoks, list of attractions
-
-    const attrCardsArray = ATTRACTION_LIST.map((d) => (
+const Guides: React.FC<Props>= ({ tabName, destinationName }) => {
+    const guideCardsArray = ATTRACTION_LIST.map((d) => (
         <Link key={d.id} to={d.link}>
-            <AttractionsCard
-                // onClick={scrollToTop}
+            <GuidesCard
                 imgurl={d.imgUrl}
                 attrName={d.name}
             />
@@ -33,6 +27,7 @@ const Attractions: React.FC<Props>= ({ tabName, destinationName }) => {
                 align="center"
                 justify={"space-between"}
                 margintop={"1rem"}
+                marginbottom={'1rem'}
             >
                 <StyledSectionTitle>
                     Explore Top {tabName} in {destinationName}
@@ -45,17 +40,12 @@ const Attractions: React.FC<Props>= ({ tabName, destinationName }) => {
                     See More {">"}
                 </StyledLink>
             </RowContainer>
-            <div className={'explore-gallery'}>
-                <div className='explore-subgallery'>
-                    {attrCardsArray}
-                </div>
-                <div style={{width: '30%', background: 'black', color: 'white'}}>
-                    map
-                    <Map/>
-                </div>
-            </div>
+            <HorizontalScroll height={'100%'}>
+                {guideCardsArray}
+            </HorizontalScroll>
+
         </div>
     );
 };
 
-export default Attractions;
+export default Guides;
