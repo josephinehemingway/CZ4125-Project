@@ -1,5 +1,7 @@
 from flask import Flask
 from flask_cors import CORS, cross_origin
+import api_functions
+import json
 app = Flask(__name__)
 cors = CORS(app)
 app.config['CORS_HEADERS'] = 'application/json'
@@ -53,6 +55,15 @@ def attractions():
 
     ]
 
+@app.route('/attractions-api')
+def attractions_api(country_input):
+    f= open('tripadvisor_link.json')
+    trip_advisor= json.load(f)
+    link_dict = trip_advisor[country_input]
+    attractions_url = link_dict['Attractions']
+    return api_functions.get_attractions(attractions_url)
+
+    
 
 @app.route('/accommodations')
 def hotels():
@@ -89,6 +100,13 @@ def hotels():
         },
     ]
 
-
+@app.route('/accommodations-api')
+def hotels(country_input):
+    f= open('tripadvisor_link.json')
+    trip_advisor= json.load(f)
+    link_dict = trip_advisor[country_input]
+    accomodations_url = link_dict['Hotel']
+    return api_functions.get_hotels(accomodations_url)
+        
 if __name__ == '__main__':
     app.run(debug=True, threaded=True)
