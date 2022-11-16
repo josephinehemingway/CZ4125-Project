@@ -4,7 +4,6 @@ import { Container, StyledPageTitle } from "../../components/reusable/Styles";
 import { Link, useLocation } from "react-router-dom";
 import { Breadcrumb } from "antd";
 import {TIKTOK_LIST} from "../../utils/const";
-import London from "../../assets/images/London.jpeg";
 import ItineraryBanner from "../../components/Itinerary/ItineraryBanner";
 import TikTokSection from "../../components/reusable/TikTok/TikTokSection";
 import Attractions from "../../components/Explore/Attractions";
@@ -20,21 +19,20 @@ function capitalise(destinationName: string) {
 
 const Itinerary: React.FC = () => {
     const destinationDetails = useLocation().pathname.split("/")[2];
-    const destinationName = destinationDetails.split("-")[0];
+    const destinationName = destinationDetails.split("-")[0].replace("%20", " ");
     const seasonSelected = destinationDetails.split("-")[1];
     const durationSelected = parseInt(destinationDetails.split("-")[2]);
 
     let formattedDestination = capitalise(destinationName)
 
-    const citiesTab = <>
-        <Attractions tabName={'Attractions'} destinationName={formattedDestination}/>
+    const citiesTab = <div style={{width: '100%'}}>
+        <Attractions tabName={'Attractions'} destinationName={formattedDestination} countryName={formattedDestination}/>
         <TikTokSection title={'Trending Places on TikTok'} TikTokList={TIKTOK_LIST}/>
-    </>
+    </div>
 
     return (
         <body className="home">
             <ItineraryBanner
-                coverUrl={London}
                 destinationName={formattedDestination}
                 seasonSelected={seasonSelected}
                 durationSelected={durationSelected}

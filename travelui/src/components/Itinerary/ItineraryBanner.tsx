@@ -1,22 +1,24 @@
 import React, { useState } from "react";
 import "../styles.css";
 import Logo from "../../assets/images/Logo.png";
+
+import Banner from "../../assets/images/travel.jpeg";
 import {
     Container,
     StyledHeading,
-    StyledSubtitle, StyledDoubleInput
+    StyledSubtitle, StyledDoubleInput, StyledInput
 } from "../reusable/Styles";
 import {Link} from "react-router-dom";
 import Plane from "../../assets/images/Plane.png";
 
 type Props = {
-    coverUrl: string;
     destinationName: string;
     seasonSelected: string;
     durationSelected: number;
 };
 
-const ItineraryBanner: React.FC<Props> = ({ coverUrl, destinationName, durationSelected, seasonSelected }) => {
+const ItineraryBanner: React.FC<Props> = ({ destinationName, durationSelected, seasonSelected }) => {
+
     const [destination, setDestination] = useState<string>(destinationName);
     const [duration, setDuration] = useState<number>(durationSelected);
     const [season, setSeason] = useState<string>(seasonSelected);
@@ -24,7 +26,7 @@ const ItineraryBanner: React.FC<Props> = ({ coverUrl, destinationName, durationS
     return (
         <>
             <div className="head-image">
-                {/*<img className="head-image" src={coverUrl} height={"100%"} width={"100%"} alt="" />*/}
+                <img className="head-image" src={Banner} height={"100%"} width={"100%"} alt="" />
             </div>
 
             <div className="text-on-image-center">
@@ -34,11 +36,12 @@ const ItineraryBanner: React.FC<Props> = ({ coverUrl, destinationName, durationS
                 <StyledHeading>Grab 'n' Go</StyledHeading>
                 <StyledSubtitle marginbottom={'2rem'}>an itinerary for your next destination</StyledSubtitle>
                 <Container width={"50%"}>
-                    <StyledDoubleInput width={'100%'}>
-                        <input
+                    <StyledDoubleInput paddingleft={'0'} width={'100%'}>
+                        <StyledInput
+                            allowClear
                             defaultValue={destination}
                             style={{ width: "75%" }}
-                            onChange={(e) => {setDestination(e.target.value)}}
+                            onChange={(e: any) => {setDestination(e.target.value)}}
                         />
                         <div
                             style={{

@@ -1,16 +1,17 @@
-from flask import Flask
+from flask import Flask, request
 from flask_cors import CORS, cross_origin
 import api_functions
 import json
+import jsonpickle
+
 app = Flask(__name__)
 cors = CORS(app)
 app.config['CORS_HEADERS'] = 'application/json'
 
-
 @app.route('/attractions')
 @cross_origin()
 def attractions():
-    return [
+    return jsonpickle.encode([
         {
             "name": "St. Peter's Basilica",
             "activity": "Historic Sites • Points of Interest & Landmarks",
@@ -53,21 +54,22 @@ def attractions():
         },
 
 
-    ]
+    ])
 
 @app.route('/attractions-api')
-def attractions_api(country_input):
+def attractions_api():
+    destination = request.args.get('destination')
+    print(destination)
     f= open('tripadvisor_link.json')
     trip_advisor= json.load(f)
-    link_dict = trip_advisor[country_input]
+    link_dict = trip_advisor[destination]
     attractions_url = link_dict['Attractions']
-    return api_functions.get_attractions(attractions_url)
+    return jsonpickle.encode(api_functions.get_attractions(attractions_url))
 
-    
 
 @app.route('/accommodations')
 def hotels():
-    return [
+    return jsonpickle.encode([
         {
             "id": 1,
             "name": "Hotel Moresco",
@@ -98,15 +100,30 @@ def hotels():
             "url": "https://www.tripadvisor.com/Hotel_Review-g187870-d289202-Reviews-Hotel_Antiche_Figure-Venice_Veneto.html",
             "rating": 5.0
         },
-    ]
+    ])
 
 @app.route('/accommodations-api')
-def hotels(country_input):
+def hotels_api():
+    destination = request.args.get('destination')
+    print(destination)
+
     f= open('tripadvisor_link.json')
     trip_advisor= json.load(f)
-    link_dict = trip_advisor[country_input]
+    link_dict = trip_advisor[destination]
     accomodations_url = link_dict['Hotel']
-    return api_functions.get_hotels(accomodations_url)
+    return jsonpickle.encode(api_functions.get_hotels(accomodations_url))
+
+@app.route('/banner')
+def get_banner():
+    destination = request.args.get('destination')
+    print(destination)
+
+    f= open('tripadvisor_link.json')
+    trip_advisor= json.load(f)
+    link_dict = trip_advisor[destination]
+    accomodations_url = link_dict['Hotel']
+
+    return jsonpickle.encode(api_functions.getbanner(accomodations_url))
         
 if __name__ == '__main__':
     app.run(debug=True, threaded=True)
