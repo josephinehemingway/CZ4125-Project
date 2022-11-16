@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 import time
 import urllib.parse
 import re
-import json
+
 
 base_url = 'https://www.tripadvisor.com'
 def parse_html(url, print_soup = False):
