@@ -8,22 +8,25 @@ import Map from "./Map";
 type Props = {
     tabName: string;
     destinationName: string;
+    countryName: string
 };
 
-const Attractions: React.FC<Props>= ({ tabName, destinationName }) => {
+const Attractions: React.FC<Props>= ({ tabName, destinationName, countryName }) => {
     interface AttractionsApi{
-        name: string,
-        activity: string,
-        location: string,
-        photo: string,
-        review_url: string
+        Name: string,
+        Activity: string,
+        Location: string,
+        ImageUrl: string,
+        Ratings: string,
+        Review_url: string;
     }
-    
+
     const [data, setdata] = useState<AttractionsApi[]>([])
+
     useEffect(() => {
         // Using fetch to fetch the api from 
         // flask server it will be redirected to proxy
-        fetch("/attractions").then((res) =>
+        fetch(`/attractions-api?destination=${countryName}`).then((res) =>
             res.json().then((data) => {
                 // Setting a data from api
                 setdata(data);
@@ -33,15 +36,15 @@ const Attractions: React.FC<Props>= ({ tabName, destinationName }) => {
     }, []);
     
     const attrCardsArray = data.map((d, index) =>{
-        console.log(d.name)
+        console.log(d.Name)
         return(
-        <Link key={index} to={"/explore/UK/Zurich"}>
+        <Link key={index} to={d.Review_url}>
             <AttractionsCard
                 //onClick={scrollToTop}
-                imgurl={d.photo}
-                attrName={d.name}
-                attrActivity={d.activity}
-                attrLocation={d.location}
+                imgurl={d.ImageUrl}
+                attrName={d.Name}
+                attrActivity={d.Activity}
+                attrLocation={d.Location}
                 
             />
         </Link>)});

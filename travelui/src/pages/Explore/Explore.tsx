@@ -16,17 +16,17 @@ const Explore: React.FC = () => {
     const destinationName = useLocation().pathname.split("/")[3];
 
     const attrTab = <>
-            <Attractions tabName={'Attractions'} destinationName={destinationName}/>
+            <Attractions tabName={'Attractions'} destinationName={destinationName} countryName={countryName}/>
             <TikTokSection title={'Trending Places on TikTok'} TikTokList={TIKTOK_LIST}/>
         </>
 
     const foodTab = <>
-        <Attractions tabName={'Restaurants'} destinationName={destinationName}/>
+        <Attractions tabName={'Restaurants'} destinationName={destinationName} countryName={countryName}/>
         <TikTokSection title={'Food Recommendations from TikTok'} TikTokList={TIKTOK_LIST}/>
     </>
 
     const accomTab = <>
-        <Accommodations tabName={'Accommodations'} destinationName={destinationName}/>
+        <Accommodations tabName={'Accommodations'} destinationName={destinationName} countryName={countryName}/>
     </>
 
     const guidesTab = <>

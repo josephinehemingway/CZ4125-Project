@@ -27,7 +27,7 @@ const Itinerary: React.FC = () => {
     let formattedDestination = capitalise(destinationName)
 
     const citiesTab = <>
-        <Attractions tabName={'Attractions'} destinationName={formattedDestination}/>
+        <Attractions tabName={'Attractions'} destinationName={formattedDestination} countryName={formattedDestination}/>
         <TikTokSection title={'Trending Places on TikTok'} TikTokList={TIKTOK_LIST}/>
     </>
 

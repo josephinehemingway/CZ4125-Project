@@ -9,10 +9,11 @@ import Map from "./Map";
 type Props = {
     tabName: string;
     destinationName: string;
+    countryName: string
 };
 
 //this component will be used for attractions and food section
-const Accommodations: React.FC<Props>= ({ destinationName }) => {
+const Accommodations: React.FC<Props>= ({ destinationName, countryName }) => {
     // here we will pass in the destination, tiktoks, list of attractions
 
     // get data
@@ -27,7 +28,7 @@ const Accommodations: React.FC<Props>= ({ destinationName }) => {
     useEffect(() => {
         // Using fetch to fetch the api from 
         // flask server it will be redirected to proxy
-        fetch("/accommodations").then((res) =>
+        fetch(`/accommodations-api?destination=${countryName}`).then((res) =>
             res.json().then((data) => {
                 // Setting a data from api
                 setdata(data);
