@@ -1,3 +1,5 @@
 Flask
 flask_cors
 jsonpickle
+requests
+bs4
