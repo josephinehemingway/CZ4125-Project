@@ -77,6 +77,7 @@ const Accommodations: React.FC<Props>= ({ destinationName, countryName }) => {
                 </StyledLink>
             </RowContainer>
             <HorizontalScroll height={'100%'}>
+
                 {loading ?
                     <div style={{ width: '100%',
                         height: '50%',
@@ -119,6 +120,7 @@ const Accommodations: React.FC<Props>= ({ destinationName, countryName }) => {
                     </div>
                     : accomCardsArray
                 }
+
             </HorizontalScroll>
 
             <RowContainer

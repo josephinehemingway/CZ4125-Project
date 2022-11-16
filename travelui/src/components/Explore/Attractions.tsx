@@ -12,6 +12,7 @@ type Props = {
 };
 
 const Attractions: React.FC<Props>= ({ tabName, destinationName, countryName }) => {
+
     interface AttractionsApi{
         Name: string,
         Activity: string,
