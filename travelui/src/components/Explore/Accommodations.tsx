@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import {HorizontalScroll, RowContainer, StyledLink, StyledSectionTitle, StyledSubSubheading} from '../reusable/Styles';
 import './explorestyles.css';
-import Rome from '../../assets/images/Rome.jpeg';
-import {Link} from "react-router-dom";
 import AccomsCard from "../reusable/Cards/AccomsCard";
 import Map from "./Map";
 
@@ -18,10 +16,13 @@ const Accommodations: React.FC<Props>= ({ destinationName, countryName }) => {
 
     // get data
     interface AccommodationsApi{
-        id: string,
-        name: string,
-        url: string,
-        rating: number
+        Id: string,
+        Name: string,
+        ImageUrl: string,
+        ReviewUrl: string,
+        Rating: number,
+        Lat: number,
+        Lng: number
     }
     
     const [data, setdata] = useState<AccommodationsApi[]>([])
@@ -38,14 +39,14 @@ const Accommodations: React.FC<Props>= ({ destinationName, countryName }) => {
     }, []);
 
     const accomCardsArray = data.map((d) => (
-        <Link key={d.id} to={d.url}>
+        <a key={d.Id} href={d.ReviewUrl} target="_blank" rel="noopener noreferrer">
             <AccomsCard
                 // onClick={scrollToTop}
-                url={Rome}
-                name={d.name}
-                rating={d.rating}
+                url={d.ImageUrl}
+                name={d.Name}
+                rating={d.Rating}
             />
-        </Link>
+        </a>
     ));
 
     return (

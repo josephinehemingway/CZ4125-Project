@@ -18,6 +18,8 @@ const Attractions: React.FC<Props>= ({ tabName, destinationName, countryName }) 
         ImageUrl: string,
         Ratings: string,
         Review_url: string;
+        Lat: number,
+        Lng: number
     }
 
     const [data, setdata] = useState<AttractionsApi[]>([])

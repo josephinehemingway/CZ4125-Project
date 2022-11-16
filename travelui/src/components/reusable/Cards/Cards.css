@@ -138,12 +138,22 @@
   box-shadow: 0 2px 25px #a8adb7;
 }
 
-.acc-desc {
+.acc-desc{
   display: flex;
   flex-direction: column;
   position: relative;
   width: 93%;
   bottom: 25%;
+  left: 7%;
+  color: #fff;
+}
+
+.acc-desc-2lines  {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 93%;
+  bottom: 35%;
   left: 7%;
   color: #fff;
 }
