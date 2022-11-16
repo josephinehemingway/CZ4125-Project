@@ -8,10 +8,10 @@ import {Spin} from "antd";
 type Props = {
     tabName: string;
     destinationName: string;
-    countryName: string
+    // countryName: string
 };
 
-const Accommodations: React.FC<Props>= ({ destinationName, countryName }) => {
+const Accommodations: React.FC<Props>= ({ destinationName }) => {
     interface AccommodationsApi{
         Id: string,
         Name: string,
@@ -26,9 +26,10 @@ const Accommodations: React.FC<Props>= ({ destinationName, countryName }) => {
     const [loading, setLoading] = useState<Boolean>(true)
 
     useEffect(() => {
+        setLoading(true);
         // Using fetch to fetch the api from 
         // flask server it will be redirected to proxy
-        fetch(`/accommodations-api?destination=${countryName}`).then((res) =>
+        fetch(`/accommodations-api?destination=${destinationName}`).then((res) =>
             res.json().then((data) => {
                 // Setting a data from api
                 setdata(data);
@@ -36,7 +37,7 @@ const Accommodations: React.FC<Props>= ({ destinationName, countryName }) => {
                 console.log(data)
             })
         );
-    }, []);
+    }, [destinationName]);
 
     const accomCardsArray = data.map((d) => (
         <a key={d.Id} href={d.ReviewUrl} target="_blank" rel="noopener noreferrer">

@@ -11,22 +11,22 @@ import Accommodations from "../../components/Explore/Accommodations";
 import Guides from "../../components/Explore/Guides";
 
 const Explore: React.FC = () => {
-    const countryName = useLocation().pathname.split("/")[2];
-    const destinationName = useLocation().pathname.split("/")[3];
+    // const countryName = useLocation().pathname.split("/")[2];
+    const destinationName = useLocation().pathname.split("/")[2];
     const [coverUrl, setCoverUrl] = useState<string>('')
 
     const attrTab = <>
-            <Attractions tabName={'Attractions'} destinationName={destinationName} countryName={countryName}/>
+            <Attractions tabName={'Attractions'} destinationName={destinationName} />
             <TikTokSection title={'Trending Places on TikTok'} TikTokList={TIKTOK_LIST}/>
         </>
 
     const foodTab = <>
-        <Attractions tabName={'Restaurants'} destinationName={destinationName} countryName={countryName}/>
+        <Attractions tabName={'Restaurants'} destinationName={destinationName}/>
         <TikTokSection title={'Food Recommendations from TikTok'} TikTokList={TIKTOK_LIST}/>
     </>
 
     const accomTab = <>
-        <Accommodations tabName={'Accommodations'} destinationName={destinationName} countryName={countryName}/>
+        <Accommodations tabName={'Accommodations'} destinationName={destinationName} />
     </>
 
     const guidesTab = <>
@@ -34,7 +34,7 @@ const Explore: React.FC = () => {
     </>
 
     useEffect(() => {
-        fetch(`/banner?destination=${countryName}`).then((res) =>
+        fetch(`/banner?destination=${destinationName}`).then((res) =>
             res.json().then((data) => {
                 setCoverUrl(data);
                 console.log(data)
@@ -65,7 +65,7 @@ const Explore: React.FC = () => {
                 </Breadcrumb>
                 <StyledPageTitle>
                     {" "}
-                    {`${destinationName}, ${countryName}`}{" "}
+                    {`${destinationName}`}{" "}
                 </StyledPageTitle>
 
                 <Tabs

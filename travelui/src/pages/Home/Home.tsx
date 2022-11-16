@@ -10,8 +10,8 @@ import {TIKTOK_LIST} from "../../utils/const";
 
 const Home: React.FC = () => {
     const [destination, setDestination] = useState<string>("");
-    const onSearch = (destination: string) => {
-        setDestination(destination);
+
+    const onSearch = () => {
         console.log(destination);
     };
 
@@ -43,10 +43,13 @@ const Home: React.FC = () => {
             <StyledInputSearch
                 col={'black'}
                 width={"75%"}
-                suffix={<img src={Plane} height={"20rem"} alt=""/>}
+                suffix={<img
+                    onClick={onSearch}
+                    src={Plane} height={"20rem"} alt=""
+                />}
                 placeholder="Search Destinations"
                 value={destination === "" ? undefined : destination}
-                onChange={(e: { target: { value: any } }) => onSearch(e.target.value)}
+                onChange={(e: { target: { value: any } }) => setDestination(e.target.value)}
                 allowClear
             />
             <ExploreSection/>

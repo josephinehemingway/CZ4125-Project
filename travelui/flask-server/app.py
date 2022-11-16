@@ -59,6 +59,8 @@ def attractions():
 @app.route('/attractions-api')
 def attractions_api():
     destination = request.args.get('destination')
+    destination = destination.lower()
+
     print(destination)
     f= open('tripadvisor_link.json')
     trip_advisor= json.load(f)
@@ -105,6 +107,8 @@ def hotels():
 @app.route('/accommodations-api')
 def hotels_api():
     destination = request.args.get('destination')
+    destination = destination.lower()
+
     print(destination)
 
     f= open('tripadvisor_link.json')
@@ -116,6 +120,7 @@ def hotels_api():
 @app.route('/banner')
 def get_banner():
     destination = request.args.get('destination')
+    destination = destination.lower()
     print(destination)
 
     f= open('tripadvisor_link.json')
