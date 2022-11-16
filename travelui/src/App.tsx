@@ -13,7 +13,7 @@ function App() {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route
-                    path="/explore/:country/:destination"
+                    path="/explore/:destination"
                     element={<Explore />}
                 />
                 <Route path='/itinerary/:destination' element={<Itinerary/>} />

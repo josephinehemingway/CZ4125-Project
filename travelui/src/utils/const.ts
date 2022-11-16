@@ -16,31 +16,31 @@ export const DESTINATIONS_LIST: CARD_INTERFACE[] = [
         id: 1,
         name: "London, UK",
         imgUrl: London,
-        link: "/explore/UK/London"
+        link: "/explore/London"
     },
     {
         id: 2,
         name: "Paris, France",
         imgUrl: Paris,
-        link: "/explore/France/Paris"
+        link: "/explore/Paris"
     },
     {
         id: 3,
         name: "Rome, Italy",
         imgUrl: Rome,
-        link: "/explore/Italy/Rome"
+        link: "/explore/Rome"
     },
     {
         id: 4,
         name: "Zurich, Switzerland",
         imgUrl: Zurich,
-        link: "/explore/Switzerland/Zurich"
+        link: "/explore/Zurich"
     },
     {
         id: 5,
         name: "Madrid, Spain",
         imgUrl: Madrid,
-        link: "/explore/Spain/Madrid"
+        link: "/explore/Madrid"
     },
 ]
 
