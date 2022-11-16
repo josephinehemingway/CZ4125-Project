@@ -3,6 +3,7 @@ import {HorizontalScroll, RowContainer, StyledLink, StyledSectionTitle, StyledSu
 import './explorestyles.css';
 import AccomsCard from "../reusable/Cards/AccomsCard";
 import Map from "./Map";
+import {Spin} from "antd";
 
 type Props = {
     tabName: string;
@@ -10,11 +11,7 @@ type Props = {
     countryName: string
 };
 
-//this component will be used for attractions and food section
 const Accommodations: React.FC<Props>= ({ destinationName, countryName }) => {
-    // here we will pass in the destination, tiktoks, list of attractions
-
-    // get data
     interface AccommodationsApi{
         Id: string,
         Name: string,
@@ -26,6 +23,8 @@ const Accommodations: React.FC<Props>= ({ destinationName, countryName }) => {
     }
     
     const [data, setdata] = useState<AccommodationsApi[]>([])
+    const [loading, setLoading] = useState<Boolean>(true)
+
     useEffect(() => {
         // Using fetch to fetch the api from 
         // flask server it will be redirected to proxy
@@ -33,6 +32,7 @@ const Accommodations: React.FC<Props>= ({ destinationName, countryName }) => {
             res.json().then((data) => {
                 // Setting a data from api
                 setdata(data);
+                setLoading(false);
                 console.log(data)
             })
         );
@@ -77,7 +77,17 @@ const Accommodations: React.FC<Props>= ({ destinationName, countryName }) => {
                 </StyledLink>
             </RowContainer>
             <HorizontalScroll height={'100%'}>
-                {accomCardsArray}
+                {loading ?
+                    <div style={{ width: '100%',
+                        height: '50%',
+                        display: 'flex',
+                        flexDirection: 'row',
+                        alignItems: 'center',
+                        justifyContent: 'center'}}>
+                        <Spin tip="Loading..." />
+                    </div>
+                    : accomCardsArray
+                }
             </HorizontalScroll>
 
             <RowContainer
@@ -98,7 +108,17 @@ const Accommodations: React.FC<Props>= ({ destinationName, countryName }) => {
                 </StyledLink>
             </RowContainer>
             <HorizontalScroll height={'100%'}>
-                {accomCardsArray}
+                {loading ?
+                    <div style={{ width: '100%',
+                        height: '50%',
+                        display: 'flex',
+                        flexDirection: 'row',
+                        alignItems: 'center',
+                        justifyContent: 'center'}}>
+                        <Spin tip="Loading..." />
+                    </div>
+                    : accomCardsArray
+                }
             </HorizontalScroll>
 
             <RowContainer
