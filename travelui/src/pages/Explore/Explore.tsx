@@ -1,10 +1,9 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import "../Pages.css";
 import { Container, StyledPageTitle } from "../../components/reusable/Styles";
 import { Link, useLocation } from "react-router-dom";
 import { Breadcrumb, Tabs } from "antd";
 import {TIKTOK_LIST} from "../../utils/const";
-import London from "../../assets/images/London.jpeg";
 import ExploreBanner from "../../components/Explore/ExploreBanner";
 import TikTokSection from "../../components/reusable/TikTok/TikTokSection";
 import Attractions from "../../components/Explore/Attractions";
@@ -14,6 +13,7 @@ import Guides from "../../components/Explore/Guides";
 const Explore: React.FC = () => {
     const countryName = useLocation().pathname.split("/")[2];
     const destinationName = useLocation().pathname.split("/")[3];
+    const [coverUrl, setCoverUrl] = useState<string>('')
 
     const attrTab = <>
             <Attractions tabName={'Attractions'} destinationName={destinationName} countryName={countryName}/>
@@ -33,10 +33,19 @@ const Explore: React.FC = () => {
         <Guides tabName={'Guides'} destinationName={destinationName}/>
     </>
 
+    useEffect(() => {
+        fetch(`/banner?destination=${countryName}`).then((res) =>
+            res.json().then((data) => {
+                setCoverUrl(data);
+                console.log(data)
+            })
+        );
+    }, []);
+
     return (
         <body className="home">
             <ExploreBanner
-                coverUrl={London}
+                coverUrl={coverUrl}
                 destinationName={destinationName}
             />
             <Container

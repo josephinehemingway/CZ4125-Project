@@ -24,7 +24,10 @@ const ExploreBanner: React.FC<Props> = ({ coverUrl, destinationName }) => {
     return (
         <>
             <div className="head-image">
-                {/*<img className="head-image" src={coverUrl} height={"100%"} width={"100%"} alt="" />*/}
+                <img className="head-image"
+                     src={coverUrl}
+                     height={"100%"}
+                     width={"100%"} alt="" />
             </div>
 
             <div className="text-on-image-center">

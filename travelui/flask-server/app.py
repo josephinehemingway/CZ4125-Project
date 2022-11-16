@@ -112,6 +112,18 @@ def hotels_api():
     link_dict = trip_advisor[destination]
     accomodations_url = link_dict['Hotel']
     return jsonpickle.encode(api_functions.get_hotels(accomodations_url))
+
+@app.route('/banner')
+def get_banner():
+    destination = request.args.get('destination')
+    print(destination)
+
+    f= open('tripadvisor_link.json')
+    trip_advisor= json.load(f)
+    link_dict = trip_advisor[destination]
+    accomodations_url = link_dict['Hotel']
+
+    return jsonpickle.encode(api_functions.getbanner(accomodations_url))
         
 if __name__ == '__main__':
     app.run(debug=True, threaded=True)
