@@ -124,6 +124,23 @@ def get_banner():
     accomodations_url = link_dict['Hotel']
 
     return jsonpickle.encode(api_functions.getbanner(accomodations_url))
+
+@app.route('/airbnb')
+def get_airbnb():
+    destination = request.args.get('destination')
+    print(destination)
+
+    airbnb_url = 'https://www.airbnb.com.sg/s/' + destination + '/homes'
+
+    return jsonpickle.encode(api_functions.getairbnb(airbnb_url))
+
+@app.route('/tiktok')
+def get_tiktok():
+    destination = request.args.get('destination')
+    print(destination)
+    tiktok_type = "food"
+
+    return jsonpickle.encode(api_functions.gettiktok(destination,tiktok_type))
         
 if __name__ == '__main__':
     app.run(debug=True, threaded=True)
