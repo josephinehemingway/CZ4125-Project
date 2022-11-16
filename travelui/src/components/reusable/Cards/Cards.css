@@ -82,7 +82,8 @@
 .attr-name {
   position: relative;
   text-overflow: ellipsis;
-  overflow-x: hidden;
+  overflow: hidden;
+  white-space: nowrap;
   width: 80%;
   font-family: Poppins-SemiBold, sans-serif;
   color: #fff;
@@ -107,11 +108,14 @@
 .attr-location {
   position: relative;
   text-overflow: ellipsis;
-  overflow-x: hidden;
   font-family: Poppins, sans-serif;
   color: #fff;
   font-size: 15px;
   margin-bottom: 0;
+  line-height: 1rem;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 90%;
 
 }
 

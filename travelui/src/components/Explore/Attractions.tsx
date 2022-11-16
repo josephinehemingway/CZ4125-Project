@@ -1,7 +1,6 @@
 import React, {useState, useEffect } from 'react';
 import {RowContainer, StyledLink, StyledSectionTitle} from '../reusable/Styles';
 import './explorestyles.css';
-import {Link} from "react-router-dom";
 import AttractionsCard from "../reusable/Cards/AttractionsCard";
 import Map from "./Map";
 
@@ -38,16 +37,18 @@ const Attractions: React.FC<Props>= ({ tabName, destinationName, countryName }) 
     const attrCardsArray = data.map((d, index) =>{
         console.log(d.Name)
         return(
-        <Link key={index} to={d.Review_url}>
+        <a key={index}
+           href={d.Review_url}
+           target="_blank"
+           rel="noopener noreferrer">
             <AttractionsCard
-                //onClick={scrollToTop}
                 imgurl={d.ImageUrl}
                 attrName={d.Name}
                 attrActivity={d.Activity}
                 attrLocation={d.Location}
                 
             />
-        </Link>)});
+        </a>)});
 
     return (
         <div style={{marginBottom: '3rem'}}>
