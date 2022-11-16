@@ -9,28 +9,32 @@ import TikTokSection from "../../components/reusable/TikTok/TikTokSection";
 import Attractions from "../../components/Explore/Attractions";
 import Accommodations from "../../components/Explore/Accommodations";
 import Guides from "../../components/Explore/Guides";
+import {capitalise} from "../../utils/helperfunctions"
+
 
 const Explore: React.FC = () => {
     // const countryName = useLocation().pathname.split("/")[2];
     const destinationName = useLocation().pathname.split("/")[2];
     const [coverUrl, setCoverUrl] = useState<string>('')
 
+    let formattedDestination = capitalise(destinationName)
+
     const attrTab = <>
-            <Attractions tabName={'Attractions'} destinationName={destinationName} />
+            <Attractions tabName={'Attractions'} destinationName={formattedDestination} />
             <TikTokSection title={'Trending Places on TikTok'} TikTokList={TIKTOK_LIST}/>
         </>
 
     const foodTab = <>
-        <Attractions tabName={'Restaurants'} destinationName={destinationName}/>
+        <Attractions tabName={'Restaurants'} destinationName={formattedDestination}/>
         <TikTokSection title={'Food Recommendations from TikTok'} TikTokList={TIKTOK_LIST}/>
     </>
 
     const accomTab = <>
-        <Accommodations tabName={'Accommodations'} destinationName={destinationName} />
+        <Accommodations tabName={'Accommodations'} destinationName={formattedDestination} />
     </>
 
     const guidesTab = <>
-        <Guides tabName={'Guides'} destinationName={destinationName}/>
+        <Guides tabName={'Guides'} destinationName={formattedDestination}/>
     </>
 
     useEffect(() => {
@@ -46,7 +50,7 @@ const Explore: React.FC = () => {
         <body className="home">
             <ExploreBanner
                 coverUrl={coverUrl}
-                destinationName={destinationName}
+                destinationName={formattedDestination}
             />
             <Container
                 width="70%"
@@ -61,11 +65,11 @@ const Explore: React.FC = () => {
                     <Breadcrumb.Item>
                         <Link to="/">Explore</Link>
                     </Breadcrumb.Item>
-                    <Breadcrumb.Item>{destinationName}</Breadcrumb.Item>
+                    <Breadcrumb.Item>{formattedDestination}</Breadcrumb.Item>
                 </Breadcrumb>
                 <StyledPageTitle>
                     {" "}
-                    {`${destinationName}`}{" "}
+                    {`${formattedDestination}`}{" "}
                 </StyledPageTitle>
 
                 <Tabs

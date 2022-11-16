@@ -7,12 +7,21 @@ import TikTokSection from "../../components/reusable/TikTok/TikTokSection";
 import Logo from "../../assets/images/Logo.png";
 import Plane from "../../assets/images/Plane-black.png";
 import {TIKTOK_LIST} from "../../utils/const";
+import {useNavigate} from "react-router-dom";
+
 
 const Home: React.FC = () => {
     const [destination, setDestination] = useState<string>("");
+    let navigate = useNavigate();
+
+    const navigateToExplore = () =>{
+        let path = `explore/${destination}`;
+        navigate(path);
+    }
 
     const onSearch = () => {
         console.log(destination);
+        navigateToExplore()
     };
 
     const exploreRef = useRef<HTMLDivElement>(null);
