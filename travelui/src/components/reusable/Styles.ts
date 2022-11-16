@@ -189,7 +189,7 @@ export const StyledDoubleInput = styled.div<
         padding-right: 1rem;
         font-size: calc(10px + 0.4vw);
         margin-right: 1rem;
-        overflow-x: hidden;
+        overflow: hidden;
 
         &:hover {
             border: 2px solid #46c7c7;
