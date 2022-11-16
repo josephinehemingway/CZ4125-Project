@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../styles.css";
 import Logo from "../../assets/images/Logo.png";
+import Banner from "../../assets/images/travel.jpeg";
 import {
     Container,
     StyledHeading,
@@ -10,13 +11,12 @@ import {Link} from "react-router-dom";
 import Plane from "../../assets/images/Plane.png";
 
 type Props = {
-    coverUrl: string;
     destinationName: string;
     seasonSelected: string;
     durationSelected: number;
 };
 
-const ItineraryBanner: React.FC<Props> = ({ coverUrl, destinationName, durationSelected, seasonSelected }) => {
+const ItineraryBanner: React.FC<Props> = ({ destinationName, durationSelected, seasonSelected }) => {
     const [destination, setDestination] = useState<string>(destinationName);
     const [duration, setDuration] = useState<number>(durationSelected);
     const [season, setSeason] = useState<string>(seasonSelected);
@@ -24,7 +24,7 @@ const ItineraryBanner: React.FC<Props> = ({ coverUrl, destinationName, durationS
     return (
         <>
             <div className="head-image">
-                {/*<img className="head-image" src={coverUrl} height={"100%"} width={"100%"} alt="" />*/}
+                <img className="head-image" src={Banner} height={"100%"} width={"100%"} alt="" />
             </div>
 
             <div className="text-on-image-center">
