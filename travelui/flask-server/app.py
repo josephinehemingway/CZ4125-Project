@@ -123,7 +123,7 @@ def get_banner():
     link_dict = trip_advisor[destination]
     accomodations_url = link_dict['Hotel']
 
-    return jsonpickle.encode(api_functions.getbanner(accomodations_url))
+    return jsonpickle.encode(api_functions.get_banner(accomodations_url))
 
 @app.route('/airbnb')
 def get_airbnb():
@@ -141,6 +141,12 @@ def get_tiktok():
     tiktok_type = "food"
 
     return jsonpickle.encode(api_functions.gettiktok(destination,tiktok_type))
-        
+
+@app.route('/food-api')
+def food_api():
+    destination = request.args.get('destination')
+    print(destination)
+    return jsonpickle.encode(api_functions.get_food(destination))
+
 if __name__ == '__main__':
     app.run(debug=True, threaded=True)
