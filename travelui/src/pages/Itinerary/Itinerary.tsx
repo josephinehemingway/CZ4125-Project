@@ -7,15 +7,7 @@ import {TIKTOK_LIST} from "../../utils/const";
 import ItineraryBanner from "../../components/Itinerary/ItineraryBanner";
 import TikTokSection from "../../components/reusable/TikTok/TikTokSection";
 import Attractions from "../../components/Explore/Attractions";
-
-function capitalise(destinationName: string) {
-    const arr = destinationName.split(" ");
-    for (var i = 0; i < arr.length; i++) {
-        arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
-
-    }
-    return arr.join(" ");
-}
+import {capitalise} from "../../utils/helperfunctions"
 
 const Itinerary: React.FC = () => {
     const destinationDetails = useLocation().pathname.split("/")[2];
@@ -26,7 +18,7 @@ const Itinerary: React.FC = () => {
     let formattedDestination = capitalise(destinationName)
 
     const citiesTab = <div style={{width: '100%'}}>
-        <Attractions tabName={'Attractions'} destinationName={formattedDestination} countryName={formattedDestination}/>
+        <Attractions tabName={'Attractions'} destinationName={formattedDestination} />
         <TikTokSection title={'Trending Places on TikTok'} TikTokList={TIKTOK_LIST}/>
     </div>
 

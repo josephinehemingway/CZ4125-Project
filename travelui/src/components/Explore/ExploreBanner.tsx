@@ -8,6 +8,7 @@ import {
     StyledHeading,
 } from "../reusable/Styles";
 import { Link } from "react-router-dom";
+import {scrollToTop} from "../../utils/helperfunctions";
 
 type Props = {
     coverUrl: string;
@@ -16,9 +17,10 @@ type Props = {
 
 const ExploreBanner: React.FC<Props> = ({ coverUrl, destinationName }) => {
     const [destination, setDestination] = useState<string>("");
-    const onSearch = (destination: string) => {
-        setDestination(destination);
+
+    const onSearch = () => {
         console.log(destination);
+        scrollToTop()
     };
 
     return (
@@ -39,12 +41,14 @@ const ExploreBanner: React.FC<Props> = ({ coverUrl, destinationName }) => {
                     <StyledInputSearch
                         col={"white"}
                         width={"90%"}
-                        suffix={<img src={Plane} height={"20rem"} alt="" />}
+                        suffix={
+                        <Link to={`/explore/${destination}`} >
+                            <img src={Plane} height={"20rem"} alt="" onClick={onSearch}/>
+                        </Link>
+                    }
                         placeholder="Search Destinations"
                         value={destination === "" ? undefined : destination}
-                        onChange={(e: { target: { value: any } }) =>
-                            onSearch(e.target.value)
-                        }
+                        onChange={(e: { target: { value: any } }) => setDestination(e.target.value)}
                         allowClear
                     />
                 </Container>

@@ -1,101 +1,105 @@
 {
-    "Italy": {
+    "italy": {
         "Hotel": "https://www.tripadvisor.com/Hotels-g187768-Italy-Hotels.html",
         "Attractions": "https://www.tripadvisor.com/Attractions-g187768-Activities-Italy.html"
     },
-    "Switzerland": {
+    "switzerland": {
         "Hotel": "https://www.tripadvisor.com.sg/Hotels-g188045-Switzerland-Hotels.html" ,
         "Attractions": "https://www.tripadvisor.com.sg/Attractions-g188045-Activities-Switzerland.html"
     },
-    "Rome": {
+    "rome": {
         "Hotel": "https://www.tripadvisor.com.sg/Hotels-g187791-Rome_Lazio-Hotels.html",
         "Attractions": "https://www.tripadvisor.com.sg/Attractions-g187791-Activities-Rome_Lazio.html"
     },
-    "Singapore": {
+    "singapore": {
         "Hotel": "https://www.tripadvisor.com.sg/Hotels-g294265-Singapore-Hotels.html",
         "Attractions": "https://www.tripadvisor.com.sg/Attractions-g294265-Activities-Singapore.html"
     },
-    "India": {
+    "india": {
         "Hotel": "https://www.tripadvisor.com.sg/Hotels-g293860-India-Hotels.html",
         "Attractions": "https://www.tripadvisor.com.sg/Attractions-g293860-Activities-India.html"
     },
-    "Malaysia": {
+    "malaysia": {
         "Hotel": "https://www.tripadvisor.com.sg/Hotels-g293951-Malaysia-Hotels.html",
         "Attractions": "https://www.tripadvisor.com.sg/Attractions-g293951-Activities-Malaysia.html"
     },
-    "Bali": {
+    "bali": {
         "Hotel": "https://www.tripadvisor.com.sg/Hotels-g294226-Bali-Hotels.html",
         "Attractions": "https://www.tripadvisor.com.sg/Attractions-g294226-Activities-Bali.html"
     },
-    "Japan": {
+    "japan": {
         "Hotel": "https://www.tripadvisor.com.sg/Hotels-g294232-Japan-Hotels.html",
         "Attractions": "https://www.tripadvisor.com.sg/Attractions-g294232-Activities-Japan.html"
     },
-    "Seoul": {
+    "seoul": {
         "Hotel": "https://www.tripadvisor.com.sg/Hotels-g294197-Seoul-Hotels.html",
         "Attractions": "https://www.tripadvisor.com.sg/Attractions-g294197-Activities-Seoul.html"
     },
-    "Melbourne": {
+    "melbourne": {
         "Hotel": "https://www.tripadvisor.com.sg/Hotels-g255100-Melbourne_Victoria-Hotels.html",
         "Attractions": "https://www.tripadvisor.com.sg/Attractions-g255100-Activities-Melbourne_Victoria.html"
     },
-    "Sydney": {
+    "sydney": {
         "Hotel": "https://www.tripadvisor.com.sg/Hotels-g255060-Sydney_New_South_Wales-Hotels.html",
         "Attractions": "https://www.tripadvisor.com.sg/Attractions-g255060-Activities-Sydney_New_South_Wales.html"
     },
-    "London": {
+    "london": {
         "Hotel": "https://www.tripadvisor.com.sg/Hotels-g186338-London_England-Hotels.html",
         "Attractions": "https://www.tripadvisor.com.sg/Attractions-g186338-Activities-London_England.html"
     },
-    "UK": {
+    "uk": {
         "Hotel": "https://www.tripadvisor.com.sg/Hotels-g186216-United_Kingdom-Hotels.html",
         "Attractions": "https://www.tripadvisor.com.sg/Attractions-g186216-Activities-United_Kingdom.html"
     },
-    "Paris": {
+    "paris": {
         "Hotel": "https://www.tripadvisor.com.sg/Hotels-g187147-Paris_Ile_de_France-Hotels.html",
         "Attractions": "https://www.tripadvisor.com.sg/Attractions-g187147-Activities-Paris_Ile_de_France.html"
     },
-    "France": {
+    "france": {
         "Hotel": "https://www.tripadvisor.com.sg/Hotels-g187070-France-Hotels.html",
         "Attractions": "https://www.tripadvisor.com.sg/Attractions-g187070-Activities-France.html"
     },
-    "Zermatt": {
+    "zermatt": {
         "Hotel": "https://www.tripadvisor.com.sg/Hotels-g188098-Zermatt_Canton_of_Valais_Swiss_Alps-Hotels.html",
         "Attractions": "https://www.tripadvisor.com.sg/Attractions-g188098-Activities-Zermatt_Canton_of_Valais_Swiss_Alps.html"
     },
-    "Interlaken": {
+    "interlaken": {
         "Hotel": "https://www.tripadvisor.com.sg/Hotels-g188081-Interlaken_Bernese_Oberland_Canton_of_Bern-Hotels.html",
         "Attractions": "https://www.tripadvisor.com.sg/Attractions-g188081-Activities-Interlaken_Bernese_Oberland_Canton_of_Bern.html"
     },
-    "Zurich": {
+    "zurich": {
         "Hotel": "https://www.tripadvisor.com.sg/Hotels-g188113-Zurich-Hotels.html",
         "Attractions": "https://www.tripadvisor.com.sg/Attractions-g188113-Activities-Zurich.html"
     },
-    "Spain": {
+    "spain": {
         "Hotel": "https://www.tripadvisor.com.sg/Hotels-g187427-Spain-Hotels.html",
         "Attractions": "https://www.tripadvisor.com.sg/Attractions-g187427-Activities-Spain.html"
     },
-    "Madrid": {
+    "madrid": {
         "Hotel": "https://www.tripadvisor.com.sg/Hotels-g187514-Madrid-Hotels.html",
         "Attractions": "https://www.tripadvisor.com.sg/Attractions-g187514-Activities-Madrid.html"
     },
-    "Thailand": {
+    "barcelona": {
+        "Hotel": "https://www.tripadvisor.com.sg/Hotels-g187497-Barcelona_Catalonia-Hotels.html",
+        "Attractions": "https://www.tripadvisor.com.sg/Attractions-g187497-Activities-Barcelona_Catalonia.html"
+    },
+    "thailand": {
         "Hotel": "https://www.tripadvisor.com.sg/Hotels-g293915-Thailand-Hotels.html",
         "Attractions": "https://www.tripadvisor.com.sg/Attractions-g293915-Activities-Thailand.html"
     },
-    "Bangkok": {
+    "bangkok": {
         "Hotel": "https://www.tripadvisor.com.sg/Hotels-g293916-Bangkok-Hotels.html",
         "Attractions": "https://www.tripadvisor.com.sg/Attractions-g293916-Activities-Bangkok.html"
     },
-    "Vietnam": {
+    "vietnam": {
         "Hotel": "https://www.tripadvisor.com.sg/Hotels-g293921-Vietnam-Hotels.html",
         "Attractions": "https://www.tripadvisor.com.sg/Attractions-g293921-Activities-Vietnam.html"
     },
-    "Shanghai": {
+    "shanghai": {
         "Hotel": "https://www.tripadvisor.com.sg/Hotels-g308272-Shanghai-Hotels.html",
         "Attractions": "https://www.tripadvisor.com.sg/Attractions-g308272-Activities-Shanghai.html"
     },
-    "Beijing": {
+    "beijing": {
         "Hotel": "https://www.tripadvisor.com.sg/Hotels-g294212-Beijing-Hotels.html",
         "Attractions": "https://www.tripadvisor.com.sg/Attractions-g294212-Activities-Beijing.html"
     }

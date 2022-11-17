@@ -7,12 +7,23 @@ import TikTokSection from "../../components/reusable/TikTok/TikTokSection";
 import Logo from "../../assets/images/Logo.png";
 import Plane from "../../assets/images/Plane-black.png";
 import {TIKTOK_LIST} from "../../utils/const";
+import {useNavigate} from "react-router-dom";
+import {scrollToTop} from "../../utils/helperfunctions";
+
 
 const Home: React.FC = () => {
     const [destination, setDestination] = useState<string>("");
-    const onSearch = (destination: string) => {
-        setDestination(destination);
+    let navigate = useNavigate();
+
+    const navigateToExplore = () =>{
+        let path = `explore/${destination}`;
+        navigate(path);
+    }
+
+    const onSearch = () => {
         console.log(destination);
+        navigateToExplore()
+        scrollToTop()
     };
 
     const exploreRef = useRef<HTMLDivElement>(null);
@@ -43,10 +54,13 @@ const Home: React.FC = () => {
             <StyledInputSearch
                 col={'black'}
                 width={"75%"}
-                suffix={<img src={Plane} height={"20rem"} alt=""/>}
+                suffix={<img
+                    onClick={onSearch}
+                    src={Plane} height={"20rem"} alt=""
+                />}
                 placeholder="Search Destinations"
                 value={destination === "" ? undefined : destination}
-                onChange={(e: { target: { value: any } }) => onSearch(e.target.value)}
+                onChange={(e: { target: { value: any } }) => setDestination(e.target.value)}
                 allowClear
             />
             <ExploreSection/>
