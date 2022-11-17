@@ -8,11 +8,9 @@ import {
 import CityCard from "../reusable/Cards/Cities";
 import { DESTINATIONS_LIST } from "../../utils/const";
 import { Link } from "react-router-dom";
+import {scrollToTop} from "../../utils/helperfunctions";
 
 const ExploreSection: React.FC = () => {
-    const scrollToTop = () => {
-        window.scrollTo(0, 0);
-    };
 
     const cityCardsArray = DESTINATIONS_LIST.map((d) => (
         <Link key={d.id} to={d.link}>

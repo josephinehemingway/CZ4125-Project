@@ -7,4 +7,8 @@ const capitalise = (destinationName: string) => {
     return arr.join(" ");
 }
 
-export { capitalise };
+const scrollToTop = () => {
+    window.scrollTo(0, 0);
+};
+
+export { capitalise, scrollToTop };
