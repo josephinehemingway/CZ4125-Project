@@ -115,7 +115,7 @@ def get_hotels(url):
         
     return hotels
 
-def getbanner(hotel_url):
+def get_banner(hotel_url):
     bannerurl = parse_html(hotel_url,print_soup=False)
     banner_result=bannerurl.find('img',class_='image')['src']
     
