@@ -1,53 +1,61 @@
 import React, {useState, useEffect } from 'react';
 import {RowContainer, StyledLink, StyledSectionTitle} from '../reusable/Styles';
 import './explorestyles.css';
-import {Link} from "react-router-dom";
 import AttractionsCard from "../reusable/Cards/AttractionsCard";
 import Map from "./Map";
+import {Spin} from "antd";
 
 type Props = {
     tabName: string;
     destinationName: string;
+    countryName: string
 };
 
-const Attractions: React.FC<Props>= ({ tabName, destinationName }) => {
-    // here we will pass in the destination, tiktoks, list of attractions
+const Attractions: React.FC<Props>= ({ tabName, destinationName, countryName }) => {
 
-    // get data
     interface AttractionsApi{
-        name: string,
-        activity: string,
-        location: string,
-        photo: string,
-        review_url: string
+        Name: string,
+        Activity: string,
+        Location: string,
+        ImageUrl: string,
+        Ratings: string,
+        Review_url: string;
+        Lat: number,
+        Lng: number
     }
-    
+
     const [data, setdata] = useState<AttractionsApi[]>([])
+    const [loading, setLoading] = useState<Boolean>(true)
+
     useEffect(() => {
         // Using fetch to fetch the api from 
         // flask server it will be redirected to proxy
-        fetch("/attractions").then((res) =>
+        fetch(`/attractions-api?destination=${destinationName}`).then((res) =>
             res.json().then((data) => {
                 // Setting a data from api
                 setdata(data);
+                setLoading(false);
                 console.log(data)
+                console.log(countryName)
             })
         );
     }, []);
     
     const attrCardsArray = data.map((d, index) =>{
-        console.log(d.name)
+        console.log(d.Name)
         return(
-        <Link key={index} to={"/explore/UK/Zurich"}>
+        <a key={index}
+           href={d.Review_url}
+           target="_blank"
+           rel="noopener noreferrer">
             <AttractionsCard
-                //onClick={scrollToTop}
-                url={d.photo}
-                attrName={d.name}
-                attrActivity={d.activity}
-                attrLocation={d.location}
+                imgurl={d.ImageUrl}
+                attrName={d.Name}
+                attrActivity={d.Activity}
+                attrLocation={d.Location}
                 
             />
-        </Link>)});
+        </a>)});
 
     return (
         <div style={{marginBottom: '3rem'}}>
@@ -70,7 +78,17 @@ const Attractions: React.FC<Props>= ({ tabName, destinationName }) => {
             </RowContainer>
             <div className={'explore-gallery'}>
                 <div className='explore-subgallery'>
-                    {attrCardsArray}
+                    {loading ?
+                        <div style={{ width: '100%',
+                            height: '50%',
+                            display: 'flex',
+                            flexDirection: 'row',
+                            alignItems: 'center',
+                            justifyContent: 'center'}}>
+                            <Spin tip="Loading..." />
+                        </div>
+                        : attrCardsArray
+                    }
                 </div>
                 <div style={{width: '30%'}}>
                     <Map />

@@ -1,6 +1,6 @@
 // @ts-ignore
 import styled from "styled-components";
-import { Input, Tabs } from "antd";
+import { Input } from "antd";
 
 export const Container = styled.div`
     width: ${(props: { width: string }) =>
@@ -99,10 +99,10 @@ export const StyledInputSearch = styled(Input)<
         border-radius: 60px;
         width: ${(props: { width: string }) =>
             props.width ? props.width : "70%"};
-        height: calc(20px + 2vw);
+        height: calc(22px + 2vw);
         display: flex;
         flex-direction: row;
-        padding: 1vw;
+        padding: 0.9vw;
         margin-top: 1rem;
         margin-bottom: 1rem;
         font-family: Poppins-Medium, sans-serif;
@@ -111,6 +111,48 @@ export const StyledInputSearch = styled(Input)<
         &:hover {
             border: 2px solid #46c7c7;
         }
+    }
+`;
+
+export const StyledInput = styled(Input)`
+    {
+        .ant-input {
+          background: none;
+          color: #fff;
+          margin-left: 0.5rem;
+          border: none;
+        }
+        .anticon {
+          color: #fff;
+        }
+        border: none;
+        background: none;
+        width: 100%;
+        height: calc(22px + 2vw);
+        display: flex;
+        flex-direction: row;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        margin-left: 0;
+        font-family: Poppins-Medium, sans-serif;
+        font-size: calc(10px + 0.4vw);
+        border-radius: 60px;
+
+      input {
+        background: none;
+        border: none;
+      }
+
+      select {
+        background: none;
+        border: none;
+      }
+
+      textarea:focus,
+      input:focus,
+      select:focus {
+        outline: none;
+      }
     }
 `;
 
@@ -123,27 +165,49 @@ export const HorizontalScroll = styled.div`
     overflow-x: scroll;
 `;
 
-export const StyledDoubleInput = styled.div`
+interface StyledDoubleInputSearchProps {
+    nohover: boolean | undefined;
+}
+
+export const StyledDoubleInput = styled.div<
+        Partial<StyledDoubleInputSearchProps>
+    >`
     && {
         color: #fff;
         background: none;
         border: 1.2px solid #fff;
         border-radius: 60px;
-        width: 40%;
+        width: ${(props: { width: string }) =>
+              props.width ? props.width : "40%"};
         height: calc(20px + 2vw);
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        padding-left: 1.5rem;
+        padding-left: ${(props: { paddingleft: string }) =>
+                props.paddingleft ? props.paddingleft : "1.5rem"};
         padding-right: 1rem;
         font-size: calc(10px + 0.4vw);
         margin-right: 1rem;
-        overflow-x: hidden;
+        overflow: hidden;
 
         &:hover {
             border: 2px solid #46c7c7;
         }
+
+        ${({ nohover }: any) =>
+              !nohover &&
+              `
+            img {
+            -webkit-filter: opacity(60%);
+        }
+
+          img:hover {
+            transform: scale(1.01);
+            -webkit-filter: opacity(100%);
+          }
+        
+        `}
 
         input {
             background: none;
@@ -162,12 +226,6 @@ export const StyledDoubleInput = styled.div`
         }
     }
 `;
-
-export const StyledTabs = styled(Tabs)`
-  && {
-    width: 100%;
-  }
-`
 
 export const StyledTitle = styled.h3`
     && {
@@ -289,120 +347,3 @@ export const StyledSubSubheading = styled.p`
         line-height: calc(20px + 0.5vw);
     }
 `;
-
-// export const StyledSearchWhite = styled(Input.Search)`
-//     && {
-//         .ant-input {
-//             background: none;
-//             color: #fff;
-//             margin-left: 1rem;
-//         }
-//
-//         .ant-input-group {
-//             display: flex;
-//             justify-content: flex-start;
-//             align-items: center;
-//             border: 1.2px solid #fff;
-//             margin-top: 1rem;
-//             margin-bottom: 1rem;
-//             border-radius: 60px !important;
-//
-//             &:hover {
-//                 border: 1.2px solid #46c7c7;
-//             }
-//         }
-//
-//         .ant-input-affix-wrapper {
-//             border-bottom-left-radius: 60px !important;
-//             border-top-left-radius: 60px !important;
-//
-//             background: none;
-//             border: none;
-//             height: calc(20px + 2vw);
-//             width: ${(props: { width: string }) =>
-//                 props.width ? props.width : "70%"};
-//             font-size: calc(10px + 0.4vw);
-//             font-family: Poppins-Medium, sans-serif;
-//
-//           &:active {
-//             outline: none !important;
-//           }
-//
-//           .input {
-//             background: none;
-//             border: none;
-//           }
-//
-//           .select {
-//             background: none;
-//             border: none;
-//           !important
-//           }
-//
-//           .textarea:focus,
-//           .input:focus,
-//           .select:focus {
-//             outline: none !important;
-//           }
-//         }
-//
-//         .ant-input-group-addon {
-//             background: none;
-//         }
-//
-//         .ant-input-search-button {
-//             background-color: var(--color-primary);
-//             border: none;
-//             border-radius: 60px !important;
-//             height: calc(20px + 2vw);
-//         }
-//
-//         .anticon {
-//             color: #fff;
-//         }
-//     }
-// `;
-
-// export const StyledInputNumber = styled(InputNumber)`
-//   && {
-//     width: 100%;
-//     border-radius: 5px;
-//   }
-// `
-//
-// export const StyledTextArea = styled(Input)`
-//   && {
-//     width: 150%;
-//     border-radius: 5px;
-//   }
-// `
-//
-// export const StyledSelect = styled(Select)`
-//   && {
-//     margin-left: ${(props) => (props.left ? props.left : '0px')};
-//     margin-top: ${(props) => (props.top ? props.top : '10px')};
-//     margin-bottom: 10px;
-//     width: ${(props) => (props.width ? props.width : '100%')};
-//     & .ant-select-selector {
-//       border-radius: 5px;
-//     }
-//   }
-// `
-//
-// export const ContentContainer = styled(Col)`
-//   && {
-//     padding: ${(props) => (props.padding ? props.padding : '10px')};
-//     width: ${(props) => (props.width ? props.width : '100%')};
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: flex-start;
-//     align-items: ${(props) => (props.alignitems ? props.alignitems : 'flex-start')};
-//   }
-// `
-//
-// export const StyledTabs = styled(Tabs)`
-//   && {
-//     width: 100%;
-//   }
-// `
-//

@@ -24,14 +24,17 @@ const ExploreBanner: React.FC<Props> = ({ coverUrl, destinationName }) => {
     return (
         <>
             <div className="head-image">
-                {/*<img className="head-image" src={coverUrl} height={"100%"} width={"100%"} alt="" />*/}
+                <img className="head-image"
+                     src={coverUrl}
+                     height={"100%"}
+                     width={"100%"} alt="" />
             </div>
 
             <div className="text-on-image-center">
                 <Link to="/">
                     <img src={Logo} width={"60vw"} alt="" />
                 </Link>
-                <StyledHeading>Explore {destinationName}</StyledHeading>
+                <StyledHeading marginbottom={'1rem'}>Explore {destinationName}</StyledHeading>
                 <Container width={"50%"}>
                     <StyledInputSearch
                         col={"white"}

@@ -4,6 +4,8 @@ import time
 import urllib.parse
 import re
 
+import numpy as np
+from TikTokApi import TikTokApi
 
 base_url = 'https://www.tripadvisor.com'
 def parse_html(url, print_soup = False):
@@ -118,3 +120,59 @@ def getbanner(hotel_url):
     banner_result=bannerurl.find('img',class_='image')['src']
     
     return banner_result
+
+
+def getairbnb(airbnb_url):
+    soup = BeautifulSoup(requests.get(airbnb_url).content, 'html.parser')
+    next_page = ['https://www.airbnb.com.sg' + x.get('href') for x in soup.find("div",class_="_jro6t0").find_all('a')]
+    pages = [airbnb_url,next_page[0],next_page[1]]
+    airbnb = []
+
+    count = 1
+    for page in pages:
+        soup = BeautifulSoup(requests.get(page).content, 'html.parser')
+        listings = soup.find_all('div', 'cy5jw6o dir dir-ltr')
+        for listing_html in listings:
+            features_dict = {}
+            url = "https://www.airbnb.com.sg" + listing_html.find('a').get('href')
+            header = listing_html.find("div", {"class": "t1jojoys dir dir-ltr"}).get_text()
+            name = listing_html.find("div", {"class": "nquyp1l s1cjsi4j dir dir-ltr"}).get_text()
+            
+            price = listing_html.find("div", {"class": "_1jo4hgw"}).get_text().split("\xa0")[-3].replace("$","")
+
+            beds = listing_html.find_all("span", class_ = "dir dir-ltr")[0].get_text().split(" ")[0]
+            
+            try:
+                ratings = listing_html.find("span", class_ = "t5eq1io r4a59j5 dir dir-ltr").get("aria-label").split(",")
+                rate = ratings[0].split(" ")[0]
+                review = ratings[1].split(" ")[-2]
+            except:
+                rate = np.nan
+                review = np.nan
+            
+            pic = listing_html.find_all("source")[0].get("srcset")
+            
+            features_dict['Id'] = count
+            features_dict['Name'] = header
+            features_dict['Rating'] = rate
+            features_dict['url'] = url
+            features_dict['imageurl'] = pic
+            features_dict['review'] = review
+
+            count+=1
+
+            airbnb.append(features_dict)
+    
+    return airbnb
+
+def gettiktok(country,type):
+    api = TikTokApi()
+
+    tiktoks = []
+    for vid in api.hashtag(name = [country,type]).videos(count = 50):
+        tiktok = {}
+        info = vid.info()
+        tiktok['url'] = info['video']['downloadAddr']
+        tiktoks.append(tiktok)
+    
+    return tiktoks
