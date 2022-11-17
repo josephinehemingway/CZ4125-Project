@@ -8,6 +8,7 @@ import Logo from "../../assets/images/Logo.png";
 import Plane from "../../assets/images/Plane-black.png";
 import {TIKTOK_LIST} from "../../utils/const";
 import {useNavigate} from "react-router-dom";
+import {scrollToTop} from "../../utils/helperfunctions";
 
 
 const Home: React.FC = () => {
@@ -22,6 +23,7 @@ const Home: React.FC = () => {
     const onSearch = () => {
         console.log(destination);
         navigateToExplore()
+        scrollToTop()
     };
 
     const exploreRef = useRef<HTMLDivElement>(null);
