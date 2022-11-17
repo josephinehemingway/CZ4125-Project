@@ -3,3 +3,5 @@ flask_cors
 jsonpickle
 requests
 bs4
+json
+TikTokApi
