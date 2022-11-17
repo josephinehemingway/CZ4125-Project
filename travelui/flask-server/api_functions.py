@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 import time
 import urllib.parse
 import re
-
+import json
 import numpy as np
 from TikTokApi import TikTokApi
 
@@ -176,3 +176,43 @@ def gettiktok(country,type):
         tiktoks.append(tiktok)
     
     return tiktoks
+
+def get_food(country):
+    food_url = f'https://www.tasteatlas.com/' + str(country) + '/restaurants'
+    soup=parse_html(food_url)
+    scripts = soup.find_all('script')
+    base_url = 'https://www.tasteatlas.com/'
+    for i in scripts:
+        text= i.text
+        if 'window.ta.whereToEatData' in text:
+            data =i.text
+    
+    list_food = data.split('=')[1].strip()
+    list_food = list_food[:-1]
+    json_str = json.loads(list_food)
+    
+    food_list=[]
+    for i in json_str:
+        food_dict={}
+        #print(i)
+        food_dict['Name']= i ['Name']
+        food_dict['Description']= i['Description']
+        food_dict['Address'] = i['Address']
+        food_dict['Rating'] = i['GoogleRating']
+        food_dict['RestaurantAwardPoint'] = i['HighestRestaurantAwardPoint']
+        dish_dict= i['Dishes']
+        #print(type(dish_dict[0]))
+        dishname = dish_dict[0]
+        name = dishname['Name']
+        food_dict['Dishes']= name
+        food_dict['MustTry'] = i['IsMustTry']
+        image_url = i['Image']
+        image = image_url['Image']
+        food_dict['Image']= base_url +image
+        location = i['Location']
+        food_dict['Lat'] = location['Lat']
+        food_dict['Lon'] = location['Long']
+        food_list.append(food_dict)
+        #print('------------------')
+    
+    return food_list
