@@ -177,6 +177,7 @@ def gettiktok(country,type):
     
     return tiktoks
 
+
 def get_food(country):
     food_url = f'https://www.tasteatlas.com/' + str(country) + '/restaurants'
     soup=parse_html(food_url)

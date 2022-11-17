@@ -144,3 +144,11 @@ def get_tiktok():
         
 if __name__ == '__main__':
     app.run(debug=True, threaded=True)
+
+
+
+@app.route('/food-api')
+def food_api():
+    destination = request.args.get('destination')
+    print(destination)
+    return jsonpickle.encode(api_functions.get_food(destination))
