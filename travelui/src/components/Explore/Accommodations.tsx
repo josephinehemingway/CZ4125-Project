@@ -19,7 +19,7 @@ const Accommodations: React.FC<Props>= ({ destinationName }) => {
         ReviewUrl: string,
         Rating: number,
         Lat: number,
-        Lng: number
+        Lon: number
     }
     
     const [data, setdata] = useState<AccommodationsApi[]>([])

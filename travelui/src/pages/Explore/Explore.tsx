@@ -8,6 +8,7 @@ import ExploreBanner from "../../components/Explore/ExploreBanner";
 import TikTokSection from "../../components/reusable/TikTok/TikTokSection";
 import Attractions from "../../components/Explore/Attractions";
 import Accommodations from "../../components/Explore/Accommodations";
+import Food from "../../components/Explore/Food";
 import Guides from "../../components/Explore/Guides";
 import {capitalise} from "../../utils/helperfunctions"
 
@@ -25,7 +26,7 @@ const Explore: React.FC = () => {
         </>
 
     const foodTab = <>
-        <Attractions tabName={'Restaurants'} destinationName={formattedDestination}/>
+        <Food tabName={'Restaurants'} destinationName={formattedDestination}/>
         <TikTokSection title={'Food Recommendations from TikTok'} TikTokList={TIKTOK_LIST}/>
     </>
 

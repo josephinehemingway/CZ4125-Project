@@ -209,7 +209,11 @@ def get_food(country):
         food_dict['MustTry'] = i['IsMustTry']
         image_url = i['Image']
         image = image_url['Image']
-        food_dict['Image']= base_url +image
+
+        try:
+            food_dict['Image']= base_url +image
+        except:
+            food_dict['Image']='https://media-cdn.tripadvisor.com/media/photo-s/17/f5/39/f7/fooood-at-the-food-department.jpg'
         location = i['Location']
         food_dict['Lat'] = location['Lat']
         food_dict['Lon'] = location['Long']

@@ -11,27 +11,29 @@ type Props = {
     // countryName: string
 };
 
-const Attractions: React.FC<Props>= ({ tabName, destinationName }) => {
+const Food: React.FC<Props>= ({ tabName, destinationName }) => {
 
-    interface AttractionsApi{
+    interface FoodApi{
         Name: string,
-        Activity: string,
-        Location: string,
-        ImageUrl: string,
-        Ratings: string,
-        Review_url: string;
+        Description: string,
+        Address: string,
+        Image: string,
+        Rating: string,
+        RestaurantAwardPoint: string;
+        Dishes: string;
+        MustTry: boolean;
         Lat: number,
         Lon: number
     }
 
-    const [data, setdata] = useState<AttractionsApi[]>([])
+    const [data, setdata] = useState<FoodApi[]>([])
     const [loading, setLoading] = useState<Boolean>(true)
 
     useEffect(() => {
         setLoading(true);
-        // Using fetch to fetch the api from 
+        // Using fetch to fetch the api from
         // flask server it will be redirected to proxy
-        fetch(`/attractions-api?destination=${destinationName}`).then((res) =>
+        fetch(`/food-api?destination=${destinationName}`).then((res) =>
             res.json().then((data) => {
                 // Setting a data from api
                 setdata(data);
@@ -40,22 +42,16 @@ const Attractions: React.FC<Props>= ({ tabName, destinationName }) => {
             })
         );
     }, [destinationName]);
-    
-    const attrCardsArray = data.map((d, index) =>{
+
+    const foodCardsArray = data.map((d, index) => {
         console.log(d.Name)
-        return(
-        <a key={index}
-           href={d.Review_url}
-           target="_blank"
-           rel="noopener noreferrer">
-            <AttractionsCard
-                imgurl={d.ImageUrl}
-                attrName={d.Name}
-                attrActivity={d.Activity}
-                attrLocation={d.Location}
-                
-            />
-        </a>)});
+        return (<AttractionsCard
+            imgurl={d.Image}
+            attrName={d.Name}
+            attrActivity={d.Description}
+            attrLocation={d.Address}
+        />);
+    });
 
     return (
         <div style={{marginBottom: '3rem'}}>
@@ -87,7 +83,7 @@ const Attractions: React.FC<Props>= ({ tabName, destinationName }) => {
                             justifyContent: 'center'}}>
                             <Spin tip="Loading..." />
                         </div>
-                        : attrCardsArray
+                        : foodCardsArray
                     }
                 </div>
                 <div style={{width: '30%'}}>
@@ -98,4 +94,4 @@ const Attractions: React.FC<Props>= ({ tabName, destinationName }) => {
     );
 };
 
-export default Attractions;
+export default Food;
