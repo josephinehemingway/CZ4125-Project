@@ -201,7 +201,10 @@ def get_food(country):
         food_dict={}
         #print(i)
         food_dict['Name']= i ['Name']
-        food_dict['Description']= strip_html(str(i['Description']))
+        if i['Description'] == None:
+            food_dict['Description'] = ''
+        else:
+            food_dict['Description']= strip_html(str(i['Description']))
         food_dict['Address'] = i['Address']
         food_dict['Rating'] = i['GoogleRating']
         food_dict['RestaurantAwardPoint'] = i['HighestRestaurantAwardPoint']
