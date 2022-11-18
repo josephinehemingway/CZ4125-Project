@@ -7,6 +7,10 @@ import json
 import numpy as np
 from TikTokApi import TikTokApi
 
+from html.parser import HTMLParser
+
+
+
 base_url = 'https://www.tripadvisor.com'
 def parse_html(url, print_soup = False):
     headers = {
@@ -197,7 +201,7 @@ def get_food(country):
         food_dict={}
         #print(i)
         food_dict['Name']= i ['Name']
-        food_dict['Description']= i['Description']
+        food_dict['Description']= strip_html(str(i['Description']))
         food_dict['Address'] = i['Address']
         food_dict['Rating'] = i['GoogleRating']
         food_dict['RestaurantAwardPoint'] = i['HighestRestaurantAwardPoint']
@@ -244,3 +248,29 @@ def find_tips_from_google(query, params=''):
         
     return websites
 
+class MLRemover(HTMLParser):
+    def __init__(self):
+        super().__init__(convert_charrefs=False)
+        self.reset()
+        self.convert_charrefs = True
+        self.fed = []
+
+    def handle_data(self, data):
+        self.fed.append(data)
+
+    def handle_entityref(self, name):
+        self.fed.append(f'&{name};')
+
+    def handle_charref(self, name):
+        self.fed.append(f'&#{name};')
+
+    def get_data(self):
+        return ''.join(self.fed)
+
+
+def strip_html(value):
+    remover = MLRemover()
+
+    remover.feed(value)
+    remover.close()
+    return remover.get_data()
