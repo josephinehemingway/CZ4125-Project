@@ -153,11 +153,6 @@ def food_api():
     print(destination)
     return jsonpickle.encode(api_functions.get_food(destination))
 
-if __name__ == '__main__':
-    app.run(debug=True, threaded=True)
-
-
-
 
 @app.route('/traveltips-api')
 def traveltips_api():
@@ -165,5 +160,16 @@ def traveltips_api():
     print(destination)
     return jsonpickle.encode(api_functions.find_tips_from_google(destination))
 
+
+@app.route('/itinerary-api')
+def googleitinerary_api():
+    destination = request.args.get('destination')
+    days = request.args.get('day')
+    print(destination)
+    return jsonpickle.encode(api_functions.find_itinerary_from_google(destination,days=days))
+
 if __name__ == '__main__':
     app.run(debug=True, threaded=True)
+
+
+

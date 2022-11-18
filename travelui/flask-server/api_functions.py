@@ -9,6 +9,7 @@ from TikTokApi import TikTokApi
 
 from html.parser import HTMLParser
 
+import geograpy
 
 
 base_url = 'https://www.tripadvisor.com'
@@ -277,3 +278,31 @@ def strip_html(value):
     remover.feed(value)
     remover.close()
     return remover.get_data()
+
+
+def get_cities(url):
+    places = geograpy.get_place_context(url=url)
+    cities= places.cities
+    return cities
+
+def find_itinerary_from_google(query,days, params=''):
+    query= days +' itinerary ' + query
+    url = f'https://www.google.com/search?q={query}{params}'
+    soup = parse_html(url)
+    
+    links = soup.find_all('div', class_="yuRUbf")
+    websites = []
+    
+    for link in links:
+        website={}
+        website_link = link.a['href']
+        website['url'] = website_link
+        inner_soup = parse_html(website_link)
+        website_title = inner_soup.title.text
+        website['title'] = website_title
+        places = get_cities(website_link)
+        website['cities'] = places
+        print(website)
+        websites.append(website)
+        
+    return websites

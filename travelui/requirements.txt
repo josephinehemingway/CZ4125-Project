@@ -6,3 +6,4 @@ bs4
 json
 TikTokApi
 HTMLParser
+geograpy3
