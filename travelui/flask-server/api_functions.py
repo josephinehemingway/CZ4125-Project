@@ -221,3 +221,26 @@ def get_food(country):
         #print('------------------')
     
     return food_list
+
+
+def find_tips_from_google(query, params=''):
+    query= query + ' travel tips'
+    url = f'https://www.google.com/search?q={query}{params}'
+    soup = parse_html(url)
+    
+    links = soup.find_all('div', class_="yuRUbf")
+    websites = []
+    
+    for link in links:
+        website={}
+        website_link = link.a['href']
+        website['url'] = website_link
+        inner_soup = parse_html(website_link)
+        website_title = inner_soup.title.text
+        website['title'] = website_title
+        websites.append(website)
+        if len(websites) >8:
+            break
+        
+    return websites
+
