@@ -1,0 +1,2642 @@
+[
+    {
+        "destinationCity": "Penang",
+        "destinationCountry": "Malaysia",
+        "currency": "SGD",
+        "price": "148",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Penang.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Sun 15 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Medan",
+        "destinationCountry": "Indonesia",
+        "currency": "SGD",
+        "price": "208",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Medan.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Sun 15 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Phuket",
+        "destinationCountry": "Thailand",
+        "currency": "SGD",
+        "price": "208",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Phuket.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Sun 15 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Ho Chi Minh City",
+        "destinationCountry": "Vietnam",
+        "currency": "SGD",
+        "price": "218",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/HoChiMinhCity.jpg",
+        "durationStart": "Sat 25 Feb 2023",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Ho Chi Minh City",
+        "destinationCountry": "Vietnam",
+        "currency": "SGD",
+        "price": "238",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/HoChiMinhCity.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Sun 15 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Hanoi",
+        "destinationCountry": "Vietnam",
+        "currency": "SGD",
+        "price": "248",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Hanoi.jpg",
+        "durationStart": "Wed 01 Feb 2023",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Bangkok",
+        "destinationCountry": "Thailand",
+        "currency": "SGD",
+        "price": "288",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Bangkok.jpg",
+        "durationStart": "Wed 03 May 2023",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Phnom Penh",
+        "destinationCountry": "Cambodia",
+        "currency": "SGD",
+        "price": "288",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/PhnomPenh.jpg",
+        "durationStart": "Fri 06 Jan 2023",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Hong Kong",
+        "destinationCountry": "Hong Kong SAR, China",
+        "currency": "SGD",
+        "price": "298",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/HongKong.jpg",
+        "durationStart": "Wed 01 Feb 2023",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Cebu",
+        "destinationCountry": "Philippines",
+        "currency": "SGD",
+        "price": "298",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Cebu.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Sun 15 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Siem Reap",
+        "destinationCountry": "Cambodia",
+        "currency": "SGD",
+        "price": "308",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Siem-Reap.jpg",
+        "durationStart": "Mon 27 Mar 2023",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Denpasar Bali",
+        "destinationCountry": "Indonesia",
+        "currency": "SGD",
+        "price": "310",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Bali.jpg",
+        "durationStart": "Sat 07 Jan 2023",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Phnom Penh",
+        "destinationCountry": "Cambodia",
+        "currency": "SGD",
+        "price": "318",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/PhnomPenh.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Sun 15 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Hanoi",
+        "destinationCountry": "Vietnam",
+        "currency": "SGD",
+        "price": "328",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Hanoi.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Sun 15 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Manila",
+        "destinationCountry": "Philippines",
+        "currency": " SGD",
+        "price": "338",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Manila.jpg",
+        "durationStart": "Fri 27 Jan 2023",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Bangkok",
+        "destinationCountry": "Thailand",
+        "currency": "SGD",
+        "price": "338",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Bangkok.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Sun 15 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Surabaya",
+        "destinationCountry": "Indonesia",
+        "currency": "SGD",
+        "price": "338",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Surabaya.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Sun 15 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Siem Reap",
+        "destinationCountry": "Cambodia",
+        "currency": "SGD",
+        "price": "338",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Siem-Reap.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Sun 15 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Denpasar Bali",
+        "destinationCountry": "Indonesia",
+        "currency": "SGD",
+        "price": "348",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Bali.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Sun 15 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Bandar Seri Begawan",
+        "destinationCountry": "Brunei Darussalam",
+        "currency": "SGD",
+        "price": "358",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/BandarSeriBegawan.jpg",
+        "durationStart": "Thu 26 Jan 2023",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Davao",
+        "destinationCountry": "Philippines",
+        "currency": "SGD",
+        "price": "358",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Davao.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Sun 15 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Chennai",
+        "destinationCountry": "India",
+        "currency": "SGD",
+        "price": "398",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Chennai.jpg",
+        "durationStart": "Tue 14 Feb 2023",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Manila",
+        "destinationCountry": "Philippines",
+        "currency": "SGD",
+        "price": "408",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Manila.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Sun 15 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Kochi",
+        "destinationCountry": "India",
+        "currency": "SGD",
+        "price": "408",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Kochi.jpg",
+        "durationStart": "Sat 25 Feb 2023",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Taipei",
+        "destinationCountry": "Taiwan, China",
+        "currency": "SGD",
+        "price": "418",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Taipei.jpg",
+        "durationStart": "Fri 23 Jun 2023",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Kolkata",
+        "destinationCountry": "India",
+        "currency": "SGD",
+        "price": "428",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Kolkata.jpg",
+        "durationStart": "Tue 07 Mar 2023",
+        "durationEnd": "Thu 28 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Delhi",
+        "destinationCountry": "India",
+        "currency": "SGD",
+        "price": "428",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/NewDelhi.jpg",
+        "durationStart": "Tue 28 Mar 2023",
+        "durationEnd": "Thu 29 Jun 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Hyderabad",
+        "destinationCountry": "India",
+        "currency": "SGD",
+        "price": "428",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Hyderabad.jpg",
+        "durationStart": "Fri 24 Feb 2023",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Mumbai",
+        "destinationCountry": "India",
+        "currency": " SGD",
+        "price": "428",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Mumbai.jpg",
+        "durationStart": "Sun 26 Feb 2023",
+        "durationEnd": "Fri 15 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Bengaluru",
+        "destinationCountry": "India",
+        "currency": "SGD",
+        "price": "428",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Bengaluru.jpg",
+        "durationStart": "Sun 05 Feb 2023",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Chennai",
+        "destinationCountry": "India",
+        "currency": "SGD",
+        "price": "438",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Chennai.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Sat 14 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Da Nang",
+        "destinationCountry": "Vietnam",
+        "currency": "SGD",
+        "price": "438",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/DaNang.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Sun 15 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Kochi",
+        "destinationCountry": "India",
+        "currency": "SGD",
+        "price": "448",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Kochi.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Sat 14 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Darwin",
+        "destinationCountry": "Australia",
+        "currency": "SGD",
+        "price": "458",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Darwin.jpg",
+        "durationStart": "Wed 03 May 2023",
+        "durationEnd": "Fri 08 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Kolkata",
+        "destinationCountry": "India",
+        "currency": "SGD",
+        "price": "468",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Kolkata.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Sat 14 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Darwin",
+        "destinationCountry": "Australia",
+        "currency": "SGD",
+        "price": "488",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Darwin.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Sat 14 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Ahmedabad",
+        "destinationCountry": "India",
+        "currency": "SGD",
+        "price": "488",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Ahmedabad.jpg",
+        "durationStart": "Sun 26 Mar 2023",
+        "durationEnd": "Sun 30 Jul 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Mumbai",
+        "destinationCountry": "India",
+        "currency": "SGD",
+        "price": "498",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Mumbai.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Sat 14 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Dubai",
+        "destinationCountry": "United Arab Emirates",
+        "currency": "SGD",
+        "price": "508",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Dubai.jpg",
+        "durationStart": "Sun 05 Mar 2023",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Bengaluru",
+        "destinationCountry": "India",
+        "currency": "SGD",
+        "price": "518",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Bengaluru.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Sat 14 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Delhi",
+        "destinationCountry": "India",
+        "currency": "SGD",
+        "price": "528",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/NewDelhi.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Sat 14 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Colombo",
+        "destinationCountry": "Sri Lanka",
+        "currency": "SGD",
+        "price": "538",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Colombo.jpg",
+        "durationStart": "Sun 01 Jan 2023",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Male",
+        "destinationCountry": "Maldives",
+        "currency": "SGD",
+        "price": "550",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Male.jpg",
+        "durationStart": "Sat 06 May 2023",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Bandar Seri Begawan",
+        "destinationCountry": "Brunei Darussalam",
+        "currency": "SGD",
+        "price": "558",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/BandarSeriBegawan.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Sun 15 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Ahmedabad",
+        "destinationCountry": "India",
+        "currency": "SGD",
+        "price": "568",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Ahmedabad.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Sat 14 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Perth",
+        "destinationCountry": "Australia",
+        "currency": "SGD",
+        "price": "578",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Perth.jpg",
+        "durationStart": "Thu 16 Mar 2023",
+        "durationEnd": "Thu 14 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Hyderabad",
+        "destinationCountry": "India",
+        "currency": "SGD",
+        "price": "578",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Hyderabad.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Sat 14 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Dhaka",
+        "destinationCountry": "Bangladesh",
+        "currency": "SGD",
+        "price": "598",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Dhaka.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Sat 14 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Jakarta",
+        "destinationCountry": "Indonesia",
+        "currency": "SGD",
+        "price": "608",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Jakarta.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Sun 15 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Cairns",
+        "destinationCountry": "Australia",
+        "currency": "SGD",
+        "price": "608",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Cairns.jpg",
+        "durationStart": "Wed 10 May 2023",
+        "durationEnd": "Fri 08 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Dubai",
+        "destinationCountry": "United Arab Emirates",
+        "currency": "SGD",
+        "price": "618",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Dubai.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Sat 14 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Seoul",
+        "destinationCountry": "South Korea",
+        "currency": "SGD",
+        "price": "628",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Seoul.jpg",
+        "durationStart": "Thu 02 Feb 2023",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Colombo",
+        "destinationCountry": "Sri Lanka",
+        "currency": "SGD",
+        "price": "628",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Colombo.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Sat 14 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Osaka",
+        "destinationCountry": "Japan",
+        "currency": "SGD",
+        "price": "640",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Osaka.jpg",
+        "durationStart": "Mon 09 Jan 2023",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Nagoya",
+        "destinationCountry": "Japan",
+        "currency": "SGD",
+        "price": "648",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Nagoya.jpg",
+        "durationStart": "Wed 11 Jan 2023",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Fukuoka",
+        "destinationCountry": "Japan",
+        "currency": "SGD",
+        "price": "648",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Fukuoka.jpg",
+        "durationStart": "Tue 10 Jan 2023",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Kathmandu",
+        "destinationCountry": "Nepal",
+        "currency": "SGD",
+        "price": "658",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Kathmandu.jpg",
+        "durationStart": "Fri 02 Jun 2023",
+        "durationEnd": "Fri 15 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Cairns",
+        "destinationCountry": "Australia",
+        "currency": "SGD",
+        "price": "658",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Cairns.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Sat 14 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Seoul",
+        "destinationCountry": "South Korea",
+        "currency": "SGD",
+        "price": "688",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Seoul.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Sat 14 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Male",
+        "destinationCountry": "Maldives",
+        "currency": "SGD",
+        "price": "698",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Male.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Sat 14 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Perth",
+        "destinationCountry": "Australia",
+        "currency": "SGD",
+        "price": "718",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Perth.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Sat 14 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Brisbane",
+        "destinationCountry": "Australia",
+        "currency": "SGD",
+        "price": "718",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Brisbane.jpg",
+        "durationStart": "Sat 06 May 2023",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Kathmandu",
+        "destinationCountry": "Nepal",
+        "currency": "SGD",
+        "price": "748",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Kathmandu.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Sat 14 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Sydney",
+        "destinationCountry": "Australia",
+        "currency": "SGD",
+        "price": "768",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Sydney.jpg",
+        "durationStart": "Tue 07 Mar 2023",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Melbourne",
+        "destinationCountry": "Australia",
+        "currency": "SGD",
+        "price": "768",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Melbourne.jpg",
+        "durationStart": "Sun 07 May 2023",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Brisbane",
+        "destinationCountry": "Australia",
+        "currency": "SGD",
+        "price": "828",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Brisbane.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Sat 14 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Adelaide",
+        "destinationCountry": "Australia",
+        "currency": "SGD",
+        "price": "828",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Adelaide.jpg",
+        "durationStart": "Tue 09 May 2023",
+        "durationEnd": "Thu 14 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Tokyo",
+        "destinationCountry": "Japan",
+        "currency": " SGD",
+        "price": "848",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Tokyo.jpg",
+        "durationStart": "Tue 10 Jan 2023",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Sydney",
+        "destinationCountry": "Australia",
+        "currency": "SGD",
+        "price": "858",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Sydney.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Sat 14 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Hong Kong",
+        "destinationCountry": "Hong Kong SAR, China",
+        "currency": "SGD",
+        "price": "878",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/HongKong.jpg",
+        "durationStart": "Sun 01 Jan 2023",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Surabaya",
+        "destinationCountry": "Indonesia",
+        "currency": "SGD",
+        "price": "918",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Surabaya.jpg",
+        "durationStart": "Sat 14 Jan 2023",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Melbourne",
+        "destinationCountry": "Australia",
+        "currency": "SGD",
+        "price": "928",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Melbourne.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Sat 14 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Denpasar Bali",
+        "destinationCountry": "Indonesia",
+        "currency": "SGD",
+        "price": "928",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Bali.jpg",
+        "durationStart": "Sun 08 Jan 2023",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Adelaide",
+        "destinationCountry": "Australia",
+        "currency": "SGD",
+        "price": "958",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Adelaide.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Sat 14 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Bangkok",
+        "destinationCountry": "Thailand",
+        "currency": "SGD",
+        "price": "978",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Bangkok.jpg",
+        "durationStart": "Wed 08 Feb 2023",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Ho Chi Minh City",
+        "destinationCountry": "Vietnam",
+        "currency": "SGD",
+        "price": "978",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/HoChiMinhCity.jpg",
+        "durationStart": "Sun 01 Jan 2023",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Hanoi",
+        "destinationCountry": "Vietnam",
+        "currency": "SGD",
+        "price": "1028",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Hanoi.jpg",
+        "durationStart": "Sun 01 Jan 2023",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Penang",
+        "destinationCountry": "Malaysia",
+        "currency": "SGD",
+        "price": "1048",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Penang.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Tue 17 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Munich",
+        "destinationCountry": "Germany",
+        "currency": "SGD",
+        "price": "1058",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Munich.jpg",
+        "durationStart": "Wed 24 May 2023",
+        "durationEnd": "Tue 26 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Los Angeles",
+        "destinationCountry": "United States",
+        "currency": "SGD",
+        "price": "1068",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/LosAngeles.jpg",
+        "durationStart": "Thu 26 Jan 2023",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Cape Town",
+        "destinationCountry": "South Africa",
+        "currency": "SGD",
+        "price": "1068",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Capetown.jpg",
+        "durationStart": "Tue 07 Mar 2023",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Auckland",
+        "destinationCountry": "New Zealand",
+        "currency": "SGD",
+        "price": "1068",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Auckland.jpg",
+        "durationStart": "Mon 07 Aug 2023",
+        "durationEnd": "Thu 21 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Zurich",
+        "destinationCountry": "Switzerland",
+        "currency": "SGD",
+        "price": "1068",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Zurich.jpg",
+        "durationStart": "Wed 23 Aug 2023",
+        "durationEnd": "Wed 13 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Johannesburg",
+        "destinationCountry": "South Africa",
+        "currency": "SGD",
+        "price": "1068",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Johannesburg.jpg",
+        "durationStart": "Tue 07 Mar 2023",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Christchurch",
+        "destinationCountry": "New Zealand",
+        "currency": "SGD",
+        "price": "1068",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Christchurch.jpg",
+        "durationStart": "Tue 08 Aug 2023",
+        "durationEnd": "Thu 21 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Copenhagen",
+        "destinationCountry": "Denmark",
+        "currency": "SGD",
+        "price": "1070",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Copenhagen.jpg",
+        "durationStart": "Tue 25 Apr 2023",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Frankfurt",
+        "destinationCountry": "Germany",
+        "currency": "SGD",
+        "price": "1070",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Frankfurt.jpg",
+        "durationStart": "Mon 06 Feb 2023",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Vancouver",
+        "destinationCountry": "Canada",
+        "currency": "SGD",
+        "price": "1078",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Vancouver.jpg",
+        "durationStart": "Sat 01 Jul 2023",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "San Francisco",
+        "destinationCountry": "United States",
+        "currency": "SGD",
+        "price": "1078",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/SanFrancisco.jpg",
+        "durationStart": "Tue 25 Apr 2023",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Milan",
+        "destinationCountry": "Italy",
+        "currency": "SGD",
+        "price": "1078",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Milan.jpg",
+        "durationStart": "Mon 04 Sep 2023",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Paris",
+        "destinationCountry": "France",
+        "currency": "SGD",
+        "price": "1078",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Paris.jpg",
+        "durationStart": "Sat 21 Jan 2023",
+        "durationEnd": "Thu 28 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Seattle",
+        "destinationCountry": "United States",
+        "currency": "SGD",
+        "price": "1078",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Seattle.jpg",
+        "durationStart": "Thu 09 Mar 2023",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Frankfurt",
+        "destinationCountry": "Germany",
+        "currency": " SGD",
+        "price": "1078",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Frankfurt.jpg",
+        "durationStart": "Mon 06 Feb 2023",
+        "durationEnd": "Fri 23 Jun 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Copenhagen",
+        "destinationCountry": "Denmark",
+        "currency": "SGD",
+        "price": "1078",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Copenhagen.jpg",
+        "durationStart": "Tue 25 Apr 2023",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Phuket",
+        "destinationCountry": "Thailand",
+        "currency": "SGD",
+        "price": "1138",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Phuket.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Tue 17 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Ho Chi Minh City",
+        "destinationCountry": "Vietnam",
+        "currency": "SGD",
+        "price": "1148",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/HoChiMinhCity.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Tue 17 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Munich",
+        "destinationCountry": "Germany",
+        "currency": "SGD",
+        "price": "1148",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Munich.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Thu 12 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Delhi",
+        "destinationCountry": "India",
+        "currency": "SGD",
+        "price": "1168",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/NewDelhi.jpg",
+        "durationStart": "Thu 09 Mar 2023",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Mumbai",
+        "destinationCountry": "India",
+        "currency": "SGD",
+        "price": "1168",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Mumbai.jpg",
+        "durationStart": "Thu 02 Feb 2023",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Zurich",
+        "destinationCountry": "Switzerland",
+        "currency": "SGD",
+        "price": "1168",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Zurich.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Thu 12 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Jakarta",
+        "destinationCountry": "Indonesia",
+        "currency": "SGD",
+        "price": "1178",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Jakarta.jpg",
+        "durationStart": "Sat 21 Jan 2023",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Milan",
+        "destinationCountry": "Italy",
+        "currency": "SGD",
+        "price": "1178",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Milan.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Thu 12 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Denpasar Bali",
+        "destinationCountry": "Indonesia",
+        "currency": "SGD",
+        "price": "1178",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Bali.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Tue 17 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Rome",
+        "destinationCountry": "Italy",
+        "currency": "SGD",
+        "price": "1178",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Rome.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Thu 12 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "London",
+        "destinationCountry": "United Kingdom",
+        "currency": "SGD",
+        "price": "1200",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/London.jpg",
+        "durationStart": "Tue 07 Feb 2023",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Manchester",
+        "destinationCountry": "United Kingdom",
+        "currency": "SGD",
+        "price": "1208",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Manchester.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Thu 12 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Istanbul",
+        "destinationCountry": "Turkey",
+        "currency": "SGD",
+        "price": "1208",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Istanbul.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Thu 12 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Barcelona",
+        "destinationCountry": "Spain",
+        "currency": "SGD",
+        "price": "1218",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Barcelona.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Thu 12 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Jakarta",
+        "destinationCountry": "Indonesia",
+        "currency": "SGD",
+        "price": "1228",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Jakarta.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Tue 17 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Vancouver",
+        "destinationCountry": "Canada",
+        "currency": "SGD",
+        "price": "1228",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Vancouver.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Thu 12 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Los Angeles",
+        "destinationCountry": "United States",
+        "currency": "SGD",
+        "price": "1258",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/LosAngeles.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Thu 12 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Seattle",
+        "destinationCountry": "United States",
+        "currency": "SGD",
+        "price": "1268",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Seattle.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Thu 12 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Frankfurt",
+        "destinationCountry": "Germany",
+        "currency": "SGD",
+        "price": "1268",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Frankfurt.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Thu 12 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Paris",
+        "destinationCountry": "France",
+        "currency": "SGD",
+        "price": "1288",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Paris.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Thu 12 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Copenhagen",
+        "destinationCountry": "Denmark",
+        "currency": "SGD",
+        "price": "1298",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Copenhagen.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Thu 12 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "London",
+        "destinationCountry": "United Kingdom",
+        "currency": "SGD",
+        "price": "1308",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/London.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Thu 12 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Delhi",
+        "destinationCountry": "India",
+        "currency": "SGD",
+        "price": "1308",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/NewDelhi.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Sun 15 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Christchurch",
+        "destinationCountry": "New Zealand",
+        "currency": "SGD",
+        "price": "1318",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Christchurch.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Thu 12 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "New York",
+        "destinationCountry": "United States",
+        "currency": "SGD",
+        "price": "1318",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/NewYork.jpg",
+        "durationStart": "Mon 24 Jul 2023",
+        "durationEnd": "Tue 26 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Auckland",
+        "destinationCountry": "New Zealand",
+        "currency": "SGD",
+        "price": "1318",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Auckland.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Thu 12 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Mumbai",
+        "destinationCountry": "India",
+        "currency": "SGD",
+        "price": "1328",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Mumbai.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Sun 15 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Houston",
+        "destinationCountry": "United States",
+        "currency": "SGD",
+        "price": "1348",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Houston.jpg",
+        "durationStart": "Wed 26 Jul 2023",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "San Francisco",
+        "destinationCountry": "United States",
+        "currency": "SGD",
+        "price": "1348",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/SanFrancisco.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Thu 12 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Medan",
+        "destinationCountry": "Indonesia",
+        "currency": "SGD",
+        "price": "1348",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Medan.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Tue 17 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Amsterdam",
+        "destinationCountry": "Netherlands",
+        "currency": "SGD",
+        "price": "1438",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Amsterdam.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Thu 12 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "New York",
+        "destinationCountry": "United States",
+        "currency": "SGD",
+        "price": "1458",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/NewYork.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Thu 12 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Manila",
+        "destinationCountry": "Philippines",
+        "currency": "SGD",
+        "price": "1468",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Manila.jpg",
+        "durationStart": "Wed 11 Jan 2023",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Hanoi",
+        "destinationCountry": "Vietnam",
+        "currency": "SGD",
+        "price": "1478",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Hanoi.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Tue 17 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Houston",
+        "destinationCountry": "United States",
+        "currency": "SGD",
+        "price": "1498",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Houston.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Thu 12 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Dubai",
+        "destinationCountry": "United Arab Emirates",
+        "currency": "SGD",
+        "price": "1498",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Dubai.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Sun 15 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Hong Kong",
+        "destinationCountry": "Hong Kong SAR, China",
+        "currency": "SGD",
+        "price": "1508",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/HongKong.jpg",
+        "durationStart": "Mon 02 Jan 2023",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Surabaya",
+        "destinationCountry": "Indonesia",
+        "currency": "SGD",
+        "price": "1528",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Surabaya.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Tue 17 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "San Francisco",
+        "destinationCountry": "United States",
+        "currency": "SGD",
+        "price": "1550",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/SanFrancisco.jpg",
+        "durationStart": "Sat 21 Jan 2023",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Los Angeles",
+        "destinationCountry": "United States",
+        "currency": " SGD",
+        "price": "1558",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/LosAngeles.jpg",
+        "durationStart": "Sun 12 Mar 2023",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Melbourne",
+        "destinationCountry": "Australia",
+        "currency": "SGD",
+        "price": "1698",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Melbourne.jpg",
+        "durationStart": "Wed 01 Mar 2023",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Sydney",
+        "destinationCountry": "Australia",
+        "currency": "SGD",
+        "price": "1698",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Sydney.jpg",
+        "durationStart": "Sun 07 May 2023",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Siem Reap",
+        "destinationCountry": "Cambodia",
+        "currency": "SGD",
+        "price": "1718",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Siem-Reap.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Tue 17 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "New York",
+        "destinationCountry": "United States",
+        "currency": " SGD",
+        "price": "1728",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/NewYork.jpg",
+        "durationStart": "Wed 18 Jan 2023",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Istanbul",
+        "destinationCountry": "Turkey",
+        "currency": "SGD",
+        "price": "1758",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Istanbul.jpg",
+        "durationStart": "Wed 18 Jan 2023",
+        "durationEnd": "Wed 27 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Tokyo",
+        "destinationCountry": "Japan",
+        "currency": "SGD",
+        "price": "1788",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Tokyo.jpg",
+        "durationStart": "Fri 27 Jan 2023",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Vancouver",
+        "destinationCountry": "Canada",
+        "currency": "SGD",
+        "price": "1798",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Vancouver.jpg",
+        "durationStart": "Tue 11 Jul 2023",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Seattle",
+        "destinationCountry": "United States",
+        "currency": "SGD",
+        "price": "1798",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Seattle.jpg",
+        "durationStart": "Thu 06 Jul 2023",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Chennai",
+        "destinationCountry": "India",
+        "currency": "SGD",
+        "price": "1848",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Chennai.jpg",
+        "durationStart": "Sun 01 Jan 2023",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Cebu",
+        "destinationCountry": "Philippines",
+        "currency": "SGD",
+        "price": "1868",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Cebu.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Tue 17 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Phnom Penh",
+        "destinationCountry": "Cambodia",
+        "currency": "SGD",
+        "price": "1878",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/PhnomPenh.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Tue 17 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Manila",
+        "destinationCountry": "Philippines",
+        "currency": "SGD",
+        "price": "1948",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Manila.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Tue 17 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Johannesburg",
+        "destinationCountry": "South Africa",
+        "currency": "SGD",
+        "price": "1948",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Johannesburg.jpg",
+        "durationStart": "Tue 07 Feb 2023",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Copenhagen",
+        "destinationCountry": "Denmark",
+        "currency": "SGD",
+        "price": "1948",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Copenhagen.jpg",
+        "durationStart": "Wed 22 Feb 2023",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Colombo",
+        "destinationCountry": "Sri Lanka",
+        "currency": "SGD",
+        "price": "1948",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Colombo.jpg",
+        "durationStart": "Sun 01 Jan 2023",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Paris",
+        "destinationCountry": "France",
+        "currency": "SGD",
+        "price": "1948",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Paris.jpg",
+        "durationStart": "Sun 22 Jan 2023",
+        "durationEnd": "Wed 12 Apr 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Melbourne",
+        "destinationCountry": "Australia",
+        "currency": "SGD",
+        "price": "1978",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Melbourne.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Tue 17 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Sydney",
+        "destinationCountry": "Australia",
+        "currency": "SGD",
+        "price": "1988",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Sydney.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Tue 17 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Taipei",
+        "destinationCountry": "Taiwan, China",
+        "currency": " SGD",
+        "price": "1998",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Taipei.jpg",
+        "durationStart": "Mon 07 Mar 2022",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Da Nang",
+        "destinationCountry": "Vietnam",
+        "currency": "SGD",
+        "price": "2008",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/DaNang.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Tue 17 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Brisbane",
+        "destinationCountry": "Australia",
+        "currency": "SGD",
+        "price": "2008",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Brisbane.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Tue 17 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Cape Town",
+        "destinationCountry": "South Africa",
+        "currency": "SGD",
+        "price": "2028",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Capetown.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Sat 14 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Istanbul",
+        "destinationCountry": "Turkey",
+        "currency": "SGD",
+        "price": "2038",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Istanbul.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Sat 14 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Zurich",
+        "destinationCountry": "Switzerland",
+        "currency": "SGD",
+        "price": "2048",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Zurich.jpg",
+        "durationStart": "Mon 15 May 2023",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Cape Town",
+        "destinationCountry": "South Africa",
+        "currency": "SGD",
+        "price": "2048",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Capetown.jpg",
+        "durationStart": "Wed 25 Jan 2023",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Munich",
+        "destinationCountry": "Germany",
+        "currency": "SGD",
+        "price": "2048",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Munich.jpg",
+        "durationStart": "Wed 15 Feb 2023",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Frankfurt",
+        "destinationCountry": "Germany",
+        "currency": "SGD",
+        "price": "2048",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Frankfurt.jpg",
+        "durationStart": "Wed 22 Feb 2023",
+        "durationEnd": "Fri 23 Jun 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Bengaluru",
+        "destinationCountry": "India",
+        "currency": "SGD",
+        "price": "2098",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Bengaluru.jpg",
+        "durationStart": "Sun 01 Jan 2023",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Davao",
+        "destinationCountry": "Philippines",
+        "currency": "SGD",
+        "price": "2098",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Davao.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Tue 17 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Dhaka",
+        "destinationCountry": "Bangladesh",
+        "currency": "SGD",
+        "price": "2128",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Dhaka.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Tue 17 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Colombo",
+        "destinationCountry": "Sri Lanka",
+        "currency": "SGD",
+        "price": "2128",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Colombo.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Tue 17 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Hyderabad",
+        "destinationCountry": "India",
+        "currency": "SGD",
+        "price": "2138",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Hyderabad.jpg",
+        "durationStart": "Thu 12 Jan 2023",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Ahmedabad",
+        "destinationCountry": "India",
+        "currency": "SGD",
+        "price": "2138",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Ahmedabad.jpg",
+        "durationStart": "Fri 20 Jan 2023",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Los Angeles",
+        "destinationCountry": "United States",
+        "currency": "SGD",
+        "price": "2138",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/LosAngeles.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Sat 14 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Mumbai",
+        "destinationCountry": "India",
+        "currency": "SGD",
+        "price": "2138",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Mumbai.jpg",
+        "durationStart": "Wed 01 Feb 2023",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Delhi",
+        "destinationCountry": "India",
+        "currency": "SGD",
+        "price": "2138",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/NewDelhi.jpg",
+        "durationStart": "Sun 26 Mar 2023",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Bandar Seri Begawan",
+        "destinationCountry": "Brunei Darussalam",
+        "currency": "SGD",
+        "price": "2168",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/BandarSeriBegawan.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Tue 17 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "San Francisco",
+        "destinationCountry": "United States",
+        "currency": "SGD",
+        "price": "2198",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/SanFrancisco.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Sat 14 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Male",
+        "destinationCountry": "Maldives",
+        "currency": "SGD",
+        "price": "2208",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Male.jpg",
+        "durationStart": "Mon 27 Mar 2023",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "New York",
+        "destinationCountry": "United States",
+        "currency": "SGD",
+        "price": "2228",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/NewYork.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Sat 14 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Paris",
+        "destinationCountry": "France",
+        "currency": "SGD",
+        "price": "2288",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Paris.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Sat 14 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Vancouver",
+        "destinationCountry": "Canada",
+        "currency": "SGD",
+        "price": "2308",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Vancouver.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Sat 14 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Chennai",
+        "destinationCountry": "India",
+        "currency": "SGD",
+        "price": "2328",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Chennai.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Tue 17 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Milan",
+        "destinationCountry": "Italy",
+        "currency": "SGD",
+        "price": "2338",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Milan.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Sat 14 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Amsterdam",
+        "destinationCountry": "Netherlands",
+        "currency": "SGD",
+        "price": "2338",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Amsterdam.jpg",
+        "durationStart": "Mon 31 Jul 2023",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Rome",
+        "destinationCountry": "Italy",
+        "currency": "SGD",
+        "price": "2338",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Rome.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Sat 14 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Bengaluru",
+        "destinationCountry": "India",
+        "currency": "SGD",
+        "price": "2338",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Bengaluru.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Tue 17 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Copenhagen",
+        "destinationCountry": "Denmark",
+        "currency": "SGD",
+        "price": "2348",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Copenhagen.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Sat 14 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Barcelona",
+        "destinationCountry": "Spain",
+        "currency": "SGD",
+        "price": "2348",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Barcelona.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Sat 14 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Kolkata",
+        "destinationCountry": "India",
+        "currency": "SGD",
+        "price": "2348",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Kolkata.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Tue 17 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Seattle",
+        "destinationCountry": "United States",
+        "currency": "SGD",
+        "price": "2348",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Seattle.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Sat 14 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Kathmandu",
+        "destinationCountry": "Nepal",
+        "currency": "SGD",
+        "price": "2388",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Kathmandu.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Tue 17 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Seoul",
+        "destinationCountry": "South Korea",
+        "currency": "SGD",
+        "price": "2438",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Seoul.jpg",
+        "durationStart": "Fri 27 Jan 2023",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Ahmedabad",
+        "destinationCountry": "India",
+        "currency": "SGD",
+        "price": "2448",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Ahmedabad.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Tue 17 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Christchurch",
+        "destinationCountry": "New Zealand",
+        "currency": "SGD",
+        "price": "2458",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Christchurch.jpg",
+        "durationStart": "Mon 08 May 2023",
+        "durationEnd": "Thu 21 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Auckland",
+        "destinationCountry": "New Zealand",
+        "currency": "SGD",
+        "price": "2458",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Auckland.jpg",
+        "durationStart": "Mon 07 Aug 2023",
+        "durationEnd": "Thu 21 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Johannesburg",
+        "destinationCountry": "South Africa",
+        "currency": "SGD",
+        "price": "2458",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Johannesburg.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Sun 15 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Male",
+        "destinationCountry": "Maldives",
+        "currency": "SGD",
+        "price": "2508",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Male.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Tue 17 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Kochi",
+        "destinationCountry": "India",
+        "currency": "SGD",
+        "price": "2548",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Kochi.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Tue 17 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Delhi",
+        "destinationCountry": "India",
+        "currency": "SGD",
+        "price": "2578",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/NewDelhi.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Tue 17 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Mumbai",
+        "destinationCountry": "India",
+        "currency": "SGD",
+        "price": "2598",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Mumbai.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Tue 17 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Perth",
+        "destinationCountry": "Australia",
+        "currency": "SGD",
+        "price": "2628",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Perth.jpg",
+        "durationStart": "Tue 21 Feb 2023",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Hyderabad",
+        "destinationCountry": "India",
+        "currency": "SGD",
+        "price": "2638",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Hyderabad.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Tue 17 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Johannesburg",
+        "destinationCountry": "South Africa",
+        "currency": "SGD",
+        "price": "2658",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Johannesburg.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Tue 17 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Zurich",
+        "destinationCountry": "Switzerland",
+        "currency": "SGD",
+        "price": "2688",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Zurich.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Sat 14 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Seoul",
+        "destinationCountry": "South Korea",
+        "currency": "SGD",
+        "price": "2708",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Seoul.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Tue 17 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Munich",
+        "destinationCountry": "Germany",
+        "currency": "SGD",
+        "price": "2768",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Munich.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Sat 14 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Frankfurt",
+        "destinationCountry": "Germany",
+        "currency": "SGD",
+        "price": "2788",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Frankfurt.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Sat 14 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Cape Town",
+        "destinationCountry": "South Africa",
+        "currency": "SGD",
+        "price": "2898",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Capetown.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Sun 15 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Houston",
+        "destinationCountry": "United States",
+        "currency": "SGD",
+        "price": "2898",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Houston.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Sat 14 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "London",
+        "destinationCountry": "United Kingdom",
+        "currency": "SGD",
+        "price": "2908",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/London.jpg",
+        "durationStart": "Sat 06 May 2023",
+        "durationEnd": "Fri 29 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Nagoya",
+        "destinationCountry": "Japan",
+        "currency": "SGD",
+        "price": "2908",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Nagoya.jpg",
+        "durationStart": "Sun 08 Jan 2023",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Osaka",
+        "destinationCountry": "Japan",
+        "currency": "SGD",
+        "price": "2908",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Osaka.jpg",
+        "durationStart": "Mon 09 Jan 2023",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Fukuoka",
+        "destinationCountry": "Japan",
+        "currency": "SGD",
+        "price": "2908",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Fukuoka.jpg",
+        "durationStart": "Tue 10 Jan 2023",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Amsterdam",
+        "destinationCountry": "Netherlands",
+        "currency": "SGD",
+        "price": "2948",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Amsterdam.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Sat 14 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Tokyo",
+        "destinationCountry": "Japan",
+        "currency": "SGD",
+        "price": "3008",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Tokyo.jpg",
+        "durationStart": "Tue 09 May 2023",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Manchester",
+        "destinationCountry": "United Kingdom",
+        "currency": "SGD",
+        "price": "3078",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Manchester.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Sat 14 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Perth",
+        "destinationCountry": "Australia",
+        "currency": "SGD",
+        "price": "3218",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Perth.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Tue 17 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Auckland",
+        "destinationCountry": "New Zealand",
+        "currency": "SGD",
+        "price": "3228",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Auckland.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Tue 17 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Christchurch",
+        "destinationCountry": "New Zealand",
+        "currency": "SGD",
+        "price": "3228",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Christchurch.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Tue 17 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "London",
+        "destinationCountry": "United Kingdom",
+        "currency": "SGD",
+        "price": "3288",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/London.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Sat 14 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Brisbane",
+        "destinationCountry": "Australia",
+        "currency": "SGD",
+        "price": "3478",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Brisbane.jpg",
+        "durationStart": "Mon 20 Feb 2023",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Sydney",
+        "destinationCountry": "Australia",
+        "currency": "SGD",
+        "price": "3498",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Sydney.jpg",
+        "durationStart": "Thu 02 Mar 2023",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Dubai",
+        "destinationCountry": "United Arab Emirates",
+        "currency": "SGD",
+        "price": "3498",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Dubai.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Tue 17 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Melbourne",
+        "destinationCountry": "Australia",
+        "currency": " SGD",
+        "price": "3498",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Melbourne.jpg",
+        "durationStart": "Tue 21 Feb 2023",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Darwin",
+        "destinationCountry": "Australia",
+        "currency": "SGD",
+        "price": "3508",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Darwin.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Tue 17 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Adelaide",
+        "destinationCountry": "Australia",
+        "currency": "SGD",
+        "price": "3698",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Adelaide.jpg",
+        "durationStart": "Thu 23 Feb 2023",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Sydney",
+        "destinationCountry": "Australia",
+        "currency": "SGD",
+        "price": "4048",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Sydney.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Tue 17 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Cairns",
+        "destinationCountry": "Australia",
+        "currency": "SGD",
+        "price": "4318",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Cairns.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Tue 17 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Melbourne",
+        "destinationCountry": "Australia",
+        "currency": "SGD",
+        "price": "4448",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Melbourne.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Tue 17 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Adelaide",
+        "destinationCountry": "Australia",
+        "currency": "SGD",
+        "price": "4458",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Adelaide.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Tue 17 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Brisbane",
+        "destinationCountry": "Australia",
+        "currency": "SGD",
+        "price": "4578",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Brisbane.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Tue 17 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Istanbul",
+        "destinationCountry": "Turkey",
+        "currency": "SGD",
+        "price": "4588",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Istanbul.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Tue 17 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Johannesburg",
+        "destinationCountry": "South Africa",
+        "currency": "SGD",
+        "price": "4858",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Johannesburg.jpg",
+        "durationStart": "Mon 17 Apr 2023",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Barcelona",
+        "destinationCountry": "Spain",
+        "currency": "SGD",
+        "price": "4858",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Barcelona.jpg",
+        "durationStart": "Mon 21 Aug 2023",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Milan",
+        "destinationCountry": "Italy",
+        "currency": "SGD",
+        "price": "4858",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Milan.jpg",
+        "durationStart": "Fri 11 Aug 2023",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Copenhagen",
+        "destinationCountry": "Denmark",
+        "currency": "SGD",
+        "price": "4858",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Copenhagen.jpg",
+        "durationStart": "Tue 28 Mar 2023",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Paris",
+        "destinationCountry": "France",
+        "currency": " SGD",
+        "price": "4858",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Paris.jpg",
+        "durationStart": "Thu 27 Jul 2023",
+        "durationEnd": "Thu 28 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Christchurch",
+        "destinationCountry": "New Zealand",
+        "currency": "SGD",
+        "price": "5178",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Christchurch.jpg",
+        "durationStart": "Sun 07 May 2023",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Auckland",
+        "destinationCountry": "New Zealand",
+        "currency": "SGD",
+        "price": "5178",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Auckland.jpg",
+        "durationStart": "Fri 07 Jul 2023",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Manchester",
+        "destinationCountry": "United Kingdom",
+        "currency": "SGD",
+        "price": "5348",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Manchester.jpg",
+        "durationStart": "Wed 16 Aug 2023",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "London",
+        "destinationCountry": "United Kingdom",
+        "currency": "SGD",
+        "price": "5348",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/London.jpg",
+        "durationStart": "Sun 19 Feb 2023",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Cape Town",
+        "destinationCountry": "South Africa",
+        "currency": "SGD",
+        "price": "5348",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Capetown.jpg",
+        "durationStart": "Mon 17 Apr 2023",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Rome",
+        "destinationCountry": "Italy",
+        "currency": "SGD",
+        "price": "5418",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Rome.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Tue 17 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Copenhagen",
+        "destinationCountry": "Denmark",
+        "currency": "SGD",
+        "price": "5878",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Copenhagen.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Tue 17 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Zurich",
+        "destinationCountry": "Switzerland",
+        "currency": "SGD",
+        "price": "5888",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Zurich.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Tue 17 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Milan",
+        "destinationCountry": "Italy",
+        "currency": "SGD",
+        "price": "5918",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Milan.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Tue 17 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Munich",
+        "destinationCountry": "Germany",
+        "currency": "SGD",
+        "price": "5968",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Munich.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Tue 17 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "San Francisco",
+        "destinationCountry": "United States",
+        "currency": "SGD",
+        "price": "6018",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/SanFrancisco.jpg",
+        "durationStart": "Mon 13 Mar 2023",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Houston",
+        "destinationCountry": "United States",
+        "currency": "SGD",
+        "price": "6018",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Houston.jpg",
+        "durationStart": "Tue 09 May 2023",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Vancouver",
+        "destinationCountry": "Canada",
+        "currency": "SGD",
+        "price": "6018",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Vancouver.jpg",
+        "durationStart": "Tue 31 Jan 2023",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Seattle",
+        "destinationCountry": "United States",
+        "currency": "SGD",
+        "price": "6018",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Seattle.jpg",
+        "durationStart": "Sun 02 Jul 2023",
+        "durationEnd": "Sat 30 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Los Angeles",
+        "destinationCountry": "United States",
+        "currency": "SGD",
+        "price": "6018",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/LosAngeles.jpg",
+        "durationStart": "Mon 15 May 2023",
+        "durationEnd": "Thu 28 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Frankfurt",
+        "destinationCountry": "Germany",
+        "currency": "SGD",
+        "price": "6038",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Frankfurt.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Tue 17 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Barcelona",
+        "destinationCountry": "Spain",
+        "currency": "SGD",
+        "price": "6058",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Barcelona.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Tue 17 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "New York",
+        "destinationCountry": "United States",
+        "currency": "SGD",
+        "price": "6308",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/NewYork.jpg",
+        "durationStart": "Tue 17 Jan 2023",
+        "durationEnd": "Fri 29 Sep 2023",
+        "bookBy": "Thu 24 Nov 2022"
+    },
+    {
+        "destinationCity": "Amsterdam",
+        "destinationCountry": "Netherlands",
+        "currency": "SGD",
+        "price": "6358",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Amsterdam.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Tue 17 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Manchester",
+        "destinationCountry": "United Kingdom",
+        "currency": "SGD",
+        "price": "6378",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Manchester.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Tue 17 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Vancouver",
+        "destinationCountry": "Canada",
+        "currency": "SGD",
+        "price": "6398",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Vancouver.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Tue 17 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Seattle",
+        "destinationCountry": "United States",
+        "currency": "SGD",
+        "price": "6438",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Seattle.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Tue 17 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Houston",
+        "destinationCountry": "United States",
+        "currency": "SGD",
+        "price": "6548",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Houston.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Tue 17 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Los Angeles",
+        "destinationCountry": "United States",
+        "currency": "SGD",
+        "price": "6708",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/LosAngeles.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Tue 17 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Christchurch",
+        "destinationCountry": "New Zealand",
+        "currency": "SGD",
+        "price": "6718",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Christchurch.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Tue 17 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Auckland",
+        "destinationCountry": "New Zealand",
+        "currency": "SGD",
+        "price": "6718",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Auckland.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Tue 17 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "San Francisco",
+        "destinationCountry": "United States",
+        "currency": "SGD",
+        "price": "6778",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/SanFrancisco.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Tue 17 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Paris",
+        "destinationCountry": "France",
+        "currency": "SGD",
+        "price": "6938",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Paris.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Tue 17 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "London",
+        "destinationCountry": "United Kingdom",
+        "currency": "SGD",
+        "price": "7138",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/London.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Tue 17 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "New York",
+        "destinationCountry": "United States",
+        "currency": "SGD",
+        "price": "7588",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/NewYork.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Tue 17 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Johannesburg",
+        "destinationCountry": "South Africa",
+        "currency": "SGD",
+        "price": "8658",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Johannesburg.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Tue 17 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    },
+    {
+        "destinationCity": "Cape Town",
+        "destinationCountry": "South Africa",
+        "currency": "SGD",
+        "price": "8878",
+        "image": "https://www.singaporeair.com/saar5/images/fare-deal-images/Capetown.jpg",
+        "durationStart": "Thu 27 Oct 2022",
+        "durationEnd": "Tue 17 Oct 2023",
+        "bookBy": "Fri 31 Mar 2023"
+    }
+]
