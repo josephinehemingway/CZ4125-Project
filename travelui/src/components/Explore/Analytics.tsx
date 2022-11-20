@@ -21,7 +21,6 @@ const AnalyticsSection: React.FC<Props> = ({destinationName}) => {
     const [loading, setLoading] = useState<Boolean>(true)
     const [data, setdata] = useState<AirfareTicketApi[]>([])
 
-
     useEffect(() => {
         setLoading(true);
         // Using fetch to fetch the api from

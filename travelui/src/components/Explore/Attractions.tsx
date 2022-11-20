@@ -37,6 +37,7 @@ const Attractions: React.FC<Props>= ({ tabName, destinationName }) => {
                 setdata(data);
                 setLoading(false);
                 console.log(data)
+                console.log(destinationName)
             })
         );
     }, [destinationName]);
@@ -91,7 +92,10 @@ const Attractions: React.FC<Props>= ({ tabName, destinationName }) => {
                     }
                 </div>
                 <div style={{width: '30%'}}>
-                    <Map />
+                    <Map
+                        destinationName={destinationName}
+                        locations={data}
+                    />
                 </div>
             </div>
         </div>
