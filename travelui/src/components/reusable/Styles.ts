@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Input } from "antd";
 
 export const Container = styled.div`
+    min-height: 200px;
     width: ${(props: { width: string }) =>
         props.width ? props.width : "100%"};
     height: ${(props: { height: string }) =>
@@ -345,5 +346,19 @@ export const StyledSubSubheading = styled.p`
     props.color ? props.color : "#000"};
         font-size: calc(18px + 0.3vw);
         line-height: calc(20px + 0.5vw);
+    }
+`;
+
+export const StyledItinerarySubheading = styled.p`
+    && {
+        margin-top: ${(props: { margintop: string }) =>
+    props.margintop ? props.margintop : "0"};
+        margin-bottom: ${(props: { marginbottom: string }) =>
+    props.marginbottom ? props.marginbottom : "0"};
+        font-family: Poppins, sans-serif;
+        color: ${(props: { color: string }) =>
+    props.color ? props.color : "#000"};
+        font-size: calc(20px + 0.3vw);
+        line-height: calc(22px + 0.5vw);
     }
 `;

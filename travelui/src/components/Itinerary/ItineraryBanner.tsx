@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "../styles.css";
 import Logo from "../../assets/images/Logo.png";
-
 import Banner from "../../assets/images/travel.jpeg";
 import {
     Container,

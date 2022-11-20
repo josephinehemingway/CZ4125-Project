@@ -300,8 +300,8 @@ def find_itinerary_from_google(query,days, params=''):
         inner_soup = parse_html(website_link)
         website_title = inner_soup.title.text
         website['title'] = website_title
-        places = get_cities(website_link)
-        website['cities'] = places
+#         places = get_cities(website_link)
+#         website['cities'] = places
         print(website)
         websites.append(website)
         
