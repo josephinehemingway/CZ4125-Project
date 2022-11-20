@@ -183,5 +183,20 @@ def airfare_api():
     return jsonpickle.encode(api_functions.get_airprices(destination))
 
 
+@app.route('/planner-api')
+def planner_api():
+    destination = request.args.get('destination')
+    days = request.args.get('days')
+    print(destination)
+    f = open('tripadvisor_link.json')
+    trip_advisor = json.load(f)
+    link_dict = trip_advisor[destination]
+    accomodations_url = link_dict['Hotel']
+    attractions_url = link_dict['Attractions']
+    hotels = jsonpickle.encode(api_functions.get_hotels(accomodations_url))
+    attractions = jsonpickle.encode(api_functions.get_attractions(attractions_url))
+    return jsonpickle.encode(api_functions.get_planner(days=days,hotel=hotels,attractions=attractions))
+
+
 if __name__ == '__main__':
     app.run(debug=True, threaded=True)
