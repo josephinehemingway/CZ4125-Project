@@ -82,40 +82,42 @@ def get_hotels(url):
     for res in results:
         hotel = {}
         listing = res.find('div', {'class':'listing_title'})
-        hotel_name = listing.text.strip() #need to remove numbers - maybe using regex?
-        hotel_link = base_url + listing.find('a')['href']
-        rating = res.find('a', {'class':'ui_bubble_rating'})['alt']
-        try:
-            hotel_image = res.find('img',class_='_C _Z w')['src']
-        except:
-            hotel_image= None
-        
-        if count < 10:
-            hotel_name_stripped = hotel_name[3:]
-        elif count >= 10 and count < 100:
-            hotel_name_stripped = hotel_name[4:]
-        else:
-            hotel_name_stripped = hotel_name[5:]
-        
-        address = hotel_name_stripped + ' Italy'
-        mapurl = 'https://nominatim.openstreetmap.org/search/' + urllib.parse.quote(address) +'?format=json'
+        hotel_name = listing.text.strip() #need to remove numbers - maybe using regex
 
-        response = requests.get(mapurl).json()
-        try:
-            lat = response[0]["lat"]
-            lon = response[0]["lon"]
-        except:
-            lat= None
-            lon= None
-        
-        hotel['Id'] = count
-        hotel['Name'] = hotel_name_stripped
-        hotel['ImageUrl']= hotel_image
-        hotel['ReviewUrl'] = hotel_link
-        hotel['Rating'] = float(rating[:-13])
-        hotel['Lat']= lat
-        hotel['Lon']=lon
-        hotels.append(hotel)
+        if 'Sponsored' not in hotel_name:
+            hotel_link = base_url + listing.find('a')['href']
+            rating = res.find('a', {'class':'ui_bubble_rating'})['alt']
+            try:
+                hotel_image = res.find('img',class_='_C _Z w')['src']
+            except:
+                hotel_image= None
+            
+            if count < 10:
+                hotel_name_stripped = hotel_name[3:]
+            elif count >= 10 and count < 100:
+                hotel_name_stripped = hotel_name[4:]
+            else:
+                hotel_name_stripped = hotel_name[5:]
+            
+            address = hotel_name_stripped + ' Italy'
+            mapurl = 'https://nominatim.openstreetmap.org/search/' + urllib.parse.quote(address) +'?format=json'
+
+            response = requests.get(mapurl).json()
+            try:
+                lat = response[0]["lat"]
+                lon = response[0]["lon"]
+            except:
+                lat= None
+                lon= None
+            
+            hotel['Id'] = count
+            hotel['Name'] = hotel_name_stripped
+            hotel['ImageUrl']= hotel_image
+            hotel['ReviewUrl'] = hotel_link
+            hotel['Rating'] = float(rating[:-13])
+            hotel['Lat']= lat
+            hotel['Lon']=lon
+            hotels.append(hotel)
         count += 1
         
     return hotels
