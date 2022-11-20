@@ -459,4 +459,4 @@ def get_planner(days, hotel, attractions):
         i['nearest_hotel'] = hotel_min_dist
     
     
-    return clusters
+    return np.array(clusters).tolist()
