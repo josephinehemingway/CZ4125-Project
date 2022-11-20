@@ -3,11 +3,11 @@ from flask_cors import CORS, cross_origin
 import api_functions
 import json
 import jsonpickle
-
+import jsonpickle.ext.numpy as jsonpickle_numpy
 app = Flask(__name__)
 cors = CORS(app)
 app.config['CORS_HEADERS'] = 'application/json'
-
+jsonpickle_numpy.register_handlers()
 
 @app.route('/attractions')
 @cross_origin()
@@ -181,6 +181,23 @@ def airfare_api():
     destination = request.args.get('destination')
     print(destination)
     return jsonpickle.encode(api_functions.get_airprices(destination))
+
+
+@app.route('/planner-api')
+def planner_api():
+    destination = request.args.get('destination')
+    destination= destination.lower()
+    days = request.args.get('days')
+    days= int(days)
+    print(destination)
+    f = open('tripadvisor_link.json')
+    trip_advisor = json.load(f)
+    link_dict = trip_advisor[destination]
+    accomodations_url = link_dict['Hotel']
+    attractions_url = link_dict['Attractions']
+    hotels = api_functions.get_hotels(accomodations_url)
+    attractions =api_functions.get_attractions(attractions_url)
+    return jsonpickle.decode(jsonpickle.encode(api_functions.get_planner(days=days,hotel=hotels,attractions=attractions)))
 
 
 if __name__ == '__main__':

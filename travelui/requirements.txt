@@ -7,3 +7,4 @@ json
 TikTokApi
 HTMLParser
 geograpy3
+numpy
