@@ -2,6 +2,7 @@
   "compilerOptions": {
     "types":[
       "googlemaps",
+      "google.maps",
       "markerclustererplus",
       "googlemapsreact"
     ],
