@@ -1,69 +1,62 @@
-import React from 'react';
-import GoogleMapReact from 'google-map-react';
-
+/*global google*/
+import React, { useRef } from 'react';
+import { GoogleMap, useJsApiLoader, Marker } from '@react-google-maps/api';
 import mapStyles from './mapStyles';
-import useStyles from './styles';
 
-const Map = () => {
-    const coords = { lat: 34.665394, lng: 135.432526}
-    // const matches = useMediaQuery('(min-width:600px)');
-    const classes = useStyles();
-    const address = "Universal Studios Singapore";
-
-    fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=${address}&key=AIzaSyB1rc1kUjUCkOXTzjodOzvIy81dQXL044s`)
-    .then((response) => {
-        return response.json();
-    }).then(jsonData => {
-        console.log(jsonData.results[0].geometry.location);
-    })
-    .catch(error => {
-        console.log(error);
-    })
-
-    return (
-        <div className={classes.mapContainer}>
-            <GoogleMapReact
-                bootstrapURLKeys={{ key: 'AIzaSyB1rc1kUjUCkOXTzjodOzvIy81dQXL044s' }}
-                defaultCenter={coords}
-                center={coords}
-                defaultZoom={14}
-                margin={[50, 50, 50, 50]}
-                options={{ disableDefaultUI: true, zoomControl: true, styles: mapStyles }}
-                // onChange={(e) => {
-                //     setCoords({ lat: e.center.lat, lng: e.center.lng });
-                //     setBounds({ ne: e.marginBounds.ne, sw: e.marginBounds.sw });
-                // }}
-                // onChildClick={(child) => setChildClicked(child)}
-            >
-                {/*{places.length && places.map((place, i) => (*/}
-                {/*    <div*/}
-                {/*        className={classes.markerContainer}*/}
-                {/*        lat={Number(place.latitude)}*/}
-                {/*        lng={Number(place.longitude)}*/}
-                {/*        key={i}*/}
-                {/*    >*/}
-                {/*        {!matches*/}
-                {/*            ? <LocationOnOutlinedIcon color="primary" fontSize="large" />*/}
-                {/*            : (*/}
-                {/*                <Paper elevation={3} className={classes.paper}>*/}
-                {/*                    <Typography className={classes.typography} variant="subtitle2" gutterBottom> {place.name}</Typography>*/}
-                {/*                    <img*/}
-                {/*                        className={classes.pointer}*/}
-                {/*                        src={place.photo ? place.photo.images.large.url : 'https://www.foodserviceandhospitality.com/wp-content/uploads/2016/09/Restaurant-Placeholder-001.jpg'}*/}
-                {/*                    />*/}
-                {/*                    <Rating name="read-only" size="small" value={Number(place.rating)} readOnly />*/}
-                {/*                </Paper>*/}
-                {/*            )}*/}
-                {/*    </div>*/}
-                {/*))}*/}
-                {/*{weatherData?.list?.length && weatherData.list.map((data, i) => (*/}
-                {/*    <div key={i} lat={data.coord.lat} lng={data.coord.lon}>*/}
-                {/*        <img src={`http://openweathermap.org/img/w/${data.weather[0].icon}.png`} height="70px" />*/}
-                {/*    </div>*/}
-                {/*))}*/}
-            </GoogleMapReact>
-        </div>
-    );
+const containerStyle = {
+    width: '400px',
+    height: '836px'
 };
 
-export default Map;
+const center = {
+    lat: 34.665394,
+    lng: 135.432526
+};
+
+export const options = {
+    disableDefaultUI: true,
+    zoomControl: true,
+    styles: mapStyles
+}
+
+export type MarkerType = {
+    id: string;
+    location: google.maps.LatLngLiteral;
+    name: string;
+    url: string;
+}
+
+const Map = () => {
+    const { isLoaded } = useJsApiLoader({
+        id: 'google-map-script',
+        googleMapsApiKey: "AIzaSyB1rc1kUjUCkOXTzjodOzvIy81dQXL044s"
+    })
+
+    const mapRef = useRef<google.maps.Map | null>(null)
+    const onLoad = (map: google.maps.Map): void => {
+        mapRef.current = map;
+    }
+
+    const onUnmount = (): void => {
+        mapRef.current = null;
+    }
+
+    if (!isLoaded) return <div> Map Loading... </div>
+
+    return (
+        <GoogleMap
+            mapContainerStyle={containerStyle}
+            center={center}
+            zoom={10}
+            onLoad={onLoad}
+            onUnmount={onUnmount}
+            options = {options as google.maps.MapOptions}
+        >
+            <Marker position={{ lat: 34.665394, lng: 135.432526}}>
+
+            </Marker>
+        </GoogleMap>
+    )
+}
+
+export default Map
