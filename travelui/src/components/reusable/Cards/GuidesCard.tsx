@@ -3,15 +3,17 @@ import './Cards.css';
 
 type Props = {
     imgurl: string;
-    attrName: string;
+    tipsTitle: string;
 }
 
-const GuidesCard: React.FC<Props> = ({imgurl, attrName}) => {
+const GuidesCard: React.FC<Props> = ({imgurl, tipsTitle}) => {
+    const lengthName = tipsTitle.length;
+
     return (
-        <div className='attr-card'>
+        <div className='guides-card'>
             <img className='attr-img' src={imgurl} height="100%" alt=''/>
-            <div className='acc-desc'>
-                <h2 className="acc-name"> {attrName} </h2>
+            <div className={lengthName > 21 ? 'acc-desc-2lines' : 'acc-desc'}>
+                <h2 className="acc-name"> {tipsTitle} </h2>
             </div>
         </div>
     );
