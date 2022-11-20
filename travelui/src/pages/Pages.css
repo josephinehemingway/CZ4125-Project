@@ -16,3 +16,16 @@
      background: #46c7c7 !important;
      pointer-events: none;
  }
+
+ .icons {
+     display: flex;
+     flex-direction: row;
+     color: #000;
+
+
+ }
+
+svg:hover {
+    color: #46c7c7;
+    transition: transform 200ms ease-in;
+ }

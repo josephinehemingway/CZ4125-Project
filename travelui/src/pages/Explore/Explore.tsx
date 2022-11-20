@@ -35,7 +35,7 @@ const Explore: React.FC = () => {
     </>
 
     const guidesTab = <>
-        <Guides tabName={'Guides'} destinationName={formattedDestination}/>
+        <Guides tabName={'Travel Tips'} destinationName={formattedDestination} countryImgUrl={coverUrl}/>
     </>
 
     useEffect(() => {
@@ -45,7 +45,7 @@ const Explore: React.FC = () => {
                 console.log(data)
             })
         );
-    }, []);
+    }, [destinationName]);
 
     return (
         <body className="home">
@@ -96,7 +96,7 @@ const Explore: React.FC = () => {
                             children: accomTab,
                         },
                         {
-                            label: `Guides`,
+                            label: `Travel Tips`,
                             key: '4',
                             children: guidesTab,
                         },
