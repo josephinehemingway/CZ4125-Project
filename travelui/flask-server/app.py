@@ -8,6 +8,7 @@ app = Flask(__name__)
 cors = CORS(app)
 app.config['CORS_HEADERS'] = 'application/json'
 
+
 @app.route('/attractions')
 @cross_origin()
 def attractions():
@@ -56,14 +57,15 @@ def attractions():
 
     ])
 
+
 @app.route('/attractions-api')
 def attractions_api():
     destination = request.args.get('destination')
     destination = destination.lower()
 
     print(destination)
-    f= open('tripadvisor_link.json')
-    trip_advisor= json.load(f)
+    f = open('tripadvisor_link.json')
+    trip_advisor = json.load(f)
     link_dict = trip_advisor[destination]
     attractions_url = link_dict['Attractions']
     return jsonpickle.encode(api_functions.get_attractions(attractions_url))
@@ -104,6 +106,7 @@ def hotels():
         },
     ])
 
+
 @app.route('/accommodations-api')
 def hotels_api():
     destination = request.args.get('destination')
@@ -111,11 +114,12 @@ def hotels_api():
 
     print(destination)
 
-    f= open('tripadvisor_link.json')
-    trip_advisor= json.load(f)
+    f = open('tripadvisor_link.json')
+    trip_advisor = json.load(f)
     link_dict = trip_advisor[destination]
     accomodations_url = link_dict['Hotel']
     return jsonpickle.encode(api_functions.get_hotels(accomodations_url))
+
 
 @app.route('/banner')
 def get_banner():
@@ -123,12 +127,13 @@ def get_banner():
     destination = destination.lower()
     print(destination)
 
-    f= open('tripadvisor_link.json')
-    trip_advisor= json.load(f)
+    f = open('tripadvisor_link.json')
+    trip_advisor = json.load(f)
     link_dict = trip_advisor[destination]
     accomodations_url = link_dict['Hotel']
 
     return jsonpickle.encode(api_functions.get_banner(accomodations_url))
+
 
 @app.route('/airbnb')
 def get_airbnb():
@@ -139,13 +144,15 @@ def get_airbnb():
 
     return jsonpickle.encode(api_functions.getairbnb(airbnb_url))
 
+
 @app.route('/tiktok')
 def get_tiktok():
     destination = request.args.get('destination')
     print(destination)
     tiktok_type = "food"
 
-    return jsonpickle.encode(api_functions.gettiktok(destination,tiktok_type))
+    return jsonpickle.encode(api_functions.gettiktok(destination, tiktok_type))
+
 
 @app.route('/food-api')
 def food_api():
@@ -166,10 +173,15 @@ def googleitinerary_api():
     destination = request.args.get('destination')
     days = request.args.get('days')
     print(destination)
-    return jsonpickle.encode(api_functions.find_itinerary_from_google(destination,days=days))
+    return jsonpickle.encode(api_functions.find_itinerary_from_google(destination, days=days))
+
+
+@app.route('/airfareprice-api')
+def airfare_api():
+    destination = request.args.get('destination')
+    print(destination)
+    return jsonpickle.encode(api_functions.get_airprices(destination))
+
 
 if __name__ == '__main__':
     app.run(debug=True, threaded=True)
-
-
-
