@@ -362,3 +362,19 @@ export const StyledItinerarySubheading = styled.p`
         line-height: calc(22px + 0.5vw);
     }
 `;
+
+export const StyledAnalyticsSubheading = styled.p`
+    && {
+        margin-top: ${(props: { margintop: string }) =>
+    props.margintop ? props.margintop : "0"};
+        margin-bottom: ${(props: { marginbottom: string }) =>
+    props.marginbottom ? props.marginbottom : "0"};
+        margin-left: ${(props: { marginleft: string }) => 
+    props.marginleft ? props.marginleft : "0"};
+        font-family: Poppins-Medium, sans-serif;
+        color: ${(props: { color: string }) =>
+    props.color ? props.color : "#000"};
+        font-size: calc(18px + 0.3vw);
+        line-height: calc(20px + 0.5vw);
+    }
+`;
