@@ -74,3 +74,22 @@ header {
   justify-content: flex-start;
   align-items: flex-start;
 }
+
+.analytics-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.plotly-container {
+  width: 30%;
+  margin-right: 1rem
+}
+
+.airfare-container {
+  width: 65%;
+}

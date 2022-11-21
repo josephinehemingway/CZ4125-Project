@@ -7,3 +7,4 @@ bs4
 TikTokApi
 HTMLParser
 geograpy3
+numpy

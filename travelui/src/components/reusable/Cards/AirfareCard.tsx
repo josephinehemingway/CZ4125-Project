@@ -1,33 +1,29 @@
 import React from 'react';
 import './Cards.css';
-import Location from '../../../assets/images/locationicon.png'
 
 type Props = {
     imgurl: string;
-    attrCity: string;
-    attrCountry: string;
-    attrPrice: number;
-    attrClass: string;
-    onClick?: React.MouseEventHandler
+    city: string;
+    country: string;
+    price: number;
+    flightClass: string;
+    currency: string;
 }
 
-const AirfareTicketCard: React.FC<Props> = ({imgurl, attrCity, attrCountry, attrPrice, attrClass}) => {
+const AirfareTicketCard: React.FC<Props> = ({imgurl, city, country, price, flightClass, currency}) => {
 
     return (
-        <div className='attr-card' >
-            <img className='attr-img' src={imgurl} height="100%" alt=''/>
-            <div className='attr-desc'>
-                <h2 className="attr-city"> {attrCity} </h2>
-                <div style={{flexDirection: 'row', display: 'flex', alignItems: 'start'}}>
-                    <img src={Location} height="14px" alt='' style={{marginRight: '5px', marginBottom: '2px', marginTop: '2px'}}/>
-                    <h2 className="attr-country"> {attrCountry} </h2>
-                </div>
-                <div style={{overflowX: 'hidden', textOverflow: 'ellipsis', width: '100%'}}>
-                    <h2 className="attr-price"> {attrPrice} </h2>
-                    <h2 className="attr-class"> {attrClass} </h2>
-                </div>
+        <div className='airfare-card'>
+            <img src={imgurl} className='airfare-img' alt=''/>
+            <div className='airfare-details'>
+                <div className={'airline'}>SINGAPORE AIRLINES</div>
+                <div>{city}, {country}</div>
+                <div className={'flightClass'}>{flightClass}</div>
+                <div className={'price'}>{currency} {price}</div>
             </div>
+
         </div>
+
     );
 };
 
