@@ -2,6 +2,7 @@ pymongo
 Flask
 flask_cors
 jsonpickle
+json
 requests
 bs4
 TikTokApi

@@ -5,7 +5,7 @@ import urllib.parse
 import re
 import json
 import numpy as np
-from TikTokApi import TikTokApi
+# from TikTokApi import TikTokApi
 from sklearn.cluster import KMeans
 import geopy.distance
 from collections import ChainMap
@@ -35,7 +35,7 @@ def parse_html(url, print_soup=False):
     return soup
 
 
-def get_attractions(url):
+def get_attractions(url, destination):
     soup = parse_html(url, print_soup=False)
     attractions = []
     results = soup.find_all('div', class_="ScCHL")
@@ -43,11 +43,9 @@ def get_attractions(url):
     for i in results:
         attraction = {}
         edited_name = i.find('div', class_='XfVdV o AIbhI').text
-        attraction_id = edited_name.split(' ')[0]
-        attraction_id = int(re.sub(r'[^\w\s]', '', attraction_id))
         name = edited_name.split(' ')[1:]
         name = ' '.join(name)
-        attraction['Id'] = attraction_id
+        attraction['Country'] = destination
         attraction['Name'] = name
         details = i.find_all('div', class_="biGQs _P pZUbB hmDzD")
         attraction['Activity'] = details[0].text
@@ -81,7 +79,7 @@ def get_attractions(url):
 #     results = soup.findAll('div', {'class':'ui_column is-8 main_col allowEllipsis'})
 
 
-def get_hotels(url):
+def get_hotels(url, destination):
     soup = parse_html(url)
     results = soup.findAll(
         'div', {'class': 'prw_rup prw_meta_hsx_responsive_listing ui_section listItem'})
@@ -120,7 +118,7 @@ def get_hotels(url):
                 lat = None
                 lon = None
 
-            hotel['Id'] = count
+            hotel['Country'] = destination
             hotel['Name'] = hotel_name_stripped
             hotel['ImageUrl'] = hotel_image
             hotel['ReviewUrl'] = hotel_link
@@ -133,14 +131,16 @@ def get_hotels(url):
     return hotels
 
 
-def get_banner(hotel_url):
+def get_banner(hotel_url, destination):
+    banner = {}
     bannerurl = parse_html(hotel_url, print_soup=False)
     banner_result = bannerurl.find('img', class_='image')['src']
+    banner['Country'] = destination
+    banner['CoverUrl'] = banner_result
+    return [banner]
 
-    return banner_result
 
-
-def getairbnb(airbnb_url):
+def getairbnb(airbnb_url, destination):
     soup = BeautifulSoup(requests.get(airbnb_url).content, 'html.parser')
     next_page = ['https://www.airbnb.com.sg' +
                  x.get('href') for x in soup.find("div", class_="_jro6t0").find_all('a')]
@@ -177,7 +177,7 @@ def getairbnb(airbnb_url):
 
             pic = listing_html.find_all("source")[0].get("srcset")
 
-            features_dict['Id'] = count
+            features_dict['Country'] = destination
             features_dict['Name'] = header
             features_dict['Rating'] = rate
             features_dict['url'] = url
@@ -198,6 +198,7 @@ def gettiktok(country, type):
     for vid in api.hashtag(name=[country, type]).videos(count=50):
         tiktok = {}
         info = vid.info()
+        tiktok['Country'] = country
         tiktok['url'] = info['video']['downloadAddr']
         tiktoks.append(tiktok)
 
@@ -222,6 +223,7 @@ def get_food(country):
     for i in json_str:
         food_dict = {}
         # print(i)
+        food_dict['Country'] = country
         food_dict['Name'] = i['Name']
         if i['Description'] == None:
             food_dict['Description'] = ''
@@ -263,6 +265,7 @@ def find_tips_from_google(query, params=''):
     for link in links:
         website = {}
         website_link = link.a['href']
+        website['Country'] = query
         website['url'] = website_link
         inner_soup = parse_html(website_link)
         website_title = inner_soup.title.text
@@ -319,6 +322,7 @@ def find_itinerary_from_google(query, days, params=''):
     for link in links:
         website = {}
         website_link = link.a['href']
+        website['Country'] = query
         website['url'] = website_link
         inner_soup = parse_html(website_link)
         website_title = inner_soup.title.text
@@ -362,101 +366,108 @@ def get_airprices(country):
 
             countries.append(flightdetails)
 
-    return countries
+    return
+
+
+def get_passengers(city):
+    df = pd.read_csv('./number-of-air-transport-passengers-carried.csv')
+    df['Passengers'] = df['Passengers'].astype(int)
+    df = df.loc[df['Entity'] == city].reset_index(drop=True)
+    passenger_dict = {}
+    passenger_dict['Year'] = list(df['Year'])
+    passenger_dict['Passengers'] = list(df['Passengers'])
+    return [passenger_dict]
 
 
 def get_planner(days, hotel, attractions):
-    #days is the number of days for itineray
-    #hotel is passed as dictionary of hotels
-    #attractions is passed as dictionary of attractions
+    # days is the number of days for itineray
+    # hotel is passed as dictionary of hotels
+    # attractions is passed as dictionary of attractions
 
-    def getShortest(start,visited,grp):
+    def getShortest(start, visited, grp):
         temp_lst = [loc for loc in grp['Name'] if loc not in visited]
         dist_lst = []
         for loc in temp_lst:
-            start_lat = df['Lat'][df['Name']==start]
-            start_lon = df['Lon'][df['Name']==start]
-            start_coord = list([float(start_lat),float(start_lon)])
+            start_lat = df['Lat'][df['Name'] == start]
+            start_lon = df['Lon'][df['Name'] == start]
+            start_coord = list([float(start_lat), float(start_lon)])
 
-            loc_lat = df['Lat'][df['Name']== loc]
-            loc_lon = df['Lon'][df['Name']== loc]
+            loc_lat = df['Lat'][df['Name'] == loc]
+            loc_lon = df['Lon'][df['Name'] == loc]
 
-            loc_coord=list([float(loc_lat),float(loc_lon)])
+            loc_coord = list([float(loc_lat), float(loc_lon)])
 
-            distance = geopy.distance.geodesic(start_coord,loc_coord).km
-            dist_lst.append((loc,distance))
+            distance = geopy.distance.geodesic(start_coord, loc_coord).km
+            dist_lst.append((loc, distance))
         return sorted(dist_lst, key=lambda x: x[1])[0]
 
     def getPath(i):
-        grp = df[df['group']==i]
-        grp = grp.reset_index(drop = True)
-        if len(grp)>1:
+        grp = df[df['group'] == i]
+        grp = grp.reset_index(drop=True)
+        if len(grp) > 1:
             lst = []
             start = grp['Name'][0]
             lst.append(start)
             cur = start
             tot_dist = 0
             for i in range(len(grp)-1):
-                next,dist_ = getShortest(cur,lst,grp)
+                next, dist_ = getShortest(cur, lst, grp)
                 lst.append(next)
-                tot_dist +=dist_
+                tot_dist += dist_
                 cur = next
-            return lst,tot_dist
+            return lst, tot_dist
         else:
-            return [grp['Name'][0]],0
-        
-    df= pd.DataFrame(attractions)
+            return [grp['Name'][0]], 0
 
-    #Drop attractions with no coordinates
+    df = pd.DataFrame(attractions)
+
+    # Drop attractions with no coordinates
     df = df[df['Lat'].notna()]
     df = df[df['Lon'].notna()]
 
-    #change lattitude and longtitude to int
-    df['Lat']= df['Lat'].astype(float)
-    df['Lon']= df['Lon'].astype(float)
+    # change lattitude and longtitude to int
+    df['Lat'] = df['Lat'].astype(float)
+    df['Lon'] = df['Lon'].astype(float)
 
-    arr_coordinates=[]
+    arr_coordinates = []
 
-    for index,row in df.iterrows():
+    for index, row in df.iterrows():
         lat = row['Lat']
-        lon= row['Lon']
-        arr_coordinates.append([lat,lon])
+        lon = row['Lon']
+        arr_coordinates.append([lat, lon])
 
-
-    kmeans = KMeans(n_clusters= int(days), random_state=0).fit(arr_coordinates)
+    kmeans = KMeans(n_clusters=int(days), random_state=0).fit(arr_coordinates)
 
     df['group'] = kmeans.labels_
-    
-    clusters=[]
-    count=0
+
+    clusters = []
+    count = 0
     for i in range(days):
-        cluster={}
-        #print(getPath(i))
+        cluster = {}
+        # print(getPath(i))
         cluster[count] = getPath(i)
-        cluster['centroid']= list(kmeans.cluster_centers_[count])
-        count= count+1
+        cluster['centroid'] = list(kmeans.cluster_centers_[count])
+        count = count+1
         clusters.append(cluster)
-        
-    
+
     for i in clusters:
         centre_coordinates = i['centroid']
-        d=[]
+        d = []
         for j in hotel:
-            details={}
-            hotel_lat= j['Lat']
-            hotel_lon=j['Lon']
-            hotel_coordinates = list([hotel_lat,hotel_lon])
-            dist=geopy.distance.geodesic(centre_coordinates,hotel_coordinates ).km
+            details = {}
+            hotel_lat = j['Lat']
+            hotel_lon = j['Lon']
+            hotel_coordinates = list([hotel_lat, hotel_lon])
+            dist = geopy.distance.geodesic(
+                centre_coordinates, hotel_coordinates).km
             details[j['Name']] = dist
             d.append(details)
 
-        dict_hotels= dict(ChainMap(*d))
-        #print(dict_hotels)
+        dict_hotels = dict(ChainMap(*d))
+        # print(dict_hotels)
 
-
-        hotel_min_dist=min(dict_hotels.items(), key=lambda x: x[1])
-        #print(hotel_min_dist)
+        hotel_min_dist = min(dict_hotels.items(), key=lambda x: x[1])
+        # print(hotel_min_dist)
         i['nearest_hotel'] = hotel_min_dist
-    
-    
+
     return np.array(clusters).tolist()
