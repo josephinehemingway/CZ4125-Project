@@ -22,12 +22,6 @@ export type MarkerType = {
 }
 
 interface LocationInterface{
-    Name: string,
-    Activity: string,
-    Location: string,
-    ImageUrl: string,
-    Ratings: string,
-    Review_url: string;
     Lat: number,
     Lon: number
 }

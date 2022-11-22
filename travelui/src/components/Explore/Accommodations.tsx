@@ -135,7 +135,10 @@ const Accommodations: React.FC<Props>= ({ destinationName }) => {
                 </StyledSectionTitle>
             </RowContainer>
             <div style={{height:'200px'}} >
-                <Map />
+                <Map 
+                    destinationName={destinationName}
+                    locations={data}
+                />
             </div>
         </div>
     );
