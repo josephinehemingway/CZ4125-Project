@@ -1,10 +1,12 @@
+pymongo
 Flask
 flask_cors
 jsonpickle
 requests
 bs4
-json
 TikTokApi
 HTMLParser
 geograpy3
 numpy
+geopy
+json

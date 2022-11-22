@@ -13,7 +13,6 @@ type Props = {
 
 const Accommodations: React.FC<Props>= ({ destinationName }) => {
     interface AccommodationsApi{
-        Id: string,
         Name: string,
         ImageUrl: string,
         ReviewUrl: string,
@@ -39,8 +38,8 @@ const Accommodations: React.FC<Props>= ({ destinationName }) => {
         );
     }, [destinationName]);
 
-    const accomCardsArray = data.map((d) => (
-        <a key={d.Id} href={d.ReviewUrl} target="_blank" rel="noopener noreferrer">
+    const accomCardsArray = data.map((d, index) => (
+        <a key={index} href={d.ReviewUrl} target="_blank" rel="noopener noreferrer">
             <AccomsCard
                 // onClick={scrollToTop}
                 url={d.ImageUrl}
@@ -135,7 +134,10 @@ const Accommodations: React.FC<Props>= ({ destinationName }) => {
                 </StyledSectionTitle>
             </RowContainer>
             <div style={{height:'200px'}} >
-                <Map />
+                <Map 
+                    destinationName={destinationName}
+                    locations={data}
+                />
             </div>
         </div>
     );

@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import AirfareTicketCard from "../reusable/Cards/AirfareCard";
 import {Spin} from "antd";
 import {HorizontalScroll, RowContainer, StyledLink, StyledAnalyticsSubheading} from "../reusable/Styles";
+import BarChart from "./BarChart"
 
 type Props = {
     destinationName: string
@@ -9,7 +10,6 @@ type Props = {
 
 const AnalyticsSection: React.FC<Props> = ({destinationName}) => {
     interface AirfareTicketApi{
-        Id: string,
         City: string,
         Country: string,
         Currency: string,
@@ -23,6 +23,7 @@ const AnalyticsSection: React.FC<Props> = ({destinationName}) => {
 
     useEffect(() => {
         setLoading(true);
+        console.log(destinationName)
         // Using fetch to fetch the api from
         // flask server it will be redirected to proxy
         fetch(`/airfareprice-api?destination=${destinationName}`).then((res) =>
@@ -51,7 +52,7 @@ const AnalyticsSection: React.FC<Props> = ({destinationName}) => {
     return (
         <div className='analytics-container'>
             <div className='plotly-container'>
-                Traveller Plot
+                <BarChart destinationName= {destinationName}/>
             </div>
             <div className='airfare-container'>
                 <RowContainer

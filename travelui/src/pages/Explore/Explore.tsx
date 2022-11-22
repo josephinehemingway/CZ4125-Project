@@ -39,7 +39,7 @@ const Explore: React.FC = () => {
     </>
 
     useEffect(() => {
-        fetch(`/banner?destination=${destinationName}`).then((res) =>
+        fetch(`/banner-api?destination=${destinationName}`).then((res) =>
             res.json().then((data) => {
                 setCoverUrl(data);
                 console.log(data)
