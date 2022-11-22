@@ -143,51 +143,46 @@ def get_banner(hotel_url, destination):
 
 def getairbnb(airbnb_url, destination):
     soup = BeautifulSoup(requests.get(airbnb_url).content, 'html.parser')
-    next_page = ['https://www.airbnb.com.sg' +
-                 x.get('href') for x in soup.find("div", class_="_jro6t0").find_all('a')]
-    pages = [airbnb_url, next_page[0], next_page[1]]
     airbnb = []
-
     count = 1
-    for page in pages:
-        soup = BeautifulSoup(requests.get(page).content, 'html.parser')
-        listings = soup.find_all('div', 'cy5jw6o dir dir-ltr')
-        for listing_html in listings:
-            features_dict = {}
-            url = "https://www.airbnb.com.sg" + \
-                listing_html.find('a').get('href')
-            header = listing_html.find(
-                "div", {"class": "t1jojoys dir dir-ltr"}).get_text()
-            name = listing_html.find(
-                "div", {"class": "nquyp1l s1cjsi4j dir dir-ltr"}).get_text()
+    
+    listings = soup.find_all('div', 'cy5jw6o dir dir-ltr')
+    for listing_html in listings:
+        features_dict = {}
+        url = "https://www.airbnb.com.sg" + \
+            listing_html.find('a').get('href')
+        header = listing_html.find(
+            "div", {"class": "t1jojoys dir dir-ltr"}).get_text()
+        name = listing_html.find(
+            "div", {"class": "nquyp1l s1cjsi4j dir dir-ltr"}).get_text()
 
-            price = listing_html.find("div", {"class": "_1jo4hgw"}).get_text().split(
-                "\xa0")[-3].replace("$", "")
+        price = listing_html.find("div", {"class": "_1jo4hgw"}).get_text().split(
+            "\xa0")[-3].replace("$", "")
 
-            beds = listing_html.find_all(
-                "span", class_="dir dir-ltr")[0].get_text().split(" ")[0]
+        beds = listing_html.find_all(
+            "span", class_="dir dir-ltr")[0].get_text().split(" ")[0]
 
-            try:
-                ratings = listing_html.find(
-                    "span", class_="t5eq1io r4a59j5 dir dir-ltr").get("aria-label").split(",")
-                rate = ratings[0].split(" ")[0]
-                review = ratings[1].split(" ")[-2]
-            except:
-                rate = np.nan
-                review = np.nan
+        try:
+            ratings = listing_html.find(
+                "span", class_="t5eq1io r4a59j5 dir dir-ltr").get("aria-label").split(",")
+            rate = ratings[0].split(" ")[0]
+            review = ratings[1].split(" ")[-2]
+        except:
+            rate = np.nan
+            review = np.nan
 
-            pic = listing_html.find_all("source")[0].get("srcset")
+        pic = listing_html.find_all("source")[0].get("srcset")
 
-            features_dict['City'] = destination
-            features_dict['Name'] = header
-            features_dict['Rating'] = rate
-            features_dict['url'] = url
-            features_dict['imageurl'] = pic
-            features_dict['review'] = review
+        features_dict['City'] = destination
+        features_dict['Name'] = header
+        features_dict['Rating'] = rate
+        features_dict['url'] = url
+        features_dict['imageurl'] = pic
+        features_dict['review'] = review
 
-            count += 1
+        count += 1
 
-            airbnb.append(features_dict)
+        airbnb.append(features_dict)
 
     return airbnb
 
