@@ -18,12 +18,12 @@ const BarChart: React.FC<Props>= (destinationName) =>{
       setLoading(true);
       // Using fetch to fetch the api from 
       // flask server it will be redirected to proxy
-      fetch(`/passengers-api?destination=${destinationName}`).then((res) =>
+      fetch(`/passengers-api?destination=${destinationName.destinationName}`).then((res) =>
           res.json().then((data) => {
               // Setting a data from api
               setdata(data);
               setLoading(false);
-              console.log(data)
+              // console.log(data)
               console.log(destinationName)
           })
       );

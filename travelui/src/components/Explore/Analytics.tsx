@@ -23,6 +23,7 @@ const AnalyticsSection: React.FC<Props> = ({destinationName}) => {
 
     useEffect(() => {
         setLoading(true);
+        console.log(destinationName)
         // Using fetch to fetch the api from
         // flask server it will be redirected to proxy
         fetch(`/airfareprice-api?destination=${destinationName}`).then((res) =>
@@ -51,13 +52,7 @@ const AnalyticsSection: React.FC<Props> = ({destinationName}) => {
     return (
         <div className='analytics-container'>
             <div className='plotly-container'>
-                <RowContainer
-                        height={"100%"}
-                        align="center"
-                        justify={"space-between"}
-                    >
                 <BarChart destinationName= {destinationName}/>
-                </RowContainer>
             </div>
             <div className='airfare-container'>
                 <RowContainer
