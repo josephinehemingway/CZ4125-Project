@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import AirfareTicketCard from "../reusable/Cards/AirfareCard";
 import {Spin} from "antd";
 import {HorizontalScroll, RowContainer, StyledLink, StyledAnalyticsSubheading} from "../reusable/Styles";
+import BarChart from "./BarChart"
 
 type Props = {
     destinationName: string
@@ -50,7 +51,13 @@ const AnalyticsSection: React.FC<Props> = ({destinationName}) => {
     return (
         <div className='analytics-container'>
             <div className='plotly-container'>
-                Traveller Plot
+                <RowContainer
+                        height={"100%"}
+                        align="center"
+                        justify={"space-between"}
+                    >
+                <BarChart destinationName= {destinationName}/>
+                </RowContainer>
             </div>
             <div className='airfare-container'>
                 <RowContainer

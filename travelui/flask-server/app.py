@@ -13,64 +13,69 @@ client = MongoClient(
     "mongodb+srv://cz4125:cz4125@travelui.twfhvbi.mongodb.net/test")
 db = client.travelui
 
-# 1. Delete all records
-# COMMENT OUT IF DONT WANT TO DELETE VALUES FROM MONGODB COLLECTIONS
-db['attractions'].delete_many({})
-db['accommodations'].delete_many({})
-db['airbnb'].delete_many({})
-db['airfare_price'].delete_many({})
-db['banner'].delete_many({})
-db['food'].delete_many({})
-db['tiktok_food'].delete_many({})
-db['traveltips'].delete_many({})
+# # 1. Delete all records
+# # COMMENT OUT IF DONT WANT TO DELETE VALUES FROM MONGODB COLLECTIONS
+# db['attractions'].delete_many({})
+# db['accommodations'].delete_many({})
+# db['airbnb'].delete_many({})
+# db['airfare_price'].delete_many({})
+# db['banner'].delete_many({})
+# db['food'].delete_many({})
+# db['passengers'].delete_many({})
+# db['tiktok_food'].delete_many({})
+# db['traveltips'].delete_many({})
 
-# 2. Add some records
-# COMMENT OUT IF DONT WANT TO POPULATE MONGODB COLLECTIONS
-# change destination
-destination = 'Rome'
-f = open('tripadvisor_link.json')
-trip_advisor = json.load(f)
-link_dict = trip_advisor[destination.lower()]
-# attractions
-attractions_url = link_dict['Attractions']
-attractions_scrape = api_functions.get_attractions(
-    attractions_url, destination)
-attraction_col = db['attractions']
-attraction_col.insert_many(attractions_scrape)
-# acommodations
-accommodations_url = link_dict['Hotel']
-accommodations_scrape = api_functions.get_hotels(
-    accommodations_url, destination)
-accommodations_col = db['accommodations']
-accommodations_col.insert_many(accommodations_scrape)
-# airbnb
-# airbnb_url = 'https://www.airbnb.com.sg/s/' + destination + '/homes'
-# airbnb_scrape = api_functions.getairbnb(airbnb_url, destination)
-# airbnb_col = db['airbnb']
-# airbnb_col.insert_many(airbnb_scrape)
-# banner
-banner_url = link_dict['Hotel']
-banner_scrape = api_functions.get_banner(
-    banner_url, destination)
-banner_col = db['banner']
-banner_col.insert_many(banner_scrape)
-# food
-food_scrape = api_functions.get_food(destination)
-food_col = db['food']
-food_col.insert_many(food_scrape)
-# passengers
-passenger_scrape = api_functions.get_passengers(destination)
-passengers_col = db['passengers']
-passengers_col.insert_many(passenger_scrape)
-# tiktok food
-# tiktok_type = "food"
-# food_scrape = api_functions.gettiktok(destination, tiktok_type)
-# tiktokfood_col = db['tiktok_food']
-# tiktokfood_col.insert_many(food_scrape)
-# travel tips
-tips_scrape = api_functions.find_tips_from_google(destination)
-tips_col = db['traveltips']
-tips_col.insert_many(tips_scrape)
+# # 2. Add some records
+# # COMMENT OUT IF DONT WANT TO POPULATE MONGODB COLLECTIONS
+# # change destination
+# destination = 'Rome'
+# f = open('tripadvisor_link.json')
+# trip_advisor = json.load(f)
+# link_dict = trip_advisor[destination.lower()]
+# # attractions
+# attractions_url = link_dict['Attractions']
+# attractions_scrape = api_functions.get_attractions(
+#     attractions_url, destination)
+# attraction_col = db['attractions']
+# attraction_col.insert_many(attractions_scrape)
+# # acommodations
+# accommodations_url = link_dict['Hotel']
+# accommodations_scrape = api_functions.get_hotels(
+#     accommodations_url, destination)
+# accommodations_col = db['accommodations']
+# accommodations_col.insert_many(accommodations_scrape)
+# # airbnb
+# # airbnb_url = 'https://www.airbnb.com.sg/s/' + destination + '/homes'
+# # airbnb_scrape = api_functions.getairbnb(airbnb_url, destination)
+# # airbnb_col = db['airbnb']
+# # airbnb_col.insert_many(airbnb_scrape)
+# # banner
+# banner_url = link_dict['Hotel']
+# banner_scrape = api_functions.get_banner(
+#     banner_url, destination)
+# banner_col = db['banner']
+# banner_col.insert_many(banner_scrape)
+# # food
+# food_scrape = api_functions.get_food(destination)
+# food_col = db['food']
+# food_col.insert_many(food_scrape)
+# # passengers
+# passenger_scrape = api_functions.get_passengers(destination)
+# passengers_col = db['passengers']
+# passengers_col.insert_many(passenger_scrape)
+# # airfare prices
+# airfareprice_scrape = api_functions.get_airprices(destination)
+# airfareprice_col = db['airfare_price']
+# airfareprice_col.insert_many(airfareprice_scrape)
+# # tiktok food
+# # tiktok_type = "food"
+# # food_scrape = api_functions.gettiktok(destination, tiktok_type)
+# # tiktokfood_col = db['tiktok_food']
+# # tiktokfood_col.insert_many(food_scrape)
+# # travel tips
+# tips_scrape = api_functions.find_tips_from_google(destination)
+# tips_col = db['traveltips']
+# tips_col.insert_many(tips_scrape)
 
 
 @app.route('/attractions-api', methods=["GET"])
@@ -80,7 +85,7 @@ def get_attractions_api():
 
     collection = db['attractions']
 
-    existing = collection.find({'Country': destination})
+    existing = collection.find({'City': destination})
     results = list(existing)
     if len(results) > 0:
         print(f"Records found in MongoDB")
@@ -96,7 +101,7 @@ def get_attractions_api():
         collection.insert_many(attractions_scrape)
         print(f"MongoDB has been updated")
 
-    attractions = list(collection.find({"Country": destination}))
+    attractions = list(collection.find({"City": destination}))
     return json.dumps(attractions, default=json_util.default)
 
 
@@ -108,7 +113,7 @@ def hotels_api():
 
     collection = db['accommodations']
 
-    existing = collection.find({'Country': destination})
+    existing = collection.find({'City': destination})
     results = list(existing)
     if len(results) > 0:
         print(f"Records found in MongoDB")
@@ -122,7 +127,7 @@ def hotels_api():
         collection.insert_many(accommodations_scrape)
         print(f"MongoDB has been updated")
 
-    accommodations = list(collection.find({"Country": destination}))
+    accommodations = list(collection.find({"City": destination}))
     return json.dumps(accommodations, default=json_util.default)
 
 
@@ -133,7 +138,7 @@ def get_banner():
 
     collection = db['banner']
 
-    existing = collection.find({'Country': destination})
+    existing = collection.find({'City': destination})
     results = list(existing)
     if len(results) > 0:
         print(f"Records found in MongoDB")
@@ -147,7 +152,7 @@ def get_banner():
         collection.insert_many(accommodations_scrape)
         print(f"MongoDB has been updated")
 
-    accommodations = list(collection.find({"Country": destination}))
+    accommodations = list(collection.find({"City": destination}))
     return json.dumps(accommodations, default=json_util.default)
 
 
@@ -157,7 +162,7 @@ def get_airbnb():
     print(destination)
 
     collection = db['airbnb']
-    existing = collection.find({'Country': destination})
+    existing = collection.find({'City': destination})
     results = list(existing)
     if len(results) > 0:
         print(f"Records found in MongoDB")
@@ -167,7 +172,7 @@ def get_airbnb():
         collection.insert_many(airbnb_scrape)
         print(f"MongoDB has been updated")
 
-    airbnb = list(collection.find({"Country": destination}))
+    airbnb = list(collection.find({"City": destination}))
     return json.dumps(airbnb, default=json_util.default)
 
 
@@ -176,7 +181,7 @@ def get_tiktok():
     destination = request.args.get('destination')
     print(destination)
     collection = db['tiktok_food']
-    existing = collection.find({'Country': destination})
+    existing = collection.find({'City': destination})
     results = list(existing)
     if len(results) > 0:
         print(f"Records found in MongoDB")
@@ -186,7 +191,7 @@ def get_tiktok():
         collection.insert_many(food_scrape)
         print(f"MongoDB has been updated")
 
-    tiktok_food = list(collection.find({"Country": destination}))
+    tiktok_food = list(collection.find({"City": destination}))
     return json.dumps(tiktok_food, default=json_util.default)
 
 
@@ -195,7 +200,7 @@ def food_api():
     destination = request.args.get('destination')
     print(destination)
     collection = db['food']
-    existing = collection.find({'Country': destination})
+    existing = collection.find({'City': destination})
     results = list(existing)
     if len(results) > 0:
         print(f"Records found in MongoDB")
@@ -203,7 +208,7 @@ def food_api():
         food_scrape = api_functions.get_food(destination)
         collection.insert_many(food_scrape)
         print(f"MongoDB has been updated")
-    food = list(collection.find({"Country": destination}))
+    food = list(collection.find({"City": destination}))
     return json.dumps(food, default=json_util.default)
 
 
@@ -212,7 +217,7 @@ def traveltips_api():
     destination = request.args.get('destination')
     print(destination)
     collection = db['traveltips']
-    existing = collection.find({'Country': destination})
+    existing = collection.find({'City': destination})
     results = list(existing)
     if len(results) > 0:
         print(f"Records found in MongoDB")
@@ -220,7 +225,7 @@ def traveltips_api():
         tips_scrape = api_functions.find_tips_from_google(destination)
         collection.insert_many(tips_scrape)
         print(f"MongoDB has been updated")
-    tips = list(collection.find({"Country": destination}))
+    tips = list(collection.find({"City": destination}))
     return json.dumps(tips, default=json_util.default)
 
 
@@ -237,7 +242,7 @@ def airfare_api():
     destination = request.args.get('destination')
     print(destination)
     collection = db['airfare_price']
-    existing = collection.find({'Country': destination})
+    existing = collection.find({'City': destination})
     results = list(existing)
     if len(results) > 0:
         print(f"Records found in MongoDB")
@@ -245,7 +250,7 @@ def airfare_api():
         airfareprice_scrape = api_functions.get_airprices(destination)
         collection.insert_many(airfareprice_scrape)
         print(f"MongoDB has been updated")
-    airfareprice = list(collection.find({"Country": destination}))
+    airfareprice = list(collection.find({"City": destination}))
     return json.dumps(airfareprice, default=json_util.default)
 
 
@@ -271,7 +276,7 @@ def passenger_api():
     destination = request.args.get('destination')
     print(destination)
     collection = db['passengers']
-    existing = collection.find({'Country': destination})
+    existing = collection.find({'City': destination})
     results = list(existing)
     if len(results) > 0:
         print(f"Records found in MongoDB")
@@ -279,7 +284,8 @@ def passenger_api():
         passenger_scrape = api_functions.get_passengers(destination)
         collection.insert_many(passenger_scrape)
         print(f"MongoDB has been updated")
-    passengers = list(collection.find({"Country": destination}))
+    passengers = list(collection.find({"City": destination}))
+    print(passengers)
     return json.dumps(passengers, default=json_util.default)
 
 # @app.route('/attractions')

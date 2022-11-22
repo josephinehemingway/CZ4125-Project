@@ -18,7 +18,7 @@ const BarChart: React.FC<Props>= (destinationName) =>{
       setLoading(true);
       // Using fetch to fetch the api from 
       // flask server it will be redirected to proxy
-      fetch(`/passenger-api?destination=${destinationName}`).then((res) =>
+      fetch(`/passengers-api?destination=${destinationName}`).then((res) =>
           res.json().then((data) => {
               // Setting a data from api
               setdata(data);
@@ -28,7 +28,7 @@ const BarChart: React.FC<Props>= (destinationName) =>{
           })
       );
     }, [destinationName]);
-    const passengerGraph = data.map((d, index) =>{
+    const passengerGraph = data.map((d) =>{
       return(
         <Plot
           data={[
@@ -41,7 +41,7 @@ const BarChart: React.FC<Props>= (destinationName) =>{
             },
             {type: 'bar', x: d.Year, y: d.Passengers},
           ]}
-          layout={ {width: 320, height: 240, title: 'A Fancy Plot'} } />
+          layout={ {title: 'Traveller Plot'} } />
 
       )});
 

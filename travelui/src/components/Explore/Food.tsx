@@ -89,8 +89,7 @@ const Food: React.FC<Props>= ({ tabName, destinationName }) => {
                 <div style={{width: '30%'}}>
                     <Map 
                         destinationName={destinationName}
-                        locations={data}
-                    />
+                        locations={data}/>
                 </div>
             </div>
         </div>

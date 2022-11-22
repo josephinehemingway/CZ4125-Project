@@ -11,6 +11,7 @@ import geopy.distance
 from collections import ChainMap
 import pandas as pd
 from html.parser import HTMLParser
+from geopy import geocoders
 
 import geograpy
 
@@ -45,7 +46,7 @@ def get_attractions(url, destination):
         edited_name = i.find('div', class_='XfVdV o AIbhI').text
         name = edited_name.split(' ')[1:]
         name = ' '.join(name)
-        attraction['Country'] = destination
+        attraction['City'] = destination
         attraction['Name'] = name
         details = i.find_all('div', class_="biGQs _P pZUbB hmDzD")
         attraction['Activity'] = details[0].text
@@ -59,7 +60,7 @@ def get_attractions(url, destination):
         attraction['ImageUrl'] = photo_url
         attraction['Review_url'] = base_url+url
 
-        address = name + ' Italy'
+        address = name + destination
         mapurl = 'https://nominatim.openstreetmap.org/search/' + \
             urllib.parse.quote(address) + '?format=json'
 
@@ -106,7 +107,7 @@ def get_hotels(url, destination):
             else:
                 hotel_name_stripped = hotel_name[5:]
 
-            address = hotel_name_stripped + ' Italy'
+            address = hotel_name_stripped + destination
             mapurl = 'https://nominatim.openstreetmap.org/search/' + \
                 urllib.parse.quote(address) + '?format=json'
 
@@ -118,7 +119,7 @@ def get_hotels(url, destination):
                 lat = None
                 lon = None
 
-            hotel['Country'] = destination
+            hotel['City'] = destination
             hotel['Name'] = hotel_name_stripped
             hotel['ImageUrl'] = hotel_image
             hotel['ReviewUrl'] = hotel_link
@@ -135,7 +136,7 @@ def get_banner(hotel_url, destination):
     banner = {}
     bannerurl = parse_html(hotel_url, print_soup=False)
     banner_result = bannerurl.find('img', class_='image')['src']
-    banner['Country'] = destination
+    banner['City'] = destination
     banner['CoverUrl'] = banner_result
     return [banner]
 
@@ -177,7 +178,7 @@ def getairbnb(airbnb_url, destination):
 
             pic = listing_html.find_all("source")[0].get("srcset")
 
-            features_dict['Country'] = destination
+            features_dict['City'] = destination
             features_dict['Name'] = header
             features_dict['Rating'] = rate
             features_dict['url'] = url
@@ -198,15 +199,16 @@ def gettiktok(country, type):
     for vid in api.hashtag(name=[country, type]).videos(count=50):
         tiktok = {}
         info = vid.info()
-        tiktok['Country'] = country
+        tiktok['City'] = country
         tiktok['url'] = info['video']['downloadAddr']
         tiktoks.append(tiktok)
 
     return tiktoks
 
 
-def get_food(country):
-    food_url = f'https://www.tasteatlas.com/' + str(country) + '/restaurants'
+def get_food(destination):
+    food_url = f'https://www.tasteatlas.com/' + \
+        str(destination) + '/restaurants'
     soup = parse_html(food_url)
     scripts = soup.find_all('script')
     base_url = 'https://www.tasteatlas.com/'
@@ -223,7 +225,7 @@ def get_food(country):
     for i in json_str:
         food_dict = {}
         # print(i)
-        food_dict['Country'] = country
+        food_dict['City'] = destination
         food_dict['Name'] = i['Name']
         if i['Description'] == None:
             food_dict['Description'] = ''
@@ -265,7 +267,7 @@ def find_tips_from_google(query, params=''):
     for link in links:
         website = {}
         website_link = link.a['href']
-        website['Country'] = query
+        website['City'] = query
         website['url'] = website_link
         inner_soup = parse_html(website_link)
         website_title = inner_soup.title.text
@@ -322,7 +324,7 @@ def find_itinerary_from_google(query, days, params=''):
     for link in links:
         website = {}
         website_link = link.a['href']
-        website['Country'] = query
+        website['City'] = query
         website['url'] = website_link
         inner_soup = parse_html(website_link)
         website_title = inner_soup.title.text
@@ -335,7 +337,7 @@ def find_itinerary_from_google(query, days, params=''):
     return websites
 
 
-def get_airprices(country):
+def get_airprices(destination):
     soup = parse_html(base_url_sgairlines)
     scripts = soup.find_all('script')
 
@@ -351,7 +353,7 @@ def get_airprices(country):
     countries = []
 
     for i in cities:
-        if i['destinationCityName'] == country:
+        if i['destinationCityName'] == destination:
             flightdetails = {}
             flightdetails['City'] = i['destinationCityName']
             flightdetails['Country'] = i['destCountryDescription']
@@ -366,14 +368,21 @@ def get_airprices(country):
 
             countries.append(flightdetails)
 
-    return
+    return countries
 
 
 def get_passengers(city):
+    # convert city to country
+    g_api_key = 'AIzaSyB1rc1kUjUCkOXTzjodOzvIy81dQXL044s'
+    gn = geocoders.GoogleV3(g_api_key)
+    place, (lat, lng) = gn.geocode(city)
+    country = place.split(' ').pop()
     df = pd.read_csv('./number-of-air-transport-passengers-carried.csv')
     df['Passengers'] = df['Passengers'].astype(int)
-    df = df.loc[df['Entity'] == city].reset_index(drop=True)
+    df = df.loc[df['Entity'] == country].reset_index(drop=True)
     passenger_dict = {}
+    passenger_dict['City'] = city
+    passenger_dict['Country'] = country
     passenger_dict['Year'] = list(df['Year'])
     passenger_dict['Passengers'] = list(df['Passengers'])
     return [passenger_dict]
