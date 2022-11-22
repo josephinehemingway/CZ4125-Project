@@ -9,7 +9,6 @@ type Props = {
 
 const AnalyticsSection: React.FC<Props> = ({destinationName}) => {
     interface AirfareTicketApi{
-        Id: string,
         City: string,
         Country: string,
         Currency: string,
