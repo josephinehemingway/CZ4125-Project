@@ -16,7 +16,22 @@ import AnalyticsSection from "../../components/Explore/Analytics";
 
 const Explore: React.FC = () => {
     const destinationName = useLocation().pathname.split("/")[2];
-    const [coverUrl, setCoverUrl] = useState<string>('')
+    const [cover, setCover] = useState<string>('')
+
+    interface BannerAPI{
+        CoverUrl: string,
+        City: string;
+    }
+
+    useEffect(() => {
+        fetch(`/banner-api?destination=${destinationName}`).then((res) =>
+            res.json().then((data: BannerAPI[]) => {
+                setCover(data[0].CoverUrl);
+                console.log(data)
+                console.log()
+            })
+        );
+    }, [destinationName]);
 
     let formattedDestination = capitalise(destinationName)
 
@@ -34,22 +49,13 @@ const Explore: React.FC = () => {
     </>
 
     const guidesTab = <>
-        <Guides tabName={'Travel Tips'} destinationName={formattedDestination} countryImgUrl={coverUrl}/>
+        <Guides tabName={'Travel Tips'} destinationName={formattedDestination} countryImgUrl={cover}/>
     </>
-
-    useEffect(() => {
-        fetch(`/banner-api?destination=${destinationName}`).then((res) =>
-            res.json().then((data) => {
-                setCoverUrl(data);
-                console.log(data)
-            })
-        );
-    }, [destinationName]);
 
     return (
         <body className="home">
             <ExploreBanner
-                coverUrl={coverUrl}
+                coverUrl={cover}
                 destinationName={formattedDestination}
             />
             <Container
