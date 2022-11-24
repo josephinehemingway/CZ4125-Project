@@ -251,8 +251,8 @@ def get_food(destination):
     return food_list
 
 
-def find_tips_from_google(query, params=''):
-    query = query + ' travel tips'
+def find_tips_from_google(city, params=''):
+    query = city + ' travel tips'
     url = f'https://www.google.com/search?q={query}{params}'
     soup = parse_html(url)
 
@@ -262,7 +262,7 @@ def find_tips_from_google(query, params=''):
     for link in links:
         website = {}
         website_link = link.a['href']
-        website['City'] = query
+        website['City'] = city
         website['url'] = website_link
         inner_soup = parse_html(website_link)
         website_title = inner_soup.title.text

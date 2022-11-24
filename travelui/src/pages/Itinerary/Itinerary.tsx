@@ -21,7 +21,7 @@ const Itinerary: React.FC = () => {
 
     const citiesTab = <div style={{width: '100%'}}>
         <Attractions tabName={'Attractions'} destinationName={formattedDestination} />
-        <TikTokSection title={'Trending Places on TikTok'} TikTokList={TIKTOK_LIST}/>
+        {/* <TikTokSection title={'Trending Places on TikTok'} TikTokList={TIKTOK_LIST}/> */}
     </div>
 
     return (

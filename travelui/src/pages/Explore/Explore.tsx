@@ -22,12 +22,11 @@ const Explore: React.FC = () => {
 
     const attrTab = <>
             <Attractions tabName={'Attractions'} destinationName={formattedDestination} />
-            <TikTokSection title={'Trending Places on TikTok'} TikTokList={TIKTOK_LIST}/>
         </>
 
     const foodTab = <>
         <Food tabName={'Restaurants'} destinationName={formattedDestination}/>
-        <TikTokSection title={'Food Recommendations from TikTok'} TikTokList={TIKTOK_LIST}/>
+        {/* <TikTokSection title={'Food Recommendations from TikTok'} TikTokList={TIKTOK_LIST}/> */}
     </>
 
     const accomTab = <>

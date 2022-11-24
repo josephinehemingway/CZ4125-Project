@@ -64,7 +64,7 @@ const Home: React.FC = () => {
                 allowClear
             />
             <ExploreSection/>
-            <TikTokSection TikTokList={TIKTOK_LIST}/>
+            {/* <TikTokSection TikTokList={TIKTOK_LIST}/> */}
         </Container>
         </body>
     );

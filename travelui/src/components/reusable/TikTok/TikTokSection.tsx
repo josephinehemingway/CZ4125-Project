@@ -6,20 +6,24 @@ import {
     StyledText,
     StyledSectionTitle,
 } from "../Styles";
-import { TIKTOK_INTERFACE } from "../../../utils/const";
 import "./TikTok.css";
 
+interface TikTokAttractions{
+    Id: string,
+    TiktokUrl: string
+}
+
 type Props = {
-    TikTokList: TIKTOK_INTERFACE[];
+    TikTokList: TikTokAttractions[];
     title?: string;
 };
 
 const TikTokSection: React.FC<Props> = ({ TikTokList, title}) => {
-    const tiktokArray = TikTokList.map((t) => (
-        <div key={t.id} className={"tiktok"}>
+    const tiktokArray = TikTokList.map((t, index) => (
+        <div key={index} className={"tiktok"}>
             <iframe
-                title={t.id}
-                src={`https://www.tiktok.com/embed/${t.embedUrl}`}
+                title={t.Id}
+                src={t.TiktokUrl}
                 className="tiktok-iframe"
                 allow="encrypted-media;"
             ></iframe>

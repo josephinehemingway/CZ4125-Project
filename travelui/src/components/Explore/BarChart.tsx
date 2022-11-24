@@ -35,13 +35,13 @@ const BarChart: React.FC<Props>= (destinationName) =>{
             {
               x: d.Year,
               y: d.Passengers,
-              type: 'scatter',
-              mode: 'lines+markers',
-              marker: {color: 'red'},
+              type: 'bar',
             },
-            {type: 'bar', x: d.Year, y: d.Passengers},
           ]}
-          layout={ {title: 'Traveller Plot'} } />
+          layout={ {title: 'Traveller Plot', plot_bgcolor: 'rgba(0,0,0,0)', 
+                  margin:{'l': 20, 'r': 20, 't': 20, 'b': 20},
+                  width: 500,
+                  height: 300} } />
 
       )});
 

@@ -2,6 +2,7 @@ import React, {useState, useEffect } from 'react';
 import {RowContainer, StyledLink, StyledSectionTitle} from '../reusable/Styles';
 import './explorestyles.css';
 import AttractionsCard from "../reusable/Cards/AttractionsCard";
+import TikTokSection from "../reusable/TikTok/TikTokSection";
 import Map from "./Map";
 import {Spin} from "antd";
 
@@ -25,8 +26,13 @@ const Food: React.FC<Props>= ({ tabName, destinationName }) => {
         Lat: number,
         Lon: number
     }
+    interface TikTokFood{
+        Id: string,
+        TiktokUrl: string
+    }
 
     const [data, setdata] = useState<FoodApi[]>([])
+    const [tiktokdata, settiktokdata] = useState<TikTokFood[]>([])
     const [loading, setLoading] = useState<Boolean>(true)
 
     useEffect(() => {
@@ -39,6 +45,20 @@ const Food: React.FC<Props>= ({ tabName, destinationName }) => {
                 setdata(data);
                 setLoading(false);
                 console.log(data)
+            })
+        );
+    }, [destinationName]);
+
+    useEffect(() => {
+        setLoading(true);
+        // Using fetch to fetch the api from 
+        // flask server it will be redirected to proxy
+        fetch(`/tiktok-food-api?destination=${destinationName}`).then((res) =>
+            res.json().then((tiktokdata) => {
+                // Setting a data from api
+                settiktokdata(tiktokdata);
+                setLoading(false);
+                console.log(tiktokdata)
             })
         );
     }, [destinationName]);
@@ -91,6 +111,9 @@ const Food: React.FC<Props>= ({ tabName, destinationName }) => {
                         destinationName={destinationName}
                         locations={data}/>
                 </div>
+            </div>
+            <div className={'tiktok'}>
+            <TikTokSection title={'Trending Places on TikTok'} TikTokList={tiktokdata}/>
             </div>
         </div>
     );

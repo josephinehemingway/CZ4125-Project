@@ -52,7 +52,7 @@ const AnalyticsSection: React.FC<Props> = ({destinationName}) => {
     return (
         <div className='analytics-container'>
             <div className='plotly-container'>
-                <BarChart destinationName= {destinationName}/>
+                {/* <BarChart destinationName= {destinationName}/> */}
             </div>
             <div className='airfare-container'>
                 <RowContainer

@@ -22,7 +22,6 @@ db = client.travelui
 # db['banner'].delete_many({})
 # db['food'].delete_many({})
 # db['passengers'].delete_many({})
-# db['tiktok_food'].delete_many({})
 # db['traveltips'].delete_many({})
 
 # # 2. Add some records
@@ -67,15 +66,24 @@ db = client.travelui
 # airfareprice_scrape = api_functions.get_airprices(destination)
 # airfareprice_col = db['airfare_price']
 # airfareprice_col.insert_many(airfareprice_scrape)
-# # tiktok food
-# # tiktok_type = "food"
-# # food_scrape = api_functions.gettiktok(destination, tiktok_type)
-# # tiktokfood_col = db['tiktok_food']
-# # tiktokfood_col.insert_many(food_scrape)
 # # travel tips
 # tips_scrape = api_functions.find_tips_from_google(destination)
 # tips_col = db['traveltips']
 # tips_col.insert_many(tips_scrape)
+
+
+# # POPULATE TIKTOK INTO MONGODB -DONT UNCOMMENT-
+# tiktok_attraction_col = db['tiktok_attraction']
+# tiktok_food_col = db['tiktok_food']
+# cities = ['Bali', 'India', 'Japan', 'London', 'Malaysia',
+#           'Paris', 'Rome', 'Seoul', 'Singapore', 'Switzerland']
+# for i in cities:
+#     f = open(f'../../Tiktok_JSON/Travel/{i}_travel.json')
+#     tiktok_att = json.load(f)
+#     tiktok_attraction_col.insert_many(tiktok_att)
+#     f = open(f'../../Tiktok_JSON/Food/{i}_food.json')
+#     tiktok_food = json.load(f)
+#     tiktok_food_col.insert_many(tiktok_food)
 
 
 @app.route('/attractions-api', methods=["GET"])
@@ -176,23 +184,23 @@ def get_airbnb():
     return json.dumps(airbnb, default=json_util.default)
 
 
-@app.route('/tiktok-api', methods=["GET"])
-def get_tiktok():
+@app.route('/tiktok-food-api', methods=["GET"])
+def get_food_tiktok():
     destination = request.args.get('destination')
     print(destination)
     collection = db['tiktok_food']
-    existing = collection.find({'City': destination})
-    results = list(existing)
-    if len(results) > 0:
-        print(f"Records found in MongoDB")
-    else:
-        tiktok_type = "food"
-        food_scrape = api_functions.gettiktok(destination, tiktok_type)
-        collection.insert_many(food_scrape)
-        print(f"MongoDB has been updated")
-
     tiktok_food = list(collection.find({"City": destination}))
     return json.dumps(tiktok_food, default=json_util.default)
+
+
+@app.route('/tiktok-attraction-api', methods=["GET"])
+def get_attr_tiktok():
+    destination = request.args.get('destination')
+    print(destination)
+    collection = db['tiktok_attraction']
+    existing = collection.find({'City': destination})
+    tiktok_attr = list(collection.find({"City": destination}))
+    return json.dumps(tiktok_attr, default=json_util.default)
 
 
 @app.route('/food-api', methods=["GET"])
@@ -285,7 +293,6 @@ def passenger_api():
         collection.insert_many(passenger_scrape)
         print(f"MongoDB has been updated")
     passengers = list(collection.find({"City": destination}))
-    print(passengers)
     return json.dumps(passengers, default=json_util.default)
 
 # @app.route('/attractions')

@@ -21,7 +21,35 @@ export type MarkerType = {
     url: string;
 }
 
-interface LocationInterface{
+interface AttractionsInterface{
+    Name: string,
+    Activity: string,
+    Location: string,
+    ImageUrl: string,
+    Ratings: string,
+    Review_url: string;
+    Lat: number,
+    Lon: number
+}
+
+interface FoodInterface{
+    Name: string,
+    Description: string,
+    Address: string,
+    Image: string,
+    Rating: string,
+    RestaurantAwardPoint: string;
+    Dishes: string;
+    MustTry: boolean;
+    Lat: number,
+    Lon: number
+}
+
+interface AccommodationsInterface{
+    Name: string,
+    ImageUrl: string,
+    ReviewUrl: string,
+    Rating: number,
     Lat: number,
     Lon: number
 }
@@ -33,7 +61,7 @@ interface centerInterface{
 
 type Props = {
     destinationName: string;
-    locations: LocationInterface[]
+    locations: AttractionsInterface[] | FoodInterface[] | AccommodationsInterface[]
 }
 
 const Map: React.FC<Props> = ({destinationName, locations}) => {
@@ -67,7 +95,7 @@ const Map: React.FC<Props> = ({destinationName, locations}) => {
 
     if (!isLoaded) return <div> Map Loading... </div>
 
-    const onMarkerClick = (marker: LocationInterface) => {
+    const onMarkerClick = (marker: AccommodationsInterface | FoodInterface | AttractionsInterface) => {
         console.log(marker)
     }
 
