@@ -36,19 +36,23 @@ const BarChart: React.FC<Props>= (destinationName) =>{
               x: d.Year,
               y: d.Passengers,
               type: 'bar',
+                marker: {color: '#72B7B2'}
             },
           ]}
-          layout={ {title: 'Traveller Plot', plot_bgcolor: 'rgba(0,0,0,0)', 
-                  margin:{'l': 20, 'r': 20, 't': 20, 'b': 20},
-                  width: 500,
-                  height: 300} } />
+          layout={ { plot_bgcolor: 'rgba(0,0,0,0)',
+                  margin:{'l': 40, 'r': 20, 't': 20, 'b': 20},
+              autosize: true,
+              width: 400,
+              height: 150,
+        } } />
 
       )});
 
     return (
-      <div className='explore-subgallery'>
+      <div style={{margin: 0,}}>
         {loading ?
-            <div style={{ width: '100%',
+            <div style={{
+                width: '100%',
                 height: '50%',
                 display: 'flex',
                 flexDirection: 'row',
@@ -58,8 +62,8 @@ const BarChart: React.FC<Props>= (destinationName) =>{
             </div>
             : passengerGraph
         }
-    </div>
-      
+        </div>
+
     );
   
 }
