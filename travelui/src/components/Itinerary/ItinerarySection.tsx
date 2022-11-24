@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import {
     StyledSectionTitle
 } from "../reusable/Styles";
@@ -23,8 +23,6 @@ type Props = {
     durationSelected?: number;
     attractions: AttractionsApi[];
 }
-
-
 
 const ItinerarySection: React.FC<Props> = ({destinationName, seasonSelected,durationSelected, attractions}) => {
     interface ItineraryApi{
