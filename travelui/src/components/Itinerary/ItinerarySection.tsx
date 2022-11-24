@@ -1,10 +1,9 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import {
     StyledSectionTitle
 } from "../reusable/Styles";
 import ItineraryCard from "../reusable/Cards/ItineraryCard";
 import Map from "../Explore/Map";
-import {Spin} from "antd";
 import './itinerarystyles.css';
 
 interface AttractionsApi{
