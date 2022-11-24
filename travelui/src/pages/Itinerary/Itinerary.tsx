@@ -210,7 +210,7 @@ const Itinerary: React.FC = () => {
                     </div>
                 </div>
             </Container>
-            <ItinerarySection destinationName={formattedDestination} attractions={attractions}/>
+            <ItinerarySection destinationName={formattedDestination} attractions={attractions} durationSelected={durationSelected}/>
             <Container width="70%"
                        height={"100%"}
                        paddingtop={"1rem"}

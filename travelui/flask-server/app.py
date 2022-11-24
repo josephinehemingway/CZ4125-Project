@@ -276,17 +276,15 @@ def airfare_api():
 @app.route('/planner-api')
 def planner_api():
     destination = request.args.get('destination')
-    destination = destination.lower()
     days = request.args.get('days')
+    print(days)
     days = int(days)
     print(destination)
-    f = open('tripadvisor_link.json')
-    trip_advisor = json.load(f)
-    link_dict = trip_advisor[destination]
-    accomodations_url = link_dict['Hotel']
-    attractions_url = link_dict['Attractions']
-    hotels = api_functions.get_hotels(accomodations_url, destination)
-    attractions = api_functions.get_attractions(attractions_url, destination)
+    hotel_col = db['accommodations']
+    hotels = list(hotel_col.find({"City": destination}))
+    # print(hotels)
+    attr_col = db['attractions']
+    attractions = list(attr_col.find({"City": destination}))
     return jsonpickle.encode(api_functions.get_planner(days=days, hotel=hotels, attractions=attractions))
 
 
