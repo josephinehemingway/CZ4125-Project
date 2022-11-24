@@ -1,6 +1,6 @@
 /*global google*/
 import React, {useEffect, useRef, useState} from 'react';
-import { GoogleMap, useJsApiLoader, Marker } from '@react-google-maps/api';
+import { GoogleMap, useJsApiLoader, Marker, InfoWindow } from '@react-google-maps/api';
 import mapStyles from './mapStyles';
 
 export const options = {
@@ -62,6 +62,8 @@ type Props = {
 
 const Map: React.FC<Props> = ({destinationName, locations, mapWidth}) => {
     const [center, setCenter] = useState<centerInterface>({lat: 48.864716, lng: 2.349014})
+    const [window, setWindow] = useState<Boolean>(false)
+
     const { isLoaded } = useJsApiLoader({
         id: 'google-map-script',
         googleMapsApiKey: "AIzaSyB1rc1kUjUCkOXTzjodOzvIy81dQXL044s"
@@ -91,10 +93,6 @@ const Map: React.FC<Props> = ({destinationName, locations, mapWidth}) => {
 
     if (!isLoaded) return <div> Map Loading... </div>
 
-    const onMarkerClick = (marker: AccommodationsInterface | FoodInterface | AttractionsInterface) => {
-        console.log(marker)
-    }
-
     return (
         <GoogleMap
             mapContainerStyle={{
@@ -109,12 +107,19 @@ const Map: React.FC<Props> = ({destinationName, locations, mapWidth}) => {
         >
             {locations?.map(marker => (
                 <Marker
-                    onClick={() => onMarkerClick(marker)}
+                    onMouseOver={() => {setWindow(true)}}
+                    onMouseOut={() => {setWindow(false)}}
                     position={{
                         lat: Number(marker.Lat),
                         lng: Number(marker.Lon)
                 }}
-                />
+                >
+                {window && (
+                    <InfoWindow>
+                        <h4>{marker.Name}</h4>
+                    </InfoWindow>
+                )}
+                </Marker>
             ))}
         </GoogleMap>
     )
