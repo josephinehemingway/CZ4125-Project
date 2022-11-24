@@ -36,7 +36,7 @@ const TikTokSection: React.FC<Props> = ({ TikTokList, title}) => {
                 height={"3rem"}
                 align="center"
                 justify={"space-between"}
-                margintop={"1rem"}
+                margintop={"2rem"}
             >
                 {title ?
                     <StyledSectionTitle>{title}</StyledSectionTitle>
