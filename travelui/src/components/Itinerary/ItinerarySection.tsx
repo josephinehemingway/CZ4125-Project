@@ -1,10 +1,9 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {
     StyledSectionTitle
 } from "../reusable/Styles";
 import ItineraryCard from "../reusable/Cards/ItineraryCard";
 import Map from "../Explore/Map";
-import {Spin} from "antd";
 import './itinerarystyles.css';
 
 interface AttractionsApi{
@@ -21,7 +20,7 @@ interface AttractionsApi{
 type Props = {
     destinationName: string;
     seasonSelected?: string;
-    durationSelected: number;
+    durationSelected?: number;
     attractions: AttractionsApi[];
 }
 
@@ -38,9 +37,9 @@ const ItinerarySection: React.FC<Props> = ({destinationName, seasonSelected,dura
 
     useEffect(() => {
         setLoading(true);
-        // Using fetch to fetch the api from 
+        // Using fetch to fetch the api from
         // flask server it will be redirected to proxy
-        fetch(`planner-api?destination=${destinationName}&days=${durationSelected}`).then((res) =>
+        fetch(`/planner-api?destination=${destinationName}&days=${durationSelected}`).then((res) =>
             res.json().then((data) => {
                 // Setting a data from api
                 setdata(data);
@@ -48,7 +47,9 @@ const ItinerarySection: React.FC<Props> = ({destinationName, seasonSelected,dura
                 console.log(data)
             })
         );
-    }, [destinationName]);
+    }, [destinationName, durationSelected]);
+
+    //
     // const data = [{
     //         "day": 1,
     //         "activities": ["Skiing", "Eating", "Hiking"]
@@ -72,16 +73,17 @@ const ItinerarySection: React.FC<Props> = ({destinationName, seasonSelected,dura
     //     {
     //         "day": 3,
     //         "activities": ["Skiing", "Eating", "Hiking"]
+    //
     //     },
     // ]
 
     const itineraryCardsArray = data.map((d) => {
         return (<ItineraryCard
-                    activities={d.destinations}
-                    dayNumber={String(d.day+1)}
-                    hotel={d.nearest_hotel}
-                    totalDistance={d.total_distance}
-                />)
+            activities={d.destinations}
+            dayNumber={String(d.day+1)}
+            hotel={d.nearest_hotel}
+            totalDistance={d.total_distance}
+        />)
     });
 
     return (
