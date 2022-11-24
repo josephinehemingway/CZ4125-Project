@@ -426,8 +426,9 @@ def get_planner(days, hotel, attractions):
     df= pd.DataFrame(attractions)
 
     #Drop attractions with no coordinates
-    df = df[df['Lat'].notna()]
-    df = df[df['Lon'].notna()]
+    #print(df)
+    df = df[df['Lat'].notnull()]
+    df = df[df['Lon'].notnull()]
 
     #change lattitude and longtitude to int
     df['Lat']= df['Lat'].astype(float)
@@ -461,7 +462,8 @@ def get_planner(days, hotel, attractions):
             
             destinations.append(dest)
             
-        cluster['destinations']= destinations
+        cluster['destinations']= places_to_visit
+
         cluster['total_distance'] = distance_to_travel
         x,y=kmeans.cluster_centers_[count]
         cluster['centroid']= [float(x),float(y)]
