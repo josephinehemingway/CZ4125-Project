@@ -21,66 +21,42 @@ interface AttractionsApi{
 type Props = {
     destinationName: string;
     seasonSelected?: string;
-    durationSelected: number;
+    durationSelected?: number;
     attractions: AttractionsApi[];
 }
 
 const ItinerarySection: React.FC<Props> = ({destinationName, seasonSelected,durationSelected, attractions}) => {
-    interface ItineraryApi{
-        day: number,
-        destinations: string[],
-        total_distance: number,
-        nearest_hotel: string
-    }
 
-    const [data, setdata] = useState<ItineraryApi[]>([])
-    const [loading, setLoading] = useState<Boolean>(true)
+    const data = [{
+            "day": 1,
+            "activities": ["Skiing", "Eating", "Hiking"]
+        },
+        {
+            "day": 2,
+            "activities": ["Skiing", "Eating", "Hiking"]
+        },
+        {
+            "day": 3,
+            "activities": ["Skiing", "Eating", "Hiking"]
+        },
+        {
+            "day": 3,
+            "activities": ["Skiing", "Eating", "Hiking"]
+        },
+        {
+            "day": 3,
+            "activities": ["Skiing", "Eating", "Hiking"]
+        },
+        {
+            "day": 3,
+            "activities": ["Skiing", "Eating", "Hiking"]
+        },
+    ]
 
-    useEffect(() => {
-        setLoading(true);
-        // Using fetch to fetch the api from 
-        // flask server it will be redirected to proxy
-        fetch(`planner-api?destination=${destinationName}&days=${durationSelected}`).then((res) =>
-            res.json().then((data) => {
-                // Setting a data from api
-                setdata(data);
-                setLoading(false);
-                console.log(data)
-            })
-        );
-    }, [destinationName]);
-    // const data = [{
-    //         "day": 1,
-    //         "activities": ["Skiing", "Eating", "Hiking"]
-    //     },
-    //     {
-    //         "day": 2,
-    //         "activities": ["Skiing", "Eating", "Hiking"]
-    //     },
-    //     {
-    //         "day": 3,
-    //         "activities": ["Skiing", "Eating", "Hiking"]
-    //     },
-    //     {
-    //         "day": 3,
-    //         "activities": ["Skiing", "Eating", "Hiking"]
-    //     },
-    //     {
-    //         "day": 3,
-    //         "activities": ["Skiing", "Eating", "Hiking"]
-    //     },
-    //     {
-    //         "day": 3,
-    //         "activities": ["Skiing", "Eating", "Hiking"]
-    //     },
-    // ]
-
-    const itineraryCardsArray = data.map((d) => {
+    const itineraryCardsArray = data.map((d, index) => {
         return (<ItineraryCard
-                    activities={d.destinations}
-                    dayNumber={String(d.day+1)}
-                    hotel={d.nearest_hotel}
-                    totalDistance={d.total_distance}
+                    activities={d.activities}
+                    dayNumber={String(d.day)}
                 />)
     });
 
