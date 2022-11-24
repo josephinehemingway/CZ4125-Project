@@ -20,8 +20,16 @@ const Accommodations: React.FC<Props>= ({ destinationName }) => {
         Lat: number,
         Lon: number
     }
+    interface AirbnbApi{
+        Name: string,
+        imageurl: string,
+        Rating: number,
+        review: string
+        url: string
+    }
     
     const [data, setdata] = useState<AccommodationsApi[]>([])
+    const [airbnbdata, setairbnbdata] = useState<AirbnbApi[]>([])
     const [loading, setLoading] = useState<Boolean>(true)
 
     useEffect(() => {
@@ -38,11 +46,35 @@ const Accommodations: React.FC<Props>= ({ destinationName }) => {
         );
     }, [destinationName]);
 
+    useEffect(() => {
+        setLoading(true);
+        // Using fetch to fetch the api from 
+        // flask server it will be redirected to proxy
+        fetch(`/airbnb-api?destination=${destinationName}`).then((res) =>
+            res.json().then((airbnbdata) => {
+                // Setting a data from api
+                setairbnbdata(airbnbdata);
+                setLoading(false);
+                console.log(airbnbdata)
+            })
+        );
+    }, [destinationName]);
+
     const accomCardsArray = data.map((d, index) => (
         <a key={index} href={d.ReviewUrl} target="_blank" rel="noopener noreferrer">
             <AccomsCard
                 // onClick={scrollToTop}
                 url={d.ImageUrl}
+                name={d.Name}
+                rating={d.Rating}
+            />
+        </a>
+    ));
+    const airbnbCardsArray = airbnbdata.map((d, index) => (
+        <a key={index} href={d.url} target="_blank" rel="noopener noreferrer">
+            <AccomsCard
+                // onClick={scrollToTop}
+                url={d.imageurl}
                 name={d.Name}
                 rating={d.Rating}
             />
@@ -69,7 +101,7 @@ const Accommodations: React.FC<Props>= ({ destinationName }) => {
                     Hotels
                 </StyledSubSubheading>
                 <StyledLink
-                    href="https://www.tiktok.com/search?q=travel"
+                    href="https://www.tripadvisor.com.sg/Hotels"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
@@ -101,7 +133,7 @@ const Accommodations: React.FC<Props>= ({ destinationName }) => {
                     Airbnbs
                 </StyledSubSubheading>
                 <StyledLink
-                    href="https://www.tiktok.com/search?q=travel"
+                    href="https://www.airbnb.com.sg/"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
@@ -118,7 +150,7 @@ const Accommodations: React.FC<Props>= ({ destinationName }) => {
                         justifyContent: 'center'}}>
                         <Spin tip="Loading..." />
                     </div>
-                    : accomCardsArray
+                    : airbnbCardsArray
                 }
 
             </HorizontalScroll>
