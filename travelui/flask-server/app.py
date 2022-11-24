@@ -13,65 +13,65 @@ client = MongoClient(
     "mongodb+srv://cz4125:cz4125@travelui.twfhvbi.mongodb.net/test")
 db = client.travelui
 
-# 1. Delete all records
-# COMMENT OUT IF DONT WANT TO DELETE VALUES FROM MONGODB COLLECTIONS
-db['attractions'].delete_many({})
-db['accommodations'].delete_many({})
-db['airbnb'].delete_many({})
-db['airfare_price'].delete_many({})
-db['banner'].delete_many({})
-db['food'].delete_many({})
-db['passengers'].delete_many({})
-db['traveltips'].delete_many({})
+# # 1. Delete all records
+# # COMMENT OUT IF DONT WANT TO DELETE VALUES FROM MONGODB COLLECTIONS
+# db['attractions'].delete_many({})
+# db['accommodations'].delete_many({})
+# db['airbnb'].delete_many({})
+# db['airfare_price'].delete_many({})
+# db['banner'].delete_many({})
+# db['food'].delete_many({})
+# db['passengers'].delete_many({})
+# db['traveltips'].delete_many({})
 
-# 2. Add some records
-# COMMENT OUT IF DONT WANT TO POPULATE MONGODB COLLECTIONS
-# change destination
-destination = 'Rome'
-f = open('tripadvisor_link.json')
-trip_advisor = json.load(f)
-link_dict = trip_advisor[destination.lower()]
-# attractions
-attractions_url = link_dict['Attractions']
-attractions_scrape = api_functions.get_attractions(
-    attractions_url, destination)
-attraction_col = db['attractions']
-attraction_col.insert_many(attractions_scrape)
-# acommodations
-accommodations_url = link_dict['Hotel']
-accommodations_scrape = api_functions.get_hotels(
-    accommodations_url, destination)
-accommodations_col = db['accommodations']
-accommodations_col.insert_many(accommodations_scrape)
-# airbnb
-# airbnb_url = 'https://www.airbnb.com.sg/s/' + destination + '/homes'
-# airbnb_scrape = api_functions.getairbnb(airbnb_url, destination)
-# airbnb_col = db['airbnb']
-# airbnb_col.insert_many(airbnb_scrape)
-# banner
-banner_url = link_dict['Hotel']
-banner_scrape = api_functions.get_banner(
-    banner_url, destination)
-banner_col = db['banner']
-banner_col.insert_many(banner_scrape)
-# food
-food_scrape = api_functions.get_food(destination)
-food_col = db['food']
-food_col.insert_many(food_scrape)
-# passengers
-passenger_scrape = api_functions.get_passengers(destination)
-passengers_col = db['passengers']
-passengers_col.insert_many(passenger_scrape)
-# airfare prices
-airfareprice_scrape = api_functions.get_airprices(destination)
-airfareprice_col = db['airfare_price']
-airfareprice_col.insert_many(airfareprice_scrape)
-# travel tips
-tips_scrape = api_functions.find_tips_from_google(destination)
-tips_col = db['traveltips']
-tips_col.insert_many(tips_scrape)
+# # 2. Add some records
+# # COMMENT OUT IF DONT WANT TO POPULATE MONGODB COLLECTIONS
+# # change destination
+# destination = 'Rome'
+# f = open('tripadvisor_link.json')
+# trip_advisor = json.load(f)
+# link_dict = trip_advisor[destination.lower()]
+# # attractions
+# attractions_url = link_dict['Attractions']
+# attractions_scrape = api_functions.get_attractions(
+#     attractions_url, destination)
+# attraction_col = db['attractions']
+# attraction_col.insert_many(attractions_scrape)
+# # acommodations
+# accommodations_url = link_dict['Hotel']
+# accommodations_scrape = api_functions.get_hotels(
+#     accommodations_url, destination)
+# accommodations_col = db['accommodations']
+# accommodations_col.insert_many(accommodations_scrape)
+# # airbnb
+# # airbnb_url = 'https://www.airbnb.com.sg/s/' + destination + '/homes'
+# # airbnb_scrape = api_functions.getairbnb(airbnb_url, destination)
+# # airbnb_col = db['airbnb']
+# # airbnb_col.insert_many(airbnb_scrape)
+# # banner
+# banner_url = link_dict['Hotel']
+# banner_scrape = api_functions.get_banner(
+#     banner_url, destination)
+# banner_col = db['banner']
+# banner_col.insert_many(banner_scrape)
+# # food
+# food_scrape = api_functions.get_food(destination)
+# food_col = db['food']
+# food_col.insert_many(food_scrape)
+# # passengers
+# passenger_scrape = api_functions.get_passengers(destination)
+# passengers_col = db['passengers']
+# passengers_col.insert_many(passenger_scrape)
+# # airfare prices
+# airfareprice_scrape = api_functions.get_airprices(destination)
+# airfareprice_col = db['airfare_price']
+# airfareprice_col.insert_many(airfareprice_scrape)
+# # travel tips
+# tips_scrape = api_functions.find_tips_from_google(destination)
+# tips_col = db['traveltips']
+# tips_col.insert_many(tips_scrape)
 
-print('Finish populating')
+# print('Finish populating')
 
 # # POPULATE TIKTOK INTO MONGODB -DONT UNCOMMENT-
 # tiktok_attraction_col = db['tiktok_attraction']
