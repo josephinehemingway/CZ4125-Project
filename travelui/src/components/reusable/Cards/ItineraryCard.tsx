@@ -16,7 +16,19 @@ const ItineraryCard: React.FC<Props> = ({activities, dayNumber, rating}) => {
     return (
         <div className='itinerary-card'>
             <h2 className="day"> Day {dayNumber} </h2>
-            {activityArray}
+            <div className='itinerary-details'>
+                <h2 className="day"> Attractions to Visit</h2>
+                {activityArray}
+            </div>
+            <div className='itinerary-details'>
+                <h2 className="day"> Nearest Hotel </h2>
+                Hotel ABC
+                <h2 className="day"> Total Distance </h2>
+                123km
+            </div>
+
+
+
         </div>
     );
 };
