@@ -3,6 +3,12 @@ import Paris from '../assets/images/Paris.jpeg';
 import Rome from '../assets/images/Rome.jpeg';
 import Zurich from '../assets/images/Zurich.jpeg';
 import Madrid from '../assets/images/Madrid.jpeg';
+import Bali from '../assets/images/Bali.jpeg';
+import India from '../assets/images/India.jpeg';
+import Japan from '../assets/images/Japan.jpeg';
+import Korea from '../assets/images/Korea.jpeg';
+import Singapore from '../assets/images/Singapore.jpeg';
+import Malaysia from '../assets/images/Malaysia.jpeg';
 
 export interface CARD_INTERFACE {
     id: number;
@@ -14,9 +20,9 @@ export interface CARD_INTERFACE {
 export const DESTINATIONS_LIST: CARD_INTERFACE[] = [
     {
         id: 1,
-        name: "London, UK",
-        imgUrl: London,
-        link: "/explore/London"
+        name: "Bali, Indonesia",
+        imgUrl: Bali,
+        link: "/explore/Bali"
     },
     {
         id: 2,
@@ -38,10 +44,47 @@ export const DESTINATIONS_LIST: CARD_INTERFACE[] = [
     },
     {
         id: 5,
-        name: "Madrid, Spain",
-        imgUrl: Madrid,
-        link: "/explore/Madrid"
+        name: "India, India",
+        imgUrl: India,
+        link: "/explore/India"
     },
+
+    {
+        id: 6,
+        name: "Japan, Japan",
+        imgUrl: Japan,
+        link: "/explore/Japan"
+    },
+
+    {
+        id: 7,
+        name: "London, UK",
+        imgUrl: London,
+        link: "/explore/London"
+    },
+
+    {
+        id: 8,
+        name: "Seoul, Korea",
+        imgUrl: Korea,
+        link: "/explore/Korea"
+    },
+
+    {
+        id: 9,
+        name: "Singapore, Singapore",
+        imgUrl: Singapore,
+        link: "/explore/Singapore"
+    },
+
+    {
+        id: 10,
+        name: "Malaysia, Malaysia",
+        imgUrl: Malaysia,
+        link: "/explore/Malaysia"
+    },
+
+    
 ]
 
 export const RESTAURANT_LIST: CARD_INTERFACE[] = [
