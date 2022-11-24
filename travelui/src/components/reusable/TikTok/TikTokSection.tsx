@@ -54,7 +54,9 @@ const TikTokSection: React.FC<Props> = ({ TikTokList, title}) => {
                 Need some inspiration for your next destination? Check out these
                 trending TikToks!
             </StyledText>
-            <HorizontalScroll height={"38rem"}>{tiktokArray}</HorizontalScroll>
+            <HorizontalScroll height={"38rem"}>
+                {tiktokArray}
+            </HorizontalScroll>
         </div>
     );
 };

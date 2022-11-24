@@ -9,13 +9,6 @@ export const options = {
     styles: mapStyles
 }
 
-export type MarkerType = {
-    id: string;
-    location: google.maps.LatLngLiteral;
-    name: string;
-    url: string;
-}
-
 interface AttractionsInterface{
     Name: string,
     Activity: string,
@@ -60,9 +53,32 @@ type Props = {
     mapWidth?: string;
 }
 
+export type MarkerProps = {
+    info: string;
+    lat: number;
+    lng: number;
+}
+
+
+const CustomMarker: React.FC<MarkerProps> = ({ info, lat, lng}) => {
+    const [showInfoWindow, setShowInfoWindow] = useState<boolean>(false)
+
+        return (
+            <Marker
+                position={{ lat, lng }}
+                onMouseOver={ () => setShowInfoWindow(true)}
+                onMouseOut={() => setShowInfoWindow(false)}>
+                {showInfoWindow && (
+                    <InfoWindow>
+                        <h4>{info}</h4>
+                    </InfoWindow>
+                )}
+            </Marker>
+        );
+}
+
 const Map: React.FC<Props> = ({destinationName, locations, mapWidth}) => {
     const [center, setCenter] = useState<centerInterface>({lat: 48.864716, lng: 2.349014})
-    const [window, setWindow] = useState<Boolean>(false)
 
     const { isLoaded } = useJsApiLoader({
         id: 'google-map-script',
@@ -100,26 +116,17 @@ const Map: React.FC<Props> = ({destinationName, locations, mapWidth}) => {
                 height: '836px'
             }}
             center={center}
-            zoom={10}
+            zoom={11}
             onLoad={onLoad}
             onUnmount={onUnmount}
             options = {options as google.maps.MapOptions}
         >
             {locations?.map(marker => (
-                <Marker
-                    onMouseOver={() => {setWindow(true)}}
-                    onMouseOut={() => {setWindow(false)}}
-                    position={{
-                        lat: Number(marker.Lat),
-                        lng: Number(marker.Lon)
-                }}
-                >
-                {window && (
-                    <InfoWindow>
-                        <h4>{marker.Name}</h4>
-                    </InfoWindow>
-                )}
-                </Marker>
+                <CustomMarker
+                    info = {marker.Name}
+                    lat={Number(marker.Lat)}
+                    lng={Number(marker.Lon)}
+                />
             ))}
         </GoogleMap>
     )
