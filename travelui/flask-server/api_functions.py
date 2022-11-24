@@ -98,7 +98,7 @@ def get_hotels(url, destination):
             try:
                 hotel_image = res.find('img', class_='_C _Z w')['src']
             except:
-                hotel_image = None
+                hotel_image = 'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0c/6e/17/1d/premier-deluxe-room.jpg?w=1200&h=-1&s=1'
 
             if count < 10:
                 hotel_name_stripped = hotel_name[3:]
@@ -177,9 +177,9 @@ def getairbnb(destination):
         features_dict['City'] = destination
         features_dict['Name'] = header
         features_dict['Rating'] = float(rate)
-        #print(type(features_dict['Rating']))
+        # print(type(features_dict['Rating']))
         features_dict['url'] = url
-        features_dict['imageurl'] = pic.split(' ')[0]
+        features_dict['imageurl'] = pic
         features_dict['review'] = review
 
         count += 1

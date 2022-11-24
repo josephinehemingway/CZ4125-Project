@@ -43,11 +43,11 @@ db = client.travelui
 #     accommodations_url, destination)
 # accommodations_col = db['accommodations']
 # accommodations_col.insert_many(accommodations_scrape)
-#airbnb
+# airbnb
 # airbnb_scrape = api_functions.getairbnb(destination)
 # airbnb_col = db['airbnb']
 # airbnb_col.insert_many(airbnb_scrape)
-#banner
+# banner
 # banner_url = link_dict['Hotel']
 # banner_scrape = api_functions.get_banner(
 #     banner_url, destination)
