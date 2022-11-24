@@ -321,6 +321,25 @@ export const StyledLink = styled.a`
     }
 `;
 
+export const StyledLink2 = styled.div`
+    && {
+        margin-top: ${(props: { margintop: string }) =>
+    props.margintop ? props.margintop : "0"};
+        margin-bottom: ${(props: { marginbottom: string }) =>
+    props.marginbottom ? props.marginbottom : "0"};
+        font-family: Poppins, sans-serif;
+        color: ${(props: { color: string }) =>
+    props.color ? props.color : "#232323"};
+        font-size: calc(12px + 0.3vw);
+        line-height: calc(20px + 0.5vw);
+
+        &:hover {
+            color: #46c7c7;
+            transition: all 0.2s ease-in-out;
+        }
+    }
+`;
+
 export const StyledText = styled.p`
     && {
         margin-top: ${(props: { margintop: string }) =>
