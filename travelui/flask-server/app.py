@@ -23,6 +23,8 @@ db = client.travelui
 # db['food'].delete_many({})
 # db['passengers'].delete_many({})
 # db['traveltips'].delete_many({})
+# db['tiktok_food'].delete_many({})
+# db['tiktok_attraction'].delete_many({})
 
 # # 2. Add some records
 # # COMMENT OUT IF DONT WANT TO POPULATE MONGODB COLLECTIONS
@@ -43,11 +45,11 @@ db = client.travelui
 #     accommodations_url, destination)
 # accommodations_col = db['accommodations']
 # accommodations_col.insert_many(accommodations_scrape)
-#airbnb
+# airbnb
 # airbnb_scrape = api_functions.getairbnb(destination)
 # airbnb_col = db['airbnb']
 # airbnb_col.insert_many(airbnb_scrape)
-#banner
+# banner
 # banner_url = link_dict['Hotel']
 # banner_scrape = api_functions.get_banner(
 #     banner_url, destination)
@@ -78,11 +80,22 @@ db = client.travelui
 # cities = ['Bali', 'India', 'Japan', 'London', 'Malaysia',
 #           'Paris', 'Rome', 'Seoul', 'Singapore', 'Switzerland']
 # for i in cities:
-#     f = open(f'../../Tiktok_JSON/Travel/{i}_travel.json')
+#     f = open(f'.\CZ4125-Project\Tiktok_JSON\Travel\{i}_travel.json')
 #     tiktok_att = json.load(f)
+#     for j in tiktok_att:
+#         tiktok = j['TiktokUrl']
+#         tiktokid= tiktok.split('/')[-1]
+#         newurl = 'https://www.tiktok.com/embed/' +tiktokid
+#         j['TiktokUrl'] = newurl
 #     tiktok_attraction_col.insert_many(tiktok_att)
-#     f = open(f'../../Tiktok_JSON/Food/{i}_food.json')
+
+#     f = open(f'.\CZ4125-Project\Tiktok_JSON\Food\{i}_food.json')
 #     tiktok_food = json.load(f)
+#     for j in tiktok_food:
+#         tiktok = j['TiktokUrl']
+#         tiktokid= tiktok.split('/')[-1]
+#         newurl = 'https://www.tiktok.com/embed/' +tiktokid
+#         j['TiktokUrl'] = newurl
 #     tiktok_food_col.insert_many(tiktok_food)
 
 
@@ -197,7 +210,6 @@ def get_attr_tiktok():
     destination = request.args.get('destination')
     print(destination)
     collection = db['tiktok_attraction']
-    existing = collection.find({'City': destination})
     tiktok_attr = list(collection.find({"City": destination}))
     return json.dumps(tiktok_attr, default=json_util.default)
 
