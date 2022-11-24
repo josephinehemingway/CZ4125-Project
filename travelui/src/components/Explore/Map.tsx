@@ -103,7 +103,7 @@ const Map: React.FC<Props> = ({destinationName, locations}) => {
         <GoogleMap
             mapContainerStyle={containerStyle}
             center={center}
-            zoom={13}
+            zoom={10}
             onLoad={onLoad}
             onUnmount={onUnmount}
             options = {options as google.maps.MapOptions}

@@ -56,7 +56,7 @@ const Attractions: React.FC<Props>= ({ tabName, destinationName }) => {
             res.json().then((tiktokdata) => {
                 // Setting a data from api
                 settiktokdata(tiktokdata);
-                setLoading(false);
+                // setLoading(false);
                 console.log(tiktokdata)
             })
         );
@@ -118,8 +118,8 @@ const Attractions: React.FC<Props>= ({ tabName, destinationName }) => {
                     />
                 </div>
             </div>
-            <div className={'tiktok'}>
-            <TikTokSection title={'Trending Places on TikTok'} TikTokList={tiktokdata}/>
+            <div className={'tiktok-section'}>
+                <TikTokSection title={'Trending Places on TikTok'} TikTokList={tiktokdata}/>
             </div>
         </div>
     );

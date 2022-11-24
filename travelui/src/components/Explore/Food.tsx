@@ -43,7 +43,7 @@ const Food: React.FC<Props>= ({ tabName, destinationName }) => {
             res.json().then((data) => {
                 // Setting a data from api
                 setdata(data);
-                setLoading(false);
+                // setLoading(false);
                 console.log(data)
             })
         );
@@ -112,7 +112,7 @@ const Food: React.FC<Props>= ({ tabName, destinationName }) => {
                         locations={data}/>
                 </div>
             </div>
-            <div className={'tiktok'}>
+            <div className={'tiktok-section'}>
             <TikTokSection title={'Trending Places on TikTok'} TikTokList={tiktokdata}/>
             </div>
         </div>

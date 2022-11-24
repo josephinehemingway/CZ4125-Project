@@ -54,7 +54,7 @@ const Accommodations: React.FC<Props>= ({ destinationName }) => {
             res.json().then((airbnbdata) => {
                 // Setting a data from api
                 setairbnbdata(airbnbdata);
-                setLoading(false);
+                // setLoading(false);
                 console.log(airbnbdata)
             })
         );
