@@ -75,28 +75,28 @@ db = client.travelui
 # print('Finish populating')
 
 # # POPULATE TIKTOK INTO MONGODB -DONT UNCOMMENT-
-# tiktok_attraction_col = db['tiktok_attraction']
-# tiktok_food_col = db['tiktok_food']
-# cities = ['Bali', 'India', 'Japan', 'London', 'Malaysia',
-#           'Paris', 'Rome', 'Seoul', 'Singapore', 'Switzerland']
-# for i in cities:
-#     f = open(f'.\CZ4125-Project\Tiktok_JSON\Travel\{i}_travel.json')
-#     tiktok_att = json.load(f)
-#     for j in tiktok_att:
-#         tiktok = j['TiktokUrl']
-#         tiktokid= tiktok.split('/')[-1]
-#         newurl = 'https://www.tiktok.com/embed/' +tiktokid
-#         j['TiktokUrl'] = newurl
-#     tiktok_attraction_col.insert_many(tiktok_att)
+tiktok_attraction_col = db['tiktok_attraction']
+tiktok_food_col = db['tiktok_food']
+cities = ['Bali', 'India', 'Japan', 'London', 'Malaysia',
+          'Paris', 'Rome', 'Seoul', 'Singapore', 'Zurich']
+for i in cities:
+    f = open(f'.\CZ4125-Project\Tiktok_JSON\Travel\{i}_travel.json')
+    tiktok_att = json.load(f)
+    for j in tiktok_att:
+        tiktok = j['TiktokUrl']
+        tiktokid= tiktok.split('/')[-1]
+        newurl = 'https://www.tiktok.com/embed/' +tiktokid
+        j['TiktokUrl'] = newurl
+    tiktok_attraction_col.insert_many(tiktok_att)
 
-#     f = open(f'.\CZ4125-Project\Tiktok_JSON\Food\{i}_food.json')
-#     tiktok_food = json.load(f)
-#     for j in tiktok_food:
-#         tiktok = j['TiktokUrl']
-#         tiktokid= tiktok.split('/')[-1]
-#         newurl = 'https://www.tiktok.com/embed/' +tiktokid
-#         j['TiktokUrl'] = newurl
-#     tiktok_food_col.insert_many(tiktok_food)
+    f = open(f'.\CZ4125-Project\Tiktok_JSON\Food\{i}_food.json')
+    tiktok_food = json.load(f)
+    for j in tiktok_food:
+        tiktok = j['TiktokUrl']
+        tiktokid= tiktok.split('/')[-1]
+        newurl = 'https://www.tiktok.com/embed/' +tiktokid
+        j['TiktokUrl'] = newurl
+    tiktok_food_col.insert_many(tiktok_food)
 
 
 @app.route('/attractions-api', methods=["GET"])
