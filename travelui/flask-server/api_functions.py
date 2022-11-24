@@ -145,7 +145,7 @@ def getairbnb(airbnb_url, destination):
     soup = BeautifulSoup(requests.get(airbnb_url).content, 'html.parser')
     airbnb = []
     count = 1
-    
+
     listings = soup.find_all('div', 'cy5jw6o dir dir-ltr')
     for listing_html in listings:
         features_dict = {}
