@@ -377,7 +377,7 @@ def get_passengers(city):
     df = pd.read_csv('./number-of-air-transport-passengers-carried.csv')
     df['Passengers'] = df['Passengers'].astype(int)
     df = df.loc[(df['Entity'] == country) & (
-        df['Year'] > 2014)].reset_index(drop=True)
+        df['Year'] > 2004)].reset_index(drop=True)
     passenger_dict = {}
     passenger_dict['City'] = city
     passenger_dict['Country'] = country
