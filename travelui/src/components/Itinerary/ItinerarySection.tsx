@@ -22,9 +22,10 @@ type Props = {
     destinationName: string;
     seasonSelected?: string;
     durationSelected?: number;
+    attractions: AttractionsApi[];
 }
 
-const ItinerarySection: React.FC<Props> = ({destinationName, seasonSelected,durationSelected}) => {
+const ItinerarySection: React.FC<Props> = ({destinationName, seasonSelected,durationSelected, attractions}) => {
 
     const data = [{
             "day": 1,
@@ -52,23 +53,6 @@ const ItinerarySection: React.FC<Props> = ({destinationName, seasonSelected,dura
         },
     ]
 
-    const [attractions, setAttractions] = useState<AttractionsApi[]>([])
-    const [loading, setLoading] = useState<Boolean>(true)
-
-    useEffect(() => {
-        setLoading(true);
-        // Using fetch to fetch the api from
-        // flask server it will be redirected to proxy
-        fetch(`/attractions-api?destination=${destinationName}`).then((res) =>
-            res.json().then((data) => {
-                // Setting a data from api
-                setAttractions(data);
-                setLoading(false);
-                console.log(data)
-            })
-        );
-    }, [destinationName]);
-
     const itineraryCardsArray = data.map((d, index) => {
         return (<ItineraryCard
                     activities={d.activities}
@@ -85,17 +69,7 @@ const ItinerarySection: React.FC<Props> = ({destinationName, seasonSelected,dura
                 </StyledSectionTitle>
                 <div className='itinerary-gallery'>
                     <div className='itinerary-subgallery'>
-                        {loading ?
-                            <div style={{ width: '100%',
-                                height: '50%',
-                                display: 'flex',
-                                flexDirection: 'row',
-                                alignItems: 'center',
-                                justifyContent: 'center'}}>
-                                <Spin tip="Loading..." />
-                            </div>
-                            : itineraryCardsArray
-                        }
+                        { itineraryCardsArray }
                     </div>
                     <div style={{width: '30%'}}>
                         <Map

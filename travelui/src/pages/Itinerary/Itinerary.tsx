@@ -4,7 +4,7 @@ import {
     Container,
     StyledPageTitle,
     StyledItinerarySubheading,
-    HorizontalScroll, RowContainer, StyledSectionTitle, StyledLink
+    HorizontalScroll, RowContainer, StyledSectionTitle, StyledLink, StyledLink2
 } from "../../components/reusable/Styles";
 import { Link, useLocation } from "react-router-dom";
 import {Breadcrumb, Spin} from "antd";
@@ -15,6 +15,7 @@ import {capitalise} from "../../utils/helperfunctions"
 import ItinerarySection from "../../components/Itinerary/ItinerarySection";
 import { PrinterOutlined, DownloadOutlined, ShareAltOutlined } from '@ant-design/icons';
 import AttractionsCard from "../../components/reusable/Cards/AttractionsCard";
+import GuidesCard from "../../components/reusable/Cards/GuidesCard";
 
 interface AttractionsApi{
     Name: string,
@@ -27,6 +28,12 @@ interface AttractionsApi{
     Lon: number
 }
 
+interface ItinerariesApi{
+    City: string,
+    title: string,
+    url: string,
+}
+
 const Itinerary: React.FC = () => {
     const destinationDetails = useLocation().pathname.split("/")[2];
     const destinationName = destinationDetails.split("-")[0].replace("%20", " ");
@@ -35,8 +42,11 @@ const Itinerary: React.FC = () => {
 
     let formattedDestination = capitalise(destinationName)
 
-    const [data, setdata] = useState<AttractionsApi[]>([])
+    const [attractions, setAttractions] = useState<AttractionsApi[]>([])
+    const [itineraries, setItineraries] = useState<ItinerariesApi[]>([])
     const [loading, setLoading] = useState<Boolean>(true)
+    const [loadingItinerary, setLoadingItinerary] = useState<Boolean>(true)
+
 
     useEffect(() => {
         setLoading(true);
@@ -45,14 +55,29 @@ const Itinerary: React.FC = () => {
         fetch(`/attractions-api?destination=${formattedDestination}`).then((res) =>
             res.json().then((data) => {
                 // Setting a data from api
-                setdata(data);
+                setAttractions(data);
                 setLoading(false);
                 console.log(data)
             })
         );
     }, [destinationName]);
 
-    const attrCardsArray = data.map((d, index) =>{
+    useEffect(() => {
+        setLoadingItinerary(true);
+        console.log('duration: ', durationSelected);
+        // Using fetch to fetch the api from
+        // flask server it will be redirected to proxy
+        fetch(`/itinerary-api?destination=${formattedDestination}&days=${durationSelected}`).then((res) =>
+            res.json().then((data) => {
+                // Setting a data from api
+                setItineraries(data);
+                setLoadingItinerary(false);
+                console.log(data)
+            })
+        );
+    }, [destinationName]);
+
+    const attrCardsArray = attractions.map((d, index) =>{
         console.log(d.Name)
         return(
             <a key={index}
@@ -68,8 +93,21 @@ const Itinerary: React.FC = () => {
                 />
             </a>)});
 
+    const itinerariesCardsArray = itineraries.map((d, index) =>{
+        console.log(d.title)
+        return(
+            <a key={index}
+               href={d.url}
+               target="_blank"
+               rel="noopener noreferrer">
+                <GuidesCard
+                    imgurl={'https://images.ctfassets.net/itrs3p223g0s/2RbOacx6d1RYNCLOtDmvg/f71f77059110c404db7874ad0d5d6fb6/canadians-travel_1920x1280.jpg'}
+                    tipsTitle={d.title}
+                />
+            </a>)});
 
-    const citiesTab = <div style={{width: '100%'}}>
+
+    const exploreScroll = <div style={{width: '100%', marginBottom: '2rem'}}>
         <RowContainer
             height={"3rem"}
             align="center"
@@ -79,13 +117,11 @@ const Itinerary: React.FC = () => {
             <StyledSectionTitle>
                 Explore Top Attractions in {formattedDestination}
             </StyledSectionTitle>
-            <StyledLink
-                href="https://www.tiktok.com/search?q=travel"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                See More {">"}
-            </StyledLink>
+            <Link to={`/explore/${formattedDestination}`}>
+                <StyledLink2>
+                    See More {">"}
+                </StyledLink2>
+            </Link>
         </RowContainer>
         <HorizontalScroll height={'100%'}>
             {loading ?
@@ -101,7 +137,38 @@ const Itinerary: React.FC = () => {
             }
 
         </HorizontalScroll>
-        {/* <TikTokSection title={'Trending Places on TikTok'} TikTokList={TIKTOK_LIST}/> */}
+    </div>
+
+    const itinerariesScroll = <div style={{width: '100%', marginBottom: '1rem'}}>
+        <RowContainer
+            height={"3rem"}
+            align="center"
+            justify={"space-between"}
+            margintop={"1rem"}
+        >
+            <StyledSectionTitle>
+                Explore other itineraries from the web
+            </StyledSectionTitle>
+            <Link to={`/explore/${formattedDestination}`}>
+                <StyledLink2>
+                    See More {">"}
+                </StyledLink2>
+            </Link>
+        </RowContainer>
+        <HorizontalScroll height={'100%'}>
+            {loadingItinerary ?
+                <div style={{ width: '100%',
+                    height: '50%',
+                    display: 'flex',
+                    flexDirection: 'row',
+                    alignItems: 'center',
+                    justifyContent: 'center'}}>
+                    <Spin tip="Loading..." />
+                </div>
+                : itinerariesCardsArray
+            }
+
+        </HorizontalScroll>
     </div>
 
     return (
@@ -143,13 +210,20 @@ const Itinerary: React.FC = () => {
                     </div>
                 </div>
             </Container>
-            <ItinerarySection destinationName={formattedDestination}/>
+            <ItinerarySection destinationName={formattedDestination} attractions={attractions}/>
             <Container width="70%"
-                       height={"175vh"}
+                       height={"100%"}
                        paddingtop={"1rem"}
                        align="flex-start">
-                {citiesTab}
+                {exploreScroll}
             </Container>
+            <Container width="70%"
+                       height={"100%"}
+                       paddingtop={"1rem"}
+                       align="flex-start">
+                {itinerariesScroll}
+            </Container>
+            {/* <TikTokSection title={'Trending Places on TikTok'} TikTokList={TIKTOK_LIST}/> */}
 
         </body>
     );
