@@ -60,7 +60,7 @@ const Explore: React.FC = () => {
             />
             <Container
                 width="70%"
-                height={"245vh"}
+                height={"100%"}
                 paddingtop={"2rem"}
                 align="flex-start"
             >

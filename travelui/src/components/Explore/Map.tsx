@@ -3,11 +3,6 @@ import React, {useEffect, useRef, useState} from 'react';
 import { GoogleMap, useJsApiLoader, Marker } from '@react-google-maps/api';
 import mapStyles from './mapStyles';
 
-const containerStyle = {
-    width: '400px',
-    height: '836px'
-};
-
 export const options = {
     disableDefaultUI: true,
     zoomControl: true,
@@ -62,9 +57,10 @@ interface centerInterface{
 type Props = {
     destinationName: string;
     locations: AttractionsInterface[] | FoodInterface[] | AccommodationsInterface[]
+    mapWidth?: string;
 }
 
-const Map: React.FC<Props> = ({destinationName, locations}) => {
+const Map: React.FC<Props> = ({destinationName, locations, mapWidth}) => {
     const [center, setCenter] = useState<centerInterface>({lat: 48.864716, lng: 2.349014})
     const { isLoaded } = useJsApiLoader({
         id: 'google-map-script',
@@ -101,7 +97,10 @@ const Map: React.FC<Props> = ({destinationName, locations}) => {
 
     return (
         <GoogleMap
-            mapContainerStyle={containerStyle}
+            mapContainerStyle={{
+                width: mapWidth ? mapWidth : '400px',
+                height: '836px'
+            }}
             center={center}
             zoom={10}
             onLoad={onLoad}

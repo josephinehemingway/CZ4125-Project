@@ -165,10 +165,11 @@ const Accommodations: React.FC<Props>= ({ destinationName }) => {
                     Map View
                 </StyledSectionTitle>
             </RowContainer>
-            <div style={{height:'200px'}} >
+            <div style={{height:'100%'}} >
                 <Map 
                     destinationName={destinationName}
                     locations={data}
+                    mapWidth={'1254px'}
                 />
             </div>
         </div>
