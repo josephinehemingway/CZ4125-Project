@@ -4,14 +4,13 @@ import {
     Container,
     StyledPageTitle,
     StyledItinerarySubheading,
-    HorizontalScroll, RowContainer, StyledSectionTitle, StyledLink, StyledLink2
+    HorizontalScroll, RowContainer, StyledSectionTitle, StyledLink2
 } from "../../components/reusable/Styles";
 import { Link, useLocation } from "react-router-dom";
 import {Breadcrumb, Spin} from "antd";
-import {TIKTOK_LIST} from "../../utils/const";
 import ItineraryBanner from "../../components/Itinerary/ItineraryBanner";
 import TikTokSection from "../../components/reusable/TikTok/TikTokSection";
-import {capitalise} from "../../utils/helperfunctions"
+import {capitalise, scrollToTop} from "../../utils/helperfunctions"
 import ItinerarySection from "../../components/Itinerary/ItinerarySection";
 import { PrinterOutlined, DownloadOutlined, ShareAltOutlined } from '@ant-design/icons';
 import AttractionsCard from "../../components/reusable/Cards/AttractionsCard";
@@ -117,8 +116,8 @@ const Itinerary: React.FC = () => {
             <StyledSectionTitle>
                 Explore Top Attractions in {formattedDestination}
             </StyledSectionTitle>
-            <Link to={`/explore/${formattedDestination}`}>
-                <StyledLink2>
+            <Link to={`/explore/${formattedDestination}`} onClick={scrollToTop}>
+                <StyledLink2 >
                     See More {">"}
                 </StyledLink2>
             </Link>
@@ -149,8 +148,8 @@ const Itinerary: React.FC = () => {
             <StyledSectionTitle>
                 Explore other itineraries from the web
             </StyledSectionTitle>
-            <Link to={`/explore/${formattedDestination}`}>
-                <StyledLink2>
+            <Link to={`/explore/${formattedDestination}`} onClick={scrollToTop}>
+                <StyledLink2 >
                     See More {">"}
                 </StyledLink2>
             </Link>
