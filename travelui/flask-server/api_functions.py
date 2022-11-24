@@ -387,94 +387,100 @@ def get_passengers(city):
 
 
 def get_planner(days, hotel, attractions):
-    # days is the number of days for itineray
-    # hotel is passed as dictionary of hotels
-    # attractions is passed as dictionary of attractions
 
-    def getShortest(start, visited, grp):
+    def getShortest(start,visited,grp):
         temp_lst = [loc for loc in grp['Name'] if loc not in visited]
         dist_lst = []
         for loc in temp_lst:
-            start_lat = df['Lat'][df['Name'] == start]
-            start_lon = df['Lon'][df['Name'] == start]
-            start_coord = list([float(start_lat), float(start_lon)])
+            start_lat = df['Lat'][df['Name']==start]
+            start_lon = df['Lon'][df['Name']==start]
+            start_coord = list([float(start_lat),float(start_lon)])
 
-            loc_lat = df['Lat'][df['Name'] == loc]
-            loc_lon = df['Lon'][df['Name'] == loc]
+            loc_lat = df['Lat'][df['Name']== loc]
+            loc_lon = df['Lon'][df['Name']== loc]
 
-            loc_coord = list([float(loc_lat), float(loc_lon)])
+            loc_coord=list([float(loc_lat),float(loc_lon)])
 
-            distance = geopy.distance.geodesic(start_coord, loc_coord).km
-            dist_lst.append((loc, distance))
+            distance = geopy.distance.geodesic(start_coord,loc_coord).km
+            dist_lst.append((loc,distance))
         return sorted(dist_lst, key=lambda x: x[1])[0]
 
     def getPath(i):
-        grp = df[df['group'] == i]
-        grp = grp.reset_index(drop=True)
-        if len(grp) > 1:
+        grp = df[df['group']==i]
+        grp = grp.reset_index(drop = True)
+        if len(grp)>1:
             lst = []
             start = grp['Name'][0]
             lst.append(start)
             cur = start
             tot_dist = 0
             for i in range(len(grp)-1):
-                next, dist_ = getShortest(cur, lst, grp)
+                next,dist_ = getShortest(cur,lst,grp)
                 lst.append(next)
-                tot_dist += dist_
+                tot_dist +=dist_
                 cur = next
-            return lst, tot_dist
+            return lst,tot_dist
         else:
-            return [grp['Name'][0]], 0
+            return [grp['Name'][0]],0
+        
+    df= pd.DataFrame(attractions)
 
-    df = pd.DataFrame(attractions)
-
-    # Drop attractions with no coordinates
+    #Drop attractions with no coordinates
     df = df[df['Lat'].notna()]
     df = df[df['Lon'].notna()]
 
-    # change lattitude and longtitude to int
-    df['Lat'] = df['Lat'].astype(float)
-    df['Lon'] = df['Lon'].astype(float)
+    #change lattitude and longtitude to int
+    df['Lat']= df['Lat'].astype(float)
+    df['Lon']= df['Lon'].astype(float)
 
-    arr_coordinates = []
+    arr_coordinates=[]
 
-    for index, row in df.iterrows():
+    for index,row in df.iterrows():
         lat = row['Lat']
-        lon = row['Lon']
-        arr_coordinates.append([lat, lon])
+        lon= row['Lon']
+        arr_coordinates.append([lat,lon])
 
-    kmeans = KMeans(n_clusters=int(days), random_state=0).fit(arr_coordinates)
+
+    kmeans = KMeans(n_clusters= int(days), random_state=0).fit(arr_coordinates)
 
     df['group'] = kmeans.labels_
-
-    clusters = []
-    count = 0
+    
+    clusters=[]
+    count=0
     for i in range(days):
-        cluster = {}
-        # print(getPath(i))
-        cluster[count] = getPath(i)
-        cluster['centroid'] = list(kmeans.cluster_centers_[count])
-        count = count+1
+        cluster={}
+        #print(getPath(i))
+        places_to_visit, distance_to_travel = getPath(i)
+        cluster['day']=count
+        cluster['destinations']= places_to_visit
+        cluster['total_distance'] = distance_to_travel
+        cluster['centroid']= list(kmeans.cluster_centers_[count])
+        count= count+1
         clusters.append(cluster)
-
+        
+    
     for i in clusters:
         centre_coordinates = i['centroid']
-        d = []
+        d=[]
         for j in hotel:
-            details = {}
-            hotel_lat = j['Lat']
-            hotel_lon = j['Lon']
-            hotel_coordinates = list([hotel_lat, hotel_lon])
-            dist = geopy.distance.geodesic(
-                centre_coordinates, hotel_coordinates).km
+            details={}
+            hotel_lat= j['Lat']
+            hotel_lon=j['Lon']
+            hotel_coordinates = list([hotel_lat,hotel_lon])
+            dist=geopy.distance.geodesic(centre_coordinates,hotel_coordinates ).km
             details[j['Name']] = dist
             d.append(details)
 
-        dict_hotels = dict(ChainMap(*d))
-        # print(dict_hotels)
+        dict_hotels= dict(ChainMap(*d))
+        #print(dict_hotels)
 
-        hotel_min_dist = min(dict_hotels.items(), key=lambda x: x[1])
-        # print(hotel_min_dist)
-        i['nearest_hotel'] = hotel_min_dist
 
-    return np.array(clusters).tolist()
+        hotel_min_dist=min(dict_hotels.items(), key=lambda x: x[1])
+        hotel_name, min_dist = hotel_min_dist
+        #print(hotel_min_dist)
+        i['nearest_hotel'] = hotel_name
+        i['dist_to_hotel']= min_dist
+    
+    
+    return clusters
+
