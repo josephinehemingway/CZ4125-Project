@@ -23,6 +23,8 @@ db = client.travelui
 # db['food'].delete_many({})
 # db['passengers'].delete_many({})
 # db['traveltips'].delete_many({})
+# db['tiktok_food'].delete_many({})
+# db['tiktok_attraction'].delete_many({})
 
 # # 2. Add some records
 # # COMMENT OUT IF DONT WANT TO POPULATE MONGODB COLLECTIONS
@@ -78,11 +80,22 @@ db = client.travelui
 # cities = ['Bali', 'India', 'Japan', 'London', 'Malaysia',
 #           'Paris', 'Rome', 'Seoul', 'Singapore', 'Switzerland']
 # for i in cities:
-#     f = open(f'../../Tiktok_JSON/Travel/{i}_travel.json')
+#     f = open(f'.\CZ4125-Project\Tiktok_JSON\Travel\{i}_travel.json')
 #     tiktok_att = json.load(f)
+#     for j in tiktok_att:
+#         tiktok = j['TiktokUrl']
+#         tiktokid= tiktok.split('/')[-1]
+#         newurl = 'https://www.tiktok.com/embed/' +tiktokid
+#         j['TiktokUrl'] = newurl
 #     tiktok_attraction_col.insert_many(tiktok_att)
-#     f = open(f'../../Tiktok_JSON/Food/{i}_food.json')
+
+#     f = open(f'.\CZ4125-Project\Tiktok_JSON\Food\{i}_food.json')
 #     tiktok_food = json.load(f)
+#     for j in tiktok_food:
+#         tiktok = j['TiktokUrl']
+#         tiktokid= tiktok.split('/')[-1]
+#         newurl = 'https://www.tiktok.com/embed/' +tiktokid
+#         j['TiktokUrl'] = newurl
 #     tiktok_food_col.insert_many(tiktok_food)
 
 
@@ -106,6 +119,7 @@ def get_attractions_api():
         attractions_scrape = api_functions.get_attractions(
             attractions_url, destination)
 
+        
         collection.insert_many(attractions_scrape)
         print(f"MongoDB has been updated")
 
