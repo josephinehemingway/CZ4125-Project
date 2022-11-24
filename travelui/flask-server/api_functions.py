@@ -179,7 +179,7 @@ def getairbnb(destination):
         features_dict['Rating'] = float(rate)
         #print(type(features_dict['Rating']))
         features_dict['url'] = url
-        features_dict['imageurl'] = pic
+        features_dict['imageurl'] = pic.split(' ')[0]
         features_dict['review'] = review
 
         count += 1
