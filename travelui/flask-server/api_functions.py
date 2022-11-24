@@ -387,7 +387,7 @@ def get_passengers(city):
 
 
 def get_planner(days, hotel, attractions):
-
+    
     def getShortest(start,visited,grp):
         temp_lst = [loc for loc in grp['Name'] if loc not in visited]
         dist_lst = []
@@ -454,7 +454,8 @@ def get_planner(days, hotel, attractions):
         cluster['day']=count
         cluster['destinations']= places_to_visit
         cluster['total_distance'] = distance_to_travel
-        cluster['centroid']= list(kmeans.cluster_centers_[count])
+        x,y=kmeans.cluster_centers_[count]
+        cluster['centroid']= [float(x),float(y)]
         count= count+1
         clusters.append(cluster)
         
@@ -466,7 +467,7 @@ def get_planner(days, hotel, attractions):
             details={}
             hotel_lat= j['Lat']
             hotel_lon=j['Lon']
-            hotel_coordinates = list([hotel_lat,hotel_lon])
+            hotel_coordinates = [hotel_lat,hotel_lon]
             dist=geopy.distance.geodesic(centre_coordinates,hotel_coordinates ).km
             details[j['Name']] = dist
             d.append(details)
