@@ -60,7 +60,7 @@ def get_attractions(url, destination):
         attraction['ImageUrl'] = photo_url
         attraction['Review_url'] = base_url+url
 
-        address = name + destination
+        address = name + ' ' + destination
         mapurl = 'https://nominatim.openstreetmap.org/search/' + \
             urllib.parse.quote(address) + '?format=json'
 
@@ -107,7 +107,7 @@ def get_hotels(url, destination):
             else:
                 hotel_name_stripped = hotel_name[5:]
 
-            address = hotel_name_stripped + destination
+            address = hotel_name_stripped + ' ' + destination
             mapurl = 'https://nominatim.openstreetmap.org/search/' + \
                 urllib.parse.quote(address) + '?format=json'
 
