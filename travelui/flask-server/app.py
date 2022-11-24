@@ -119,7 +119,6 @@ def get_attractions_api():
         attractions_scrape = api_functions.get_attractions(
             attractions_url, destination)
 
-        
         collection.insert_many(attractions_scrape)
         print(f"MongoDB has been updated")
 
@@ -211,7 +210,6 @@ def get_attr_tiktok():
     destination = request.args.get('destination')
     print(destination)
     collection = db['tiktok_attraction']
-    existing = collection.find({'City': destination})
     tiktok_attr = list(collection.find({"City": destination}))
     return json.dumps(tiktok_attr, default=json_util.default)
 
