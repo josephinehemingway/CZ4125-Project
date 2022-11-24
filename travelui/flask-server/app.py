@@ -75,28 +75,28 @@ db = client.travelui
 # print('Finish populating')
 
 # # POPULATE TIKTOK INTO MONGODB -DONT UNCOMMENT-
-# tiktok_attraction_col = db['tiktok_attraction']
-# tiktok_food_col = db['tiktok_food']
-# cities = ['Bali', 'India', 'Japan', 'London', 'Malaysia',
-#           'Paris', 'Rome', 'Seoul', 'Singapore', 'Switzerland']
-# for i in cities:
-#     f = open(f'.\CZ4125-Project\Tiktok_JSON\Travel\{i}_travel.json')
-#     tiktok_att = json.load(f)
-#     for j in tiktok_att:
-#         tiktok = j['TiktokUrl']
-#         tiktokid= tiktok.split('/')[-1]
-#         newurl = 'https://www.tiktok.com/embed/' +tiktokid
-#         j['TiktokUrl'] = newurl
-#     tiktok_attraction_col.insert_many(tiktok_att)
+tiktok_attraction_col = db['tiktok_attraction']
+tiktok_food_col = db['tiktok_food']
+cities = ['Bali', 'India', 'Japan', 'London', 'Malaysia',
+          'Paris', 'Rome', 'Seoul', 'Singapore', 'Zurich']
+for i in cities:
+    f = open(f'.\CZ4125-Project\Tiktok_JSON\Travel\{i}_travel.json')
+    tiktok_att = json.load(f)
+    for j in tiktok_att:
+        tiktok = j['TiktokUrl']
+        tiktokid= tiktok.split('/')[-1]
+        newurl = 'https://www.tiktok.com/embed/' +tiktokid
+        j['TiktokUrl'] = newurl
+    tiktok_attraction_col.insert_many(tiktok_att)
 
-#     f = open(f'.\CZ4125-Project\Tiktok_JSON\Food\{i}_food.json')
-#     tiktok_food = json.load(f)
-#     for j in tiktok_food:
-#         tiktok = j['TiktokUrl']
-#         tiktokid= tiktok.split('/')[-1]
-#         newurl = 'https://www.tiktok.com/embed/' +tiktokid
-#         j['TiktokUrl'] = newurl
-#     tiktok_food_col.insert_many(tiktok_food)
+    f = open(f'.\CZ4125-Project\Tiktok_JSON\Food\{i}_food.json')
+    tiktok_food = json.load(f)
+    for j in tiktok_food:
+        tiktok = j['TiktokUrl']
+        tiktokid= tiktok.split('/')[-1]
+        newurl = 'https://www.tiktok.com/embed/' +tiktokid
+        j['TiktokUrl'] = newurl
+    tiktok_food_col.insert_many(tiktok_food)
 
 
 @app.route('/attractions-api', methods=["GET"])
@@ -276,17 +276,14 @@ def airfare_api():
 @app.route('/planner-api')
 def planner_api():
     destination = request.args.get('destination')
-    destination = destination.lower()
     days = request.args.get('days')
     days = int(days)
     print(destination)
-    f = open('tripadvisor_link.json')
-    trip_advisor = json.load(f)
-    link_dict = trip_advisor[destination]
-    accomodations_url = link_dict['Hotel']
-    attractions_url = link_dict['Attractions']
-    hotels = api_functions.get_hotels(accomodations_url, destination)
-    attractions = api_functions.get_attractions(attractions_url, destination)
+    hotel_col= db['accommodations'] 
+    hotels = list(hotel_col.find({"City": destination}))
+    #print(hotels)
+    attr_col= db['attractions'] 
+    attractions = list(attr_col.find({"City": destination}))
     return jsonpickle.encode(api_functions.get_planner(days=days, hotel=hotels, attractions=attractions))
 
 
