@@ -452,7 +452,16 @@ def get_planner(days, hotel, attractions):
         #print(getPath(i))
         places_to_visit, distance_to_travel = getPath(i)
         cluster['day']=count
-        cluster['destinations']= places_to_visit
+        destinations = []
+        for k in places_to_visit:
+            dest={}
+            dest_lat = df['Lat'][df['Name']==k]
+            dest_lon = df['Lon'][df['Name']==k]
+            dest[k]= [float(dest_lat), float(dest_lon)]
+            
+            destinations.append(dest)
+            
+        cluster['destinations']= destinations
         cluster['total_distance'] = distance_to_travel
         x,y=kmeans.cluster_centers_[count]
         cluster['centroid']= [float(x),float(y)]
