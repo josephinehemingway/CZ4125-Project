@@ -277,12 +277,13 @@ def airfare_api():
 def planner_api():
     destination = request.args.get('destination')
     days = request.args.get('days')
+    print(days)
     days = int(days)
     print(destination)
-    hotel_col= db['accommodations'] 
+    hotel_col = db['accommodations']
     hotels = list(hotel_col.find({"City": destination}))
-    #print(hotels)
-    attr_col= db['attractions'] 
+    # print(hotels)
+    attr_col = db['attractions']
     attractions = list(attr_col.find({"City": destination}))
     return jsonpickle.encode(api_functions.get_planner(days=days, hotel=hotels, attractions=attractions))
 

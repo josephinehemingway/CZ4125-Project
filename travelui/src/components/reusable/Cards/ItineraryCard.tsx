@@ -5,9 +5,11 @@ type Props = {
     dayNumber: string;
     activities: string[];
     rating?: number;
+    hotel: string
+    totalDistance: number
 }
 
-const ItineraryCard: React.FC<Props> = ({activities, dayNumber, rating}) => {
+const ItineraryCard: React.FC<Props> = ({activities, dayNumber, rating, hotel, totalDistance}) => {
 
     const activityArray = activities.map((d) => (
             <div className='activity'>• {d}</div>
@@ -22,9 +24,9 @@ const ItineraryCard: React.FC<Props> = ({activities, dayNumber, rating}) => {
             </div>
             <div className='itinerary-details'>
                 <h2 className="day"> Nearest Hotel </h2>
-                Hotel ABC
+                {hotel}
                 <h2 className="day"> Total Distance </h2>
-                123km
+                {totalDistance}
             </div>
 
 
