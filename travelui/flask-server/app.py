@@ -285,9 +285,9 @@ def planner_api():
     link_dict = trip_advisor[destination]
     accomodations_url = link_dict['Hotel']
     attractions_url = link_dict['Attractions']
-    hotels = api_functions.get_hotels(accomodations_url)
-    attractions = api_functions.get_attractions(attractions_url)
-    return jsonpickle.decode(jsonpickle.encode(api_functions.get_planner(days=days, hotel=hotels, attractions=attractions)))
+    hotels = api_functions.get_hotels(accomodations_url, destination)
+    attractions = api_functions.get_attractions(attractions_url, destination)
+    return jsonpickle.encode(api_functions.get_planner(days=days, hotel=hotels, attractions=attractions))
 
 
 @app.route('/passengers-api', methods=["GET"])
