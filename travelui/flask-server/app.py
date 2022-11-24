@@ -43,12 +43,11 @@ db = client.travelui
 #     accommodations_url, destination)
 # accommodations_col = db['accommodations']
 # accommodations_col.insert_many(accommodations_scrape)
-# # airbnb
-# # airbnb_url = 'https://www.airbnb.com.sg/s/' + destination + '/homes'
-# # airbnb_scrape = api_functions.getairbnb(airbnb_url, destination)
-# # airbnb_col = db['airbnb']
-# # airbnb_col.insert_many(airbnb_scrape)
-# # banner
+#airbnb
+# airbnb_scrape = api_functions.getairbnb(destination)
+# airbnb_col = db['airbnb']
+# airbnb_col.insert_many(airbnb_scrape)
+#banner
 # banner_url = link_dict['Hotel']
 # banner_scrape = api_functions.get_banner(
 #     banner_url, destination)
@@ -176,8 +175,7 @@ def get_airbnb():
     if len(results) > 0:
         print(f"Records found in MongoDB")
     else:
-        airbnb_url = 'https://www.airbnb.com.sg/s/' + destination + '/homes'
-        airbnb_scrape = api_functions.getairbnb(airbnb_url, destination)
+        airbnb_scrape = api_functions.getairbnb(destination)
         collection.insert_many(airbnb_scrape)
         print(f"MongoDB has been updated")
 

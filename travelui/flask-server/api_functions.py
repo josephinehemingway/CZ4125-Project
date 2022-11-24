@@ -141,7 +141,8 @@ def get_banner(hotel_url, destination):
     return [banner]
 
 
-def getairbnb(airbnb_url, destination):
+def getairbnb(destination):
+    airbnb_url = 'https://www.airbnb.com.sg/s/' + destination + '/homes'
     soup = BeautifulSoup(requests.get(airbnb_url).content, 'html.parser')
     airbnb = []
     count = 1
@@ -175,7 +176,8 @@ def getairbnb(airbnb_url, destination):
 
         features_dict['City'] = destination
         features_dict['Name'] = header
-        features_dict['Rating'] = rate
+        features_dict['Rating'] = float(rate)
+        #print(type(features_dict['Rating']))
         features_dict['url'] = url
         features_dict['imageurl'] = pic
         features_dict['review'] = review
