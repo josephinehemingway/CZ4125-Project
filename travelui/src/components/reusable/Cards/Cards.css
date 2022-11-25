@@ -203,14 +203,21 @@
 
 .itinerary-card {
   overflow: hidden;
-  cursor: pointer;
   margin-top: 0.5rem;
   margin-right: 2rem;
   margin-bottom: 1rem;
   width: 100%;
   background-color: #fff;
   border-radius: 10px;
-  padding: 1rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.itinerary-card-content {
+  overflow: hidden;
+  width: 80%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -220,13 +227,45 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: space-between;
+  justify-content: flex-start;
+  margin-bottom: 0.25rem;
+  margin-right: 1rem;
+  margin-top: 0.25rem;
+  font-family: Poppins, sans-serif;
+  font-size: 16px;
 }
 
 .day {
-  color: #000;
+  color: #3f3f3f;
   font-family: Poppins-SemiBold, sans-serif;
   font-size: 20px;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.heading {
+  color: #7e7e7e;
+  font-family: Poppins-Medium, sans-serif;
+  font-size: 15px;
+  margin-bottom: 0;
+  /*width: 80%*/
+}
+
+.icon-heading {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 16px;
+}
+
+.distance {
+  color: #000;
+  font-family: Poppins-Semibold, sans-serif;
+  font-size: 25px;
   margin-bottom: 0;
 }
 

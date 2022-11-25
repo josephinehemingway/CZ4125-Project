@@ -63,7 +63,7 @@ const Food: React.FC<Props>= ({ tabName, destinationName }) => {
         );
     }, [destinationName]);
 
-    const foodCardsArray = data.map((d, index) => {
+    const foodCardsArray = data.map((d) => {
         console.log(d.Name)
         return (<AttractionsCard
             imgurl={d.Image}
@@ -113,7 +113,7 @@ const Food: React.FC<Props>= ({ tabName, destinationName }) => {
                 </div>
             </div>
             <div className={'tiktok-section'}>
-            <TikTokSection title={'Trending Places on TikTok'} TikTokList={tiktokdata}/>
+                <TikTokSection title={'Trending Food on TikTok'} TikTokList={tiktokdata}/>
             </div>
         </div>
     );

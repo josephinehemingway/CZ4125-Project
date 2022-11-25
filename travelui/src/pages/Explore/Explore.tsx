@@ -3,9 +3,7 @@ import "../Pages.css";
 import { Container, StyledPageTitle } from "../../components/reusable/Styles";
 import { Link, useLocation } from "react-router-dom";
 import { Breadcrumb, Tabs } from "antd";
-import {TIKTOK_LIST} from "../../utils/const";
 import ExploreBanner from "../../components/Explore/ExploreBanner";
-import TikTokSection from "../../components/reusable/TikTok/TikTokSection";
 import Attractions from "../../components/Explore/Attractions";
 import Accommodations from "../../components/Explore/Accommodations";
 import Food from "../../components/Explore/Food";
@@ -41,7 +39,6 @@ const Explore: React.FC = () => {
 
     const foodTab = <>
         <Food tabName={'Restaurants'} destinationName={formattedDestination}/>
-        {/* <TikTokSection title={'Food Recommendations from TikTok'} TikTokList={TIKTOK_LIST}/> */}
     </>
 
     const accomTab = <>

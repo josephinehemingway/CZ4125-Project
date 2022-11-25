@@ -9,7 +9,6 @@ import {
 import { Link, useLocation } from "react-router-dom";
 import {Breadcrumb, Spin} from "antd";
 import ItineraryBanner from "../../components/Itinerary/ItineraryBanner";
-import TikTokSection from "../../components/reusable/TikTok/TikTokSection";
 import {capitalise, scrollToTop} from "../../utils/helperfunctions"
 import ItinerarySection from "../../components/Itinerary/ItinerarySection";
 import { PrinterOutlined, DownloadOutlined, ShareAltOutlined } from '@ant-design/icons';
@@ -49,11 +48,8 @@ const Itinerary: React.FC = () => {
 
     useEffect(() => {
         setLoading(true);
-        // Using fetch to fetch the api from
-        // flask server it will be redirected to proxy
         fetch(`/attractions-api?destination=${formattedDestination}`).then((res) =>
             res.json().then((data) => {
-                // Setting a data from api
                 setAttractions(data);
                 setLoading(false);
                 console.log(data)
@@ -64,11 +60,8 @@ const Itinerary: React.FC = () => {
     useEffect(() => {
         setLoadingItinerary(true);
         console.log('duration: ', durationSelected);
-        // Using fetch to fetch the api from
-        // flask server it will be redirected to proxy
         fetch(`/itinerary-api?destination=${formattedDestination}&days=${durationSelected}`).then((res) =>
             res.json().then((data) => {
-                // Setting a data from api
                 setItineraries(data);
                 setLoadingItinerary(false);
                 console.log(data)
@@ -222,8 +215,6 @@ const Itinerary: React.FC = () => {
                        align="flex-start">
                 {itinerariesScroll}
             </Container>
-            {/* <TikTokSection title={'Trending Places on TikTok'} TikTokList={TIKTOK_LIST}/> */}
-
         </body>
     );
 };

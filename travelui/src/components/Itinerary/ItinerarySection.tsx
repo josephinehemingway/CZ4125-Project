@@ -5,6 +5,7 @@ import {
 import ItineraryCard from "../reusable/Cards/ItineraryCard";
 import Map from "../Explore/Map";
 import './itinerarystyles.css';
+import {Spin} from "antd";
 
 interface AttractionsApi{
     Name: string,
@@ -49,34 +50,6 @@ const ItinerarySection: React.FC<Props> = ({destinationName, seasonSelected,dura
         );
     }, [destinationName, durationSelected]);
 
-    //
-    // const data = [{
-    //         "day": 1,
-    //         "activities": ["Skiing", "Eating", "Hiking"]
-    //     },
-    //     {
-    //         "day": 2,
-    //         "activities": ["Skiing", "Eating", "Hiking"]
-    //     },
-    //     {
-    //         "day": 3,
-    //         "activities": ["Skiing", "Eating", "Hiking"]
-    //     },
-    //     {
-    //         "day": 3,
-    //         "activities": ["Skiing", "Eating", "Hiking"]
-    //     },
-    //     {
-    //         "day": 3,
-    //         "activities": ["Skiing", "Eating", "Hiking"]
-    //     },
-    //     {
-    //         "day": 3,
-    //         "activities": ["Skiing", "Eating", "Hiking"]
-    //
-    //     },
-    // ]
-
     const itineraryCardsArray = data.map((d) => {
         return (<ItineraryCard
             activities={d.destinations}
@@ -95,8 +68,19 @@ const ItinerarySection: React.FC<Props> = ({destinationName, seasonSelected,dura
                 </StyledSectionTitle>
                 <div className='itinerary-gallery'>
                     <div className='itinerary-subgallery'>
-                        { itineraryCardsArray }
+                        {loading ?
+                            <div style={{ width: '100%',
+                                height: '50%',
+                                display: 'flex',
+                                flexDirection: 'row',
+                                alignItems: 'center',
+                                justifyContent: 'center'}}>
+                                <Spin tip="Loading..." />
+                            </div>
+                            : itineraryCardsArray
+                        }
                     </div>
+
                     <div style={{width: '30%'}}>
                         <Map
                             destinationName={destinationName}
